@@ -1,0 +1,11 @@
+# dev
+.DS_Store
+node_modules/
+dist/
+test/
+
+
+# config
+package-lock.json
+yarn.lock
+yarn-error.log

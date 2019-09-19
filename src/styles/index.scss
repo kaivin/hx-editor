@@ -1,0 +1,48 @@
+
+@charset "UTF-8";
+
+// 导入core中的基础文件
+//-----------------------------------------------------
+@import "core/_settings";
+@import "core/_mixin";
+@import "core/_reset";
+@import "_iconfonts";
+@import "transitions";
+html,body,#app,#app > .el-container{
+  margin:0;
+  padding:0;
+  height:100vh;
+  overflow: hidden;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+.page-root{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
+
+.style-list{
+  .demo7{
+    height: pxToRem(75);
+    font-size: pxToRem(36);
+    text-align: center;
+    color: red;
+    line-height: pxToRem(75);
+  }
+}
+.style-list.is-pc{
+  .demo7{
+    height: 70px;
+    font-size: 48px;
+    text-align: center;
+    color: blue;
+    line-height: 70px;
+  }
+}
