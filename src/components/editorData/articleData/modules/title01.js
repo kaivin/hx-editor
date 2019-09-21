@@ -1,4 +1,4 @@
 
 export function title (){
-    return {type:"web",htmlString:'<div class="demo1">我是正文1</div>'};
+    return {type:"",htmlString:'<p class="smalltxt001">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p>'};
 }

@@ -1,8 +1,7 @@
 <template>
     <div class="page-root">
-      <link rel="stylesheet" v-bind:href="styleUrl" />
-      <div class="btn-panel" v-bind:class="tType=='web'?'is-pc':''"><span v-bind:class="tType=='web'?'on':''" v-on:click="changeTerminalType('web')">PC端</span><span v-bind:class="tType=='wap'?'on':''" v-on:click="changeTerminalType('wap')">移动端</span></div>
-      <div class="style-list" v-bind:class="tType=='web'?'is-pc':''">
+      <div class="btn-panel" v-bind:class="tType=='web'?'is-pc':'is-wap'"><span v-bind:class="tType=='web'?'on':''" v-on:click="changeTerminalType('web')">PC端</span><span v-bind:class="tType=='wap'?'on':''" v-on:click="changeTerminalType('wap')">移动端</span></div>
+      <div class="style-list" v-bind:class="tType=='web'?'is-pc':'is-wap'">
         <el-scrollbar style="height:100%;">
           <div class="item-list">
               <div class="item-wrap" v-for="(item,index) in currentData" v-bind:key="index">

@@ -141,3 +141,6 @@
   @function pxToRem($px){
     @return ($px/75)+rem;
   }
+  @function pxTo($px){
+    @return ($px*46.875/75)+rem;
+  }
