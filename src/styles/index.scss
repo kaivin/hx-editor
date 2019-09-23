@@ -29,6 +29,8 @@ html,body,#app,#app > .el-container{
   overflow:hidden; 
 }
 .style-list.is-wap{
+  max-width: 750px;
+  min-width: 320px;
   //=============标题
   .item-content{padding:pxToRem(15) pxToRem(30); }
   [class^="smalltit"]{font-size:pxToRem(29); }
@@ -107,16 +109,12 @@ html,body,#app,#app > .el-container{
   .smalltit028 strong:after,.smalltit028 strong:before{content:''; position:absolute; border-style:solid; border-color:transparent #ffd5d5 transparent #ffd5d5; top:50%; transform:translateY(-50%); }
   .smalltit028 strong:after{border-width:10px 0px 10px 10px; right:-14px; }
   .smalltit028 strong:before{border-width:10px 10px 10px 0px; left:-14px; }
-  .smalltit029{}
   .smalltit029 strong{display:inline-block; position:relative; background:#b55553; padding:pxToRem(5) pxToRem(15) pxToRem(5) pxToRem(65); border-radius:pxToRem(10); color:#fff; font-weight:normal; }
   .smalltit029 strong span{position:absolute; top:pxToRem(-5); bottom:pxToRem(-5); background:#ffdbaa; color:#7b0900; font-style:normal; left:pxToRem(7); width:pxToRem(48); z-index:5; border-radius:pxToRem(5); line-height:pxToRem(63); font-size:pxToRem(29); text-align:center; font-weight:bold; }
-  .smalltit030{}
   .smalltit030 strong{display:inline-block; position:relative; padding-left:47px; background:#fff0dc; padding:pxToRem(5) pxToRem(25) pxToRem(5) pxToRem(50); margin-left:pxToRem(14); border-radius:pxToRem(0) pxToRem(25) pxToRem(25) pxToRem(0); font-weight:normal; }
   .smalltit030 strong span{position:absolute; top:0px; background:#ffffff; color:#cb7600; font-style:normal; left:pxToRem(-15); width:pxToRem(53); height:pxToRem(53); z-index:5; border-radius:50%; line-height:pxToRem(49); border:pxToRem(2) solid #ffce8a; font-weight:bold; font-size:pxToRem(29); text-align:center; }
-  .smalltit031{}
   .smalltit031 strong{display:inline-block; position:relative; padding-left:47px; padding:pxToRem(5) pxToRem(25) pxToRem(5) pxToRem(66); border:1px solid #000; border-radius:pxToRem(50); font-weight:normal; }
   .smalltit031 strong span{position:absolute; top:0px; background:#c32e0e; color:#ffffff; font-style:normal; left:0px; width:pxToRem(55); height:pxToRem(55); z-index:5; border-radius:50%; line-height:pxToRem(55); font-weight:bold; text-align:center; }
-  .smalltit032{}
   .smalltit032 strong{display:inline-block; position:relative; padding-left:76px; box-shadow:3px 3px 2px rgba(0, 0, 0, 0.1); padding:pxToRem(5) pxToRem(20) pxToRem(5) pxToRem(60); color:#dc2d07; line-height:pxToRem(44); font-weight:normal; }
   .smalltit032 strong span{position:absolute; top:0px; bottom:0px; background:#b55553; color:#ffffff; font-style:normal; left:0px; width:pxToRem(50); z-index:5; border-radius:0% 50% 50% 0%; line-height:pxToRem(54); font-size:pxToRem(29); text-align:center; padding-right:pxToRem(4); font-weight:bold; }
 
@@ -276,6 +274,8 @@ html,body,#app,#app > .el-container{
 .smalltext015 .smalltext015pic img{width:100%;}
 }
 .style-list.is-pc{
+  max-width:1024px;
+  min-width:320px;
   .item-content{padding:15px 30px; }
   [class^="smalltit"]{font-size:16px; line-height:30px; }
   .smalltit001{background:url(../assets/images/insidestyle/newicon01.png) no-repeat left 2px; }
@@ -364,13 +364,10 @@ html,body,#app,#app > .el-container{
   .smalltit029{padding:18px 0px 18px !important; }
   .smalltit029 strong{display:inline-block; position:relative; background:#b55553; padding:8px 15px 8px 60px; border-radius:5px; color:#fff; text-shadow:2px 2px 0px rgba(0, 0, 0, 0.29); }
   .smalltit029 strong span{position:absolute; top:-5px; bottom:-5px; background:#ffdbaa; color:#7b0900; font-style:normal; left:7px; width:40px; z-index:5; border-radius:5px; line-height:50px; font-size:24px; text-align:center; }
-  .smalltit030{}
   .smalltit030 strong{display:inline-block; position:relative; padding-left:47px; background:#fff0dc; padding:8px 15px 8px 35px; margin-left:14px; border-radius:0px 20px 20px 0px; }
   .smalltit030 strong span{position:absolute; top:0px; background:#ffffff; color:#cb7600; font-style:normal; left:-14px; width:40px; height:40px; z-index:5; border-radius:50%; line-height:36px; border:2px solid #ffce8a; font-weight:bold; font-size:24px; text-align:center; }
-  .smalltit031{}
   .smalltit031 strong{display:inline-block; position:relative; padding-left:47px; padding:5px 15px 5px 50px; border:1px solid #000; border-radius:45px; font-weight:bold; }
   .smalltit031 strong span{position:absolute; top:0px; background:#c32e0e; color:#ffffff; font-style:normal; left:0px; width:40px; height:40px; z-index:5; border-radius:50%; line-height:40px; text-align:center; font-size:22px; }
-  .smalltit032{}
   .smalltit032 strong{display:inline-block; position:relative; padding-left:76px; box-shadow:3px 3px 2px rgba(0, 0, 0, 0.1); padding:5px 20px 5px 48px; color:#dc2d07; font-size:18px; }
   .smalltit032 strong span{position:absolute; top:0px; bottom:0px; background:#b55553; color:#ffffff; font-style:normal; left:0px; width:40px; z-index:5; border-radius:0% 50% 50% 0%; line-height:40px; font-size:24px; text-align:center; }
   .smalltit033{clear:both; text-align:center; }
@@ -522,5 +519,4 @@ html,body,#app,#app > .el-container{
   .smalltext015 .smalltext015pic {box-shadow: 0px 0px 10px rgba(80, 0, 5, 0.5);border-radius:15px;overflow: hidden; margin-top:20px;}
   .smalltext015 .smalltext015pic img{width:100%;}
   //================按钮
-  .smallbtn01{}
 }

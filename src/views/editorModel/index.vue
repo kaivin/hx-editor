@@ -1,6 +1,10 @@
 <template>
     <div class="page-root">
-      <div class="btn-panel" v-bind:class="tType=='web'?'is-pc':'is-wap'"><span v-bind:class="tType=='web'?'on':''" v-on:click="changeTerminalType('web')">PC端</span><span v-bind:class="tType=='wap'?'on':''" v-on:click="changeTerminalType('wap')">移动端</span></div>
+      <div class="filter-panel">
+        <el-scrollbar style="height:100%;">
+          <div class="btn-panel" v-bind:class="tType=='web'?'is-pc':'is-wap'"><span v-bind:class="tType=='web'?'on':''" v-on:click="changeTerminalType('web')">PC端</span><span v-bind:class="tType=='wap'?'on':''" v-on:click="changeTerminalType('wap')">移动端</span></div>
+        </el-scrollbar>
+      </div>
       <div class="style-list" v-bind:class="tType=='web'?'is-pc':'is-wap'">
         <el-scrollbar style="height:100%;">
           <div class="item-list">
@@ -95,31 +99,23 @@ export default {
 </script>
 
 <style lang="scss">
-.page-root{
-    padding-top: 60px;
+.filter-panel{
+  width:320px;
+  background: #fff;
+  float:left;
+  margin-right:10px;
+  height:100%;
+  overflow:hidden;
 }
 .style-list{
-  width:750px;
-  margin: 0 auto;
   height:100%;
   overflow: hidden;
   background: #fff;
 }
-.style-list.is-pc{
-  width:1024px;
-}
-.btn-panel.is-pc{
-  width:1024px;
-  margin-left: -512px;
-}
 .btn-panel{
-  width: 750px;
+  width: 100%;
   margin: 0 auto;
   height:50px;
-  position: absolute;
-  left:50%;
-  top: 0;
-  margin-left: -375px;
   span{
     display: block;
     height: 50px;
