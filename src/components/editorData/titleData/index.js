@@ -6,7 +6,7 @@ function getTitleData(){
         // set './header.js' => 'header'
         const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1');
         const value = modulesFiles(modulePath);
-        titleModules[moduleName] = value.title();
+        titleModules[moduleName] = value.getHtmlData();
         return titleModules;
     }, {});
     console.log(titleModules);

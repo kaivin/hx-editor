@@ -24,6 +24,7 @@ export default {
         {type:'title',name:'标题',icon:'el-icon-s-tools',isOn:true},
         {type:'article',name:'正文',icon:'el-icon-document',isOn:false},
         {type:'image',name:'图文',icon:'el-icon-picture',isOn:false},
+        {type:'button',name:'按钮',icon:'el-icon-open',isOn:false},
       ]
     }
   },
