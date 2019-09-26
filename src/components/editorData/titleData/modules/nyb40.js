@@ -7,8 +7,8 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb40.js', // 该文件的文件名
-        styleWebCode:'', // PC端样式
-        styleWapCode:'', // 移动端样式
+        styleWebCode:'.smalltit040{display:block; background:none; padding:0px; text-align:center;}.smalltit040 strong{position:relative; font-size:0.4rem; line-height:1.5; color:#fff; background-color:#b72630; border-radius:4px; padding:10px 20px; display:inline-block;}.smalltit040 strong:after{content:""; position:absolute; top:4px; left:4px; bottom:4px; right:4px; border:1px dashed #fff; border-radius:4px; box-sizing:border-box;}', // PC端样式
+        styleWapCode:'.smalltit040{display:block; background:none; padding:0rem; text-align:center;}.smalltit040 strong{position:relative; font-size:0.4rem; line-height:1.5; color:#fff; background-color:#b72630; border-radius:4px; padding:10px 20px; display:inline-block;}.smalltit040 strong:after{content:""; position:absolute; top:4px; left:4px; bottom:4px; right:4px; border:1px dashed #fff; border-radius:4px; box-sizing:border-box;}', // 移动端样式
         htmlString:'<p class="smalltit040"><strong>标题标题标题标题标题标题</strong></p>'
     };
 }

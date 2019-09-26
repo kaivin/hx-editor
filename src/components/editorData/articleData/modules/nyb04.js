@@ -4,8 +4,8 @@ export function getHtmlData (){
         color:'红色', // 多个颜色用逗号分隔 目前取值项：红色,橙色,蓝色,绿色,棕色,黄色,紫色,粉色,黑色,青色,灰色
         effect:'static', // dynamic(动态)|static(静态)
         fileName:'nyb04.js', // 该文件的文件名
-        styleWebCode:'', // PC端样式
-        styleWapCode:'', // 移动端样式
+        styleWebCode:'.smalltxt004{border:1px solid #f29c9f; border-radius:5px; position:relative; padding:15px !important; margin-bottom:20px;}', // PC端样式
+        styleWapCode:'.smalltxt004{border:1px solid #f29c9f; border-radius:0.13333rem; position:relative; padding:0.26667rem !important; margin-bottom:0.26667rem;}', // 移动端样式
         htmlString:'<p class="smalltxt004">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p>'
     };
 }

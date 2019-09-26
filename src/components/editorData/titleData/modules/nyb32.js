@@ -7,8 +7,8 @@ export function getHtmlData (){
         align:'left', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'number', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb32.js', // 该文件的文件名
-        styleWebCode:'', // PC端样式
-        styleWapCode:'', // 移动端样式
+        styleWebCode:'.smalltit032{padding-bottom:20px !important;}.smalltit032 strong{display:inline-block; position:relative; padding-left:76px; box-shadow:3px 3px 2px rgba(0, 0, 0, 0.1); padding:1px 15px 1px 45px; color:#dc2d07; font-weight:normal;}.smalltit032 strong span{position:absolute; top:0px; bottom:0px; background:#b55553; color:#ffffff; font-style:normal; left:0px; width:35px; z-index:5; border-radius:0px 19px 19px 0px; text-align:center; padding-right:3px; font-weight:bold; font-size:20px; line-height:37px;}', // PC端样式
+        styleWapCode:'.smalltit032 strong{display:inline-block; position:relative; padding-left:76px; box-shadow:3px 3px 2px rgba(0, 0, 0, 0.1); padding:0.06667rem 0.26667rem 0.06667rem 0.8rem; color:#dc2d07; line-height:0.58667rem; font-weight:normal;}.smalltit032 strong span{position:absolute; top:0px; bottom:0px; background:#b55553; color:#ffffff; font-style:normal; left:0px; width:0.66667rem; z-index:5; border-radius:0% 50% 50% 0%; line-height:0.72rem; text-align:center; padding-right:0.05333rem; font-weight:bold;}', // 移动端样式
         htmlString:'<p class="smalltit032"><strong><span>1</span>标题标题标题标题标题标题</strong></p>'
     };
 }

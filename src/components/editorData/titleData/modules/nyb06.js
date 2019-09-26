@@ -7,8 +7,8 @@ export function getHtmlData (){
         align:'left', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'icon', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb06.js', // 该文件的文件名
-        styleWebCode:'', // PC端样式
-        styleWapCode:'', // 移动端样式
+        styleWebCode:'.smalltit006{background: url(../images/insidestyle/newicon06.png) no-repeat left 5px;padding-left:40px !important; background-size:24px;}', // PC端样式
+        styleWapCode:'.smalltit006{background: url(../images/insidestyle/newicon06.png) no-repeat left 0.2rem; background-size: 0.4rem; padding-left: 0.53333rem !important;}', // 移动端样式
         htmlString:'<p class="smalltit006">标题标题标题标题标题标题</p>'
     };
 }

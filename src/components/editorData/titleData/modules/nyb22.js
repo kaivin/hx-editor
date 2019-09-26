@@ -7,8 +7,8 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb22.js', // 该文件的文件名
-        styleWebCode:'', // PC端样式
-        styleWapCode:'', // 移动端样式
+        styleWebCode:'.smalltit022{text-align:center; padding-bottom:22px !important;}.smalltit022 strong{display:inline-block; border:1px solid #cd3522; color:#cd3522; padding:5px 20px; position:relative; font-weight:normal;}.smalltit022 strong:after, .smalltit022 strong:before{content:""; position:absolute; left:50%; transform:translateX(-50%);}.smalltit022 strong:after{background:#cd3522; width:120px; height:5px; bottom:-3px; border-radius:3px;}.smalltit022 strong:before{background:url(../images/insidestyle/smalltit022icon01.png) no-repeat center top; width:110px; height:10px; top:-5px; background-size:100%;}', // PC端样式
+        styleWapCode:'.smalltit022{text-align:center;}.smalltit022 strong{display:inline-block; border:1px solid #cd3522; color:#cd3522; padding:0.06667rem 0.2rem; position:relative; font-weight:normal;}.smalltit022 strong:after, .smalltit022 strong:before{content:""; position:absolute; left:50%; transform:translateX(-50%);}.smalltit022 strong:after{background:#cd3522; width:1.86667rem; height:0.06667rem; bottom:-0.04rem; border-radius:0.06667rem;}.smalltit022 strong:before{background:url(../images/insidestyle/smalltit022icon01.png) no-repeat center top; width:1.46667rem; height:0.13333rem; top:-0.06667rem; background-size:100%;}', // 移动端样式
         htmlString:'<p class="smalltit022"><strong>标题标题标题标题标题标题</strong></p>'
     };
 }

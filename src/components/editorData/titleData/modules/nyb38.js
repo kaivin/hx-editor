@@ -7,8 +7,8 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb38.js', // 该文件的文件名
-        styleWebCode:'', // PC端样式
-        styleWapCode:'', // 移动端样式
+        styleWebCode:'.smalltit038{clear:both; text-align:center !important;}.smalltit038 span{display:inline-block; border-radius:0.42667rem; padding:0.04rem 0.2rem; background:#b52832; color:#fff; position:relative;}.smalltit038 span::before, .smalltit038 span::after{content:""; background:url(../images/insidestyle/small020.png) no-repeat center top; width:0.46667rem; background-size:0.46667rem; height:0.21333rem; display:inline-block; vertical-align:middle; position:absolute; top:50%; margin-top:-0.10667rem;}.smalltit038 span::before{left:-0.45333rem;}.smalltit038 span::after{right:-0.45333rem; transform:scale(-1); margin-top:-0.10667rem;}', // PC端样式
+        styleWapCode:'.smalltit038{clear:both; text-align:center !important;}.smalltit038 span{display:inline-block; border-radius:0.42667rem; padding:0.04rem 0.2rem; background:#b52832; color:#fff; position:relative;}.smalltit038 span::before, .smalltit038 span::after{content:""; background:url(../images/insidestyle/small020.png) no-repeat center top; width:0.46667rem; background-size:0.46667rem; height:0.21333rem; display:inline-block; vertical-align:middle; position:absolute; top:50%; margin-top:-0.10667rem;}.smalltit038 span::before{left:-0.45333rem;}.smalltit038 span::after{right:-0.45333rem; transform:scale(-1); margin-top:-0.10667rem;}', // 移动端样式
         htmlString:'<p class="smalltit038"><span>标题标题标题标题标题标题</span></p>'
     };
 }

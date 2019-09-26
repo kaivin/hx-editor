@@ -7,8 +7,8 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb25.js', // 该文件的文件名
-        styleWebCode:'', // PC端样式
-        styleWapCode:'', // 移动端样式
+        styleWebCode:'.smalltit025{text-align:center; padding-bottom:20px !important;}.smalltit025 strong{display:inline-block; padding:0px 0px; position:relative; font-weight:normal;}.smalltit025 strong:after, .smalltit025 strong:before{content:""; position:absolute; background:url(../images/insidestyle/small012.gif) no-repeat center center; width:38px; height:20px; top:50%; transform:translateY(-50%);}.smalltit025 strong:after{left:-45px;}.smalltit025 strong:before{right:-45px;}', // PC端样式
+        styleWapCode:'.smalltit025{text-align:center;}.smalltit025 strong{display:inline-block; padding:0rem 0rem; position:relative; font-weight:normal;}.smalltit025 strong:after, .smalltit025 strong:before{content:""; position:absolute; background:url(../images/insidestyle/small012.gif) no-repeat center center; width:0.50667rem; height:0.26667rem; top:50%; transform:translateY(-50%);}.smalltit025 strong:after{left:-0.6rem;}.smalltit025 strong:before{right:-0.6rem;}', // 移动端样式
         htmlString:'<p class="smalltit025"><strong>标题标题标题标题标题标题</strong></p>'
     };
 }
