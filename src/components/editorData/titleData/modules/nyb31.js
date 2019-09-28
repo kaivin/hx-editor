@@ -7,7 +7,7 @@ export function getHtmlData (){
         align:'left', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'number', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb31.js', // 该文件的文件名
-        styleWebCode:'.smalltit031{padding-bottom:20px !important;}.smalltit031 strong{display:inline-block; position:relative; padding-left:47px; padding:0px 15px 0px 45px; border:1px solid #000; border-radius:19px; font-weight:normal;}.smalltit031 strong span{position:absolute; top:0px; background:#c32e0e; color:#ffffff; font-style:normal; left:0px; width:35px; height:35px; z-index:5; border-radius:50%; line-height:33px; font-weight:bold; text-align:center;}', // PC端样式
+        styleWebCode:'.smalltit031 {padding-bottom:20px !important;}.smalltit031 strong {display:inline-block;position:relative;padding-left:47px;padding:0px 15px 0px 45px;border:1px solid #000;border-radius:19px;font-weight:normal;}.smalltit031 strong span {position:absolute;top:0px;background:#c32e0e;color:#ffffff;font-style:normal;left:0px;width:35px;height:35px;z-index:5;border-radius:50%;line-height:33px;font-weight:bold;text-align:center;}', // PC端样式
         styleWapCode:'.smalltit031 strong{display:inline-block; position:relative; padding-left:47px; padding:0rem 0.33333rem 0rem 0.88rem; border:1px solid #000; border-radius:0.66667rem; font-weight:normal;}.smalltit031 strong span{position:absolute; top:1px; background:#c32e0e; color:#ffffff; font-style:normal; left:0px; width:0.77333rem; height:0.77333rem; z-index:5; border-radius:50%; line-height:0.77333rem; font-weight:bold; text-align:center;}', // 移动端样式
         htmlString:'<p class="smalltit031"><strong><span>1</span>标题标题标题标题标题标题</strong></p>'
     };

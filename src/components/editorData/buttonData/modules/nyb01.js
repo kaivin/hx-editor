@@ -9,6 +9,6 @@ export function getHtmlData (){
         fileName:'nyb01.js', // 该文件的文件名
         styleWebCode:'', // PC端样式
         styleWapCode:'', // 移动端样式
-        htmlString:'<p class="smalltit001">标题标题标题标题标题标题</p>'
+        htmlString:'<p class="smallbtn001"><a href="#"><img src="assets/images/insidestyle/smallbtn001.png" alt=""></a></p>'
     };
 }

@@ -7,7 +7,7 @@ export function getHtmlData (){
         align:'left', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'icon', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb12.js', // 该文件的文件名
-        styleWebCode:'.smalltit012{background: url(../images/insidestyle/newicon12.png) no-repeat left 5px;padding-left:40px !important; background-size:24px;}', // PC端样式
+        styleWebCode:'.smalltit012 { background: url(../images/insidestyle/newicon12.png) no-repeat left 7px; padding-left: 27px !important; background-size: 18px; }@media (min-width: 1366px) { .smalltit012 { background-position: left 12px; background-size: 20px; padding-left: 30px !important; }}@media (min-width: 1730px) { .smalltit012 { background-position: left 15px; background-size: 24px; padding-left: 35px !important; }}', // PC端样式
         styleWapCode:'.smalltit012{background: url(../images/insidestyle/newicon12.png) no-repeat left 0.2rem; background-size: 0.4rem; padding-left: 0.53333rem !important;}', // 移动端样式
         htmlString:'<p class="smalltit012">标题标题标题标题标题标题</p>'
     };
