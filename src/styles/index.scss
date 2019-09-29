@@ -272,6 +272,9 @@ html,body,#app,#app > .el-container{
   .smalltext015 .smalltext015txt{font-size:pxToRem(29);line-height:pxToRem(60);text-align: left;margin-bottom:pxToRem(30);color: #5a5a5a;}
   .smalltext015 .smalltext015pic {box-shadow: 0px 0px pxToRem(10) rgba(80, 0, 5, 0.5);border-radius:pxToRem(15);overflow: hidden;}
   .smalltext015 .smalltext015pic img{width:100%;}
+  [class^="websitetext"]{font-size:pxToRem(30); line-height:pxToRem(60);}
+  .websitetext1{border: 1px solid #bcd0f5;border-radius: pxToRem(40) 0 pxToRem(40) 0;padding: pxToRem(20) pxToRem(30);position: relative;}
+  .websitetext1:before{content: "";border: 1px dashed #bcd0f5;border-radius: pxToRem(40) 0 pxToRem(40) 0;position: absolute;left: pxToRem(10);right: pxToRem(10);top: pxToRem(10);bottom: pxToRem(10);}
   //=============按钮
   .smallbtn001{width:pxToRem(690); margin: 0 auto;}
 

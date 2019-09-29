@@ -42,7 +42,7 @@
                 <div class="item-content" v-html="item.htmlString"></div>
                 <div class="file-panel"><span>后台文件名：{{item.fileName}}</span></div>
                 <div class="edit-panel">
-                  <span v-clipboard:copy="item.styleCode+item.htmlString" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
+                  <span v-clipboard:copy="item.htmlString" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
                   <span v-clipboard:copy="item.styleWebCode" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType == 'web'">复制样式</span>
                   <span v-clipboard:copy="item.styleWapCode" v-clipboard:success="onCopy" v-clipboard:error="onError" v-else>复制样式</span>
                 </div>
