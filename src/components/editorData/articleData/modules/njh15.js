@@ -1,0 +1,12 @@
+
+export function getHtmlData (){
+    return {
+        type:"", // web(只用于PC端)|wap(只用于移动端)|(PC和移动端通用该值为空)|
+        color:'蓝色', // 多个颜色用逗号分隔 目前取值项：红色,橙色,蓝色,绿色,棕色,黄色,紫色,粉色,黑色,青色,灰色
+        effect:'static', // dynamic(动态)|static(静态)
+        fileName:'njh15.js', // 该文件的文件名
+        styleWebCode:'.websitetext16{width: fit-content;border: 1px solid #bcd0f5;padding: 10px 2%;display: block;text-indent: 0!important;margin: 30px auto!important;position:relative;}.websitetext16:before,.websitetext16:after,.websitetext16 span:before,.websitetext16 span:after{content:"";display: block;position: absolute;}.websitetext16:before{border-top: 15px solid #bcd0f5;border-right: 15px solid transparent;border-left: 0px solid transparent;left: 0;top: 0;}.websitetext16:after{border-top: 15px solid #bcd0f5;border-right: 0px solid transparent;border-left: 15px solid transparent;right: 0;top: 0;}.websitetext16 span:before{border-bottom: 15px solid #bcd0f5;border-right: 15px solid transparent;border-left: 0px solid transparent;left: 0;bottom: 0;}.websitetext16 span:after{border-bottom: 15px solid #bcd0f5;border-right: 0px solid transparent;border-left: 15px solid transparent;right: 0;bottom: 0;}', // PC端样式
+        styleWapCode:'.websitetext16{width:fit-content;border:1px solid #bcd0f5;padding:.2rem .4rem;display:block;margin:.4rem auto!important;position:relative}.websitetext16 span:after,.websitetext16 span:before,.websitetext16:after,.websitetext16:before{content:"";display:block;position:absolute}.websitetext16:before{border-top:.2rem solid #bcd0f5;border-right:.2rem solid transparent;border-left:0 solid transparent;left:0;top:0}.websitetext16:after{border-top:.2rem solid #bcd0f5;border-right:0 solid transparent;border-left:.2rem solid transparent;right:0;top:0}.websitetext16 span:before{border-bottom:.2rem solid #bcd0f5;border-right:.2rem solid transparent;border-left:0 solid transparent;left:0;bottom:0}.websitetext16 span:after{border-bottom:.2rem solid #bcd0f5;border-right:0 solid transparent;border-left:.2rem solid transparent;right:0;bottom:0}', // 移动端样式
+        htmlString:'<p class="websitetext16"><span>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span></p>'
+    };
+}
