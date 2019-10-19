@@ -272,12 +272,44 @@ html,body,#app,#app > .el-container{
   .smalltext015 .smalltext015txt{font-size:pxToRem(29);line-height:pxToRem(60);text-align: left;margin-bottom:pxToRem(30);color: #5a5a5a;}
   .smalltext015 .smalltext015pic {box-shadow: 0px 0px pxToRem(10) rgba(80, 0, 5, 0.5);border-radius:pxToRem(15);overflow: hidden;}
   .smalltext015 .smalltext015pic img{width:100%;}
+  //=============按钮
+  .smallbtn001{width:pxToRem(690); margin: 0 auto;}
+
+  // 标题*************************************************************************************
+  .special08{width:fit-content;background:#5885d0;color:#fff;padding:0 .32rem;display:block;margin:.4rem auto .9331875rem auto!important;position:relative}
+  .special08 b:after,.special08 b:before,.special08:after,.special08:before{content:"";width:.09333125rem;height:.6rem;background:#5885d0;display:block;position:absolute;bottom:0}
+  .special08:before{left:-.1733125rem}
+  .special08 b:after,.special08:after{width:.04rem;height:.36rem;left:-.2933125rem}
+  .special08 b:before{right:-.1733125rem}
+  .special08 b:after{left:auto;right:-.2933125rem}
+  .special08 i{width:.2933125rem;height:.3733125rem;background:url(../assets/images/njhimg/special08.gif) no-repeat;background-size:100%;display:block;position:absolute;left:50%;bottom:-.6rem;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%);transform:translateX(-50%)}
+  .special15{text-align:center;color:#4b75bd;position:relative}
+  .special15:before{content:"";width:100%;height:.0266875rem;background:#e0f2ff;display:block;position:absolute;left:0;top:.44rem}
+  .special15 b{background:#e0f2ff;display:inline-block;padding:0 10%;line-height:.6666875rem;position:relative}
+  .special15 b:after,.special15 b:before{content:"";width:.44rem;height:.44rem;background:#fff;display:block;position:absolute;left:-.21875rem;top:.1066875rem;transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg)}
+  .special15 b:after{left:auto;right:-.21875rem}
+  .special57{width:fit-content;display:block;position:relative}
+  .special57:after,.special57:before{content:"";height:.05333125rem;display:block;position:absolute;left:0}
+  .special57:before{width:50%;background:#87c1f3;bottom:0}
+  .special57:after{width:100%;background:#e1f1ff;bottom:-.1333125rem}
+  .special79{margin:.75rem 0 .4rem!important;padding:.48rem 0 0;position:relative;z-index: 1;}
+  .special79:before{content:"";width:100%;height:.1333125rem;background:#e7f3ff;border-top:.0266875rem solid #3876da;display:block;position:absolute;left:0;top:0}
+  .special79 b{color:#1555b8;display:inline-block;background:#e7f3ff;border-radius:50px;padding:0 .4rem;line-height:.6666875rem;box-shadow:0 -.04rem 0 #3876da;position:relative}
+  .special79 b:after,.special79 b:before{content:"";width:.1125rem;height:.48rem;background:#e7f3ff;border-left:1px solid #3876da;display:block;position:absolute;top:-.44rem;z-index:-1}
+  .special79 b:before{left:.6rem}
+  .special79 b:after{right:.6rem}
+  .special106{width:fit-content;background:#217dc8;color:#fff;border-radius:50px;padding:0 5%;box-shadow:0 .04rem 0 #9fcfff}
+  .special107{text-align:center}
+  .special107:after{content:"";width:100%;height:.41875rem;background:url(../assets/images/njhimg/special107-zs.png) center no-repeat;background-size:.5333125rem;display:block;position:relative;top:-.1333125rem}
+  .special107 b{background:#217dc8;display:inline-block;border-radius:50px;box-shadow:0 .0666875rem 0 #217dc8}
+  .special107 span{background:#217dc8;display:block;color:#fff;padding:0 .4rem;border-radius:50px;box-shadow:0 .05333125rem 0 #fff}
+  // 正文*************************************************************************************
   [class^="websitetext"]{font-size:pxToRem(30); line-height:pxToRem(60);}
   .websitetext1{border: 1px solid #bcd0f5;padding: 0.16rem;border-radius: 0.799875rem 0 0.799875rem 0;}
   .websitetext1 span{color: #4068ac;border: 1px dashed #bcd0f5;display: block;border-radius: 0.799875rem 0 0.799875rem 0;padding: 0.16rem 0.32rem;}
   .websitetext2{background:#fff;padding:0 .32rem .13333125rem;border-radius:.4rem;box-shadow:0 .05333125rem .05333125rem #d9e1ea;position:relative}
   .websitetext2:before{content:"";width:100%;height:.6rem;background:#5a8ccf;display:block;border-radius:0.4rem 0.4rem 0 0;position:absolute;left:0;top:0;}
-  .websitetext2 span{width:fit-content;background:#5a8ccf;display:block;text-align:center;color:#fff;margin:0 auto .13333125rem auto;padding:0.1rem 0.4rem;border-radius:0 0 .3rem .3rem}
+  .websitetext2 span{width:fit-content;background:#5a8ccf;display:block;text-align:center;color:#fff;margin:0 auto .13333125rem auto;padding:0.1rem 0.4rem;border-radius:0 0 .3rem .3rem;position: relative;}
   .websitetext3{background:#bcd0f5;border-radius:.2rem;padding: .13333125rem .32rem;color:#3a6ab8;margin: 0 0.16rem;position: relative;}
   .websitetext3:before{content: "";display:block;border:1px solid #bcd0f5;border-radius: 0.2rem;position: absolute;left: -0.16rem;right: -0.16rem;top:-0.16rem;bottom: -0.16rem;}
   .websitetext4{color:#3a4f9f!important;background:#bcd0f5;border-radius:.13333125rem;padding:.2rem .4rem;margin:.4rem 0 .6666875rem 0!important;position:relative}
@@ -312,10 +344,146 @@ html,body,#app,#app > .el-container{
   .websitetext16:after{border-top:.2rem solid #bcd0f5;border-right:0 solid transparent;border-left:.2rem solid transparent;right:0;top:0}
   .websitetext16 span:before{border-bottom:.2rem solid #bcd0f5;border-right:.2rem solid transparent;border-left:0 solid transparent;left:0;bottom:0}
   .websitetext16 span:after{border-bottom:.2rem solid #bcd0f5;border-right:0 solid transparent;border-left:.2rem solid transparent;right:0;bottom:0}
-
-  //=============按钮
-  .smallbtn001{width:pxToRem(690); margin: 0 auto;}
- 
+  [class^="special"]{font-size:pxToRem(30); line-height:pxToRem(60);}
+  .special01{background:#fafdff;padding:1px 0;position:relative;margin-top:.5333125rem}
+  .special01:before{content:"";border:1px dashed #e6e6e6;position:absolute;left:0;right:0;top:0;bottom:0}
+  .special01:after{content:"";width:.2666875rem;height:.2666875rem;border:1px solid #e6e6e6;border-radius:50%;position:absolute;right:1.3333125rem;top:-.1333125rem}
+  .special01 p{color:#101010;text-align:center}
+  .special01 p:first-child:after,.special01 p:first-child:before{content:"";width:.1733125rem;height:.1733125rem;background:#4d96d8;border-radius:50%;display:block;position:absolute;top:-.08rem}
+  .special01 p:first-child:before{left:1.23980625rem}
+  .special01 p:first-child:after{right:1.23980625rem}
+  .special02{background:#f2faff;padding:.4rem .32rem 1px;margin:1.3333125rem 0;position:relative}
+  .special02 .tit{width:5.5191375rem;background:#fff;border:2px solid #4d96d8;color:#4d96d8;font-weight:700;line-height:2.4;text-align:center;display:block;position:absolute;left:50%;top:-.5333125rem;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%);transform:translateX(-50%);margin:0;}
+  .special02 .tit span{width:.5866875rem;background:#fff;font-size:.5333125rem;font-weight:400;line-height:1;position:absolute;left:.2rem;top:-.32rem}
+  .special02 .tit span:before{content:"";width:.16rem;height:.16rem;background:#4d96d8;display:block;position:absolute;right:-.16rem;top:.2133125rem}
+  .special02 P{margin: 0.4rem 0;}
+  .special103{text-align:center}
+  .special103 b{background:#4772bb;background:-webkit-linear-gradient(#6091e5,#2f5595);background:-o-linear-gradient(#6091e5,#2f5595);background:-moz-linear-gradient(#6091e5,#2f5595);background:linear-gradient(#6091e5,#2f5595);display:inline-block;color:#fff;padding:0 8%;border-radius:50px;margin:0 5.5%;position:relative}
+  .special103 b:after,.special103 b:before{content:"";width:.6666875rem;height:.2rem;background:url(../assets/images/njhimg/special103-zs.png) no-repeat;display:block;background-size:1.10625rem;position:absolute;top:.2933125rem}
+  .special103 b:before{background-position:left center;left:-.8798625rem}
+  .special103 b:after{background-position:right center;right:-.8798625rem}
+  .special04{color:#767575;border:.0266875rem dashed #4a77ce;padding:.2rem .6rem;position:relative}
+  .special04:before{content:"";width:.52rem;height:.7999875rem;background:url(../assets/images/njhimg/smalltxt018-zs.png) center no-repeat #fff;background-size:100%;display:block;position:absolute;left:-.24rem;top:.32rem}
+  .special07{border:.02666875rem solid #5885d0;padding:.2rem 5%;position:relative}
+  .special07 span:after,.special07 span:before,.special07:after,.special07:before{content:"";width:.4rem;height:.4rem;background:url(../assets/images/njhimg/special07.jpg) no-repeat;background-size:100%;display:block;position:absolute}
+  .special07:before{left:-.02666875rem;top:-.02666875rem}
+  .special07:after{right:-.02666875rem;top:-.02666875rem;-moz-transform:scaleX(-1);-webkit-transform:scaleX(-1);-o-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH}
+  .special07 span{margin-bottom:.2rem;display:block}
+  .special07 span:before{left:-.02666875rem;bottom:-.02666875rem;-moz-transform:scaleY(-1);-webkit-transform:scaleY(-1);-o-transform:scaleY(-1);transform:scaleY(-1);filter:FlipV}
+  .special07 span:after{right:-.02666875rem;bottom:-.02666875rem;transform:rotate(180deg);-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg)}
+  .special14{border:.04rem solid #e0f2ff;padding:0 4%;margin:.4rem 0 0 0;position:relative}
+  .special14:before{content:"";width:100%;height:.16rem;background:url(../assets/images/njhimg/special14-zs.png) no-repeat;background-size:100%;display:block;position:absolute;left:0;top:-.2rem}
+  .special14:after{content:"";height:1px;background:#e0f2ff;position:absolute;left:.09375rem;right:.09375rem;top:.16rem}
+  .special14 p{margin: 0.4rem 0;}
+  .special18{background:#e0f2ff;color:#4e79bf;padding:.4rem 5%;position:relative}
+  .special18:after,.special18:before{content:"";width:.1466875rem;background:#94c6f7;border-radius:50px;position:absolute;left:0;top:-.09375rem;bottom:-.09375rem}
+  .special18:after{left:auto;right:0}
+  .special20{background:#e0f2ff;padding:.2rem 4%;margin:.4rem .2rem!important;position:relative}
+  .special20:after,.special20:before{content:"";width:1.24rem;height:.6666875rem;background:url(../assets/images/njhimg/special20-zs.png) no-repeat;background-size:100%;display:block;position:absolute}
+  .special20:before{left:-.16rem;top:-.16rem}
+  .special20:after{right:-.16rem;bottom:-.16rem;transform:rotate(180deg);-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg)}
+  .special21{border-left:.0266875rem solid #97c7f7;border-bottom:.0266875rem solid #97c7f7;position:relative;margin:.4rem 0;}
+  .special21:before{content:"";width:.5333125rem;height:.16rem;background:#97c7f7;display:block;position:absolute;right:0;bottom:-.16rem}
+  .special21 p{padding:0 4%;margin: 0.2rem 0;}
+  .special21 .p1{width:fit-content;background:#97c7f7;display:block;color:#fff;margin:0;padding:0 3%;position:relative}
+  .special21 .p1:before{content:"";width:.1333125rem;background:#97c7f7;display:block;position:absolute;left:-.2rem;top:0;bottom:0}
+  .special27{border:.0266875rem solid #94c6f7;padding:.1333125rem 4%;position:relative}
+  .special27:before{content:"";width:.32rem;height:.32rem;background:#fff;border:.0266875rem solid #94c6f7;border-radius:50%;display:block;position:absolute;left:-.16875rem;top:.2666875rem}
+  .special33{position:relative}
+  .special33:before{content:"";background:#c7e5ff;position:absolute;left:0;right:0;top:0;bottom:0;transform:rotate(-3deg);-ms-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-webkit-transform:rotate(-3deg);-o-transform:rotate(-3deg)}
+  .special33 span{background:#fff;border:.0266875rem solid #4a77ce;padding:.1333125rem 4%;position:relative;display: block;}
+  .special37{background:#97c7f7;border-radius:.1333125rem;color:#fff;padding:.48rem 3% .2rem;position:relative;margin-top:.8rem!important}
+  .special37:before{content:"";width:1.02650625rem;height:1.02650625rem;background:url(../assets/images/njhimg/special37-zs.png) center no-repeat #fff;border-radius:50%;background-size:.4rem;display:block;position:absolute;left:.4rem;top:-.48rem}
+  .special40{padding:.2rem;box-shadow:0 0 .1625rem rgba(182,188,194,.48);margin-top:.1333125rem;position:relative}
+  .special40:after,.special40:before{content:"";width:.24rem;height:.2rem;display:block;position:absolute;top:0}
+  .special40:before{background:#97c7f7;left:44%}
+  .special40:after{background:#c9e7ff;right:44%}
+  .special40 p{border:.0266875rem solid #c9e7ff;padding:1px .2666875rem;margin:0}
+  .special53{background:#e9f6ff;border:.0266875rem solid #97c7f7;margin:.8rem 0 0 0;padding: .4rem .2rem;text-align:center;position:relative;z-index:1}
+  .special53 p{margin:0}
+  .special53 .p1{background:url(../assets/images/njhimg/special53-bg.png) no-repeat;background-size:100% 100%;display:inline-block;border-radius:50px;padding:0 .6rem;position:absolute;top:-.48rem;left:26.5%}
+  .special53 .p1:before{content:"";background:#e9f6ff;border-radius:50px;position:absolute;left:-.12rem;right:-.12rem;top:-.12rem;bottom:-.12rem;z-index:-1}
+  .special54 .p1{background:#e1f1ff;padding:.1333125rem .32rem;box-shadow:.16rem .16rem 0 #87c1f3}
+  .special54 .p2{color:#3466b0;text-align:center;border:.0266875rem solid #87c1f3;border-radius:.1333125rem;margin:.48rem 0;position:relative}
+  .special54 .p2:after,.special54 .p2:before{content:"";width:.0266875rem;height:.48rem;background:#87c1f3;display:block;position:absolute;top:-.48rem;left:.32rem}
+  .special54 .p2:after{left:auto;right:.32rem}
+  .special58{background:#fff;border-radius:.2666875rem;padding:.5333125rem .32rem 1px;margin:.4rem 0 .6rem 0;box-shadow:0 -0.12rem 0 #3f79b5,0 0 .16rem #bedbf5 inset;position: relative;}
+  .special58 .p1 strong{background:#3f79b5;color:#fff;padding:0 .4rem;border-radius:.1333125rem;position:absolute;left:50%;top:-.1066875rem;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%);transform:translateX(-50%)}
+  .special58 p{margin: .4rem 0;}
+  .special60 p{background:url(../assets/images/njhimg/special60-bg.jpg) no-repeat;background-size:100% 100%;padding:0 .4rem .24rem;position:relative;z-index:1}
+  .special60 p i{font-size:.8rem;color:#3662aa;font-style:normal;font-weight:700;line-height:normal;padding-right:.4rem;display:inline-block;position:relative}
+  .special60 p i:before{content:"";width:.68125rem;height:.68125rem;background:#fff;border-radius:50%;display:block;position:absolute;left:-.025rem;top:.3466875rem;z-index:-1}
+  .special61{background: #f0f7fe;background-size:100% 100%;border-top:.05333125rem solid #97c7f7;border-bottom:.05333125rem solid #97c7f7;padding:.2rem .4rem}
+  .special61 p{margin:0}
+  .special65{background:url(../assets/images/njhimg/special65-zs.png) center bottom no-repeat;padding:1px .4rem;margin:.4rem 0;box-shadow:0 0 .46875rem rgba(111,164,218,.7) inset}
+  .special65 .tit{text-align:center;position:relative;z-index: 1;}
+  .special65 .tit:after,.special65 .tit:before{content:"";height:1px;background:#82b3e7;position:absolute;left:0;right:0;z-index:-1}
+  .special65 .tit:before{top:.346875rem}
+  .special65 .tit:after{bottom:.346875rem}
+  .special65 .tit strong{background:#82b3e7;display:inline-block;padding:0 .4rem;color:#fff}
+  .special65 p{margin: 0.4rem 0;}
+  .special66{padding:0 0 0 .4rem}
+  .special66 li{background:#deebf9;padding:.12rem;border-radius:.2666875rem;margin:.4rem 0;position:relative}
+  .special66 li p{background:url(../assets/images/njhimg/special28-bg.jpg) repeat;background-size:.14664375rem;border:1px solid #82b3e7;border-radius:.2666875rem;color:#3e62a8;margin:0;padding:.2rem .4rem;position:relative;z-index:1}
+  .special66 li p i{width:.9375rem;height:.9375rem;background:url(../assets/images/njhimg/special28-bg.jpg) repeat;background-size:.14664375rem;display:block;border:1px solid #82b3e7;border-radius:50%;font-size:.64rem;color:#3e62a8;text-align:center;line-height:.9375rem;font-weight:700;font-style:normal;position:absolute;left:-.5065875rem;top:-.4rem}
+  .special66 li p i:before{content:"";background:#deebf9;position:absolute;left:-.06875rem;right:-.06875rem;top:-.06875rem;bottom:-.06875rem;border-radius:50%;z-index:-1}
+  .special67{background:#f5fbff;border:1px solid #a7d5f8;border-radius:0 .8rem 0 0;padding:1px .4rem;margin:.8rem 0 .4rem 0;position:relative}
+  .special67:before{content:"";width:.69375rem;height:.8798625rem;background:url(../assets/images/njhimg/special67-zs.gif) center no-repeat;background-size:100%;position:absolute;left:-.2666875rem;top:-.4rem}
+  .special67 .tit{text-align:center}
+  .special67 .tit strong{color:#3c87d7;display:inline-block;position:relative;z-index:1}
+  .special67 .tit strong:before{content:"";width:.64rem;height:.64rem;background:#aadafe;border-radius:50%;display:block;position:absolute;left:-.2399625rem;top:0;z-index:-1}
+  .special67 .tit strong:after{content:"";width:.64rem;height:.64rem;border:.0264375rem dashed #aadafe;border-radius:50%;display:block;position:absolute;right:-.2rem;bottom:0;z-index:-1}
+  .special67 p{margin: 0.4rem 0;}
+  .special68{border:1px solid #a7d5f8;padding:.2rem .4rem;position:relative}
+  .special68:before{content:"";border:1px solid #a7d5f8;position:absolute;left: -1px;right:-1px;top:-.12rem;bottom:-1px;}
+  .special68:after{content:"";width:.1333125rem;height:.1333125rem;background:#aadafe;border:1px solid #6da3dd;border-radius:50%;display:block;position:absolute;right:.1333125rem;bottom:.1333125rem}
+  .special73{border:1px solid #88bff2;border-radius:.1333125rem;border-bottom:.1066875rem solid #88bff2;padding: 0.2rem 0.3rem;}
+  .special75{margin:.4rem 0;padding:1px .4rem;border-radius:.2rem;box-shadow:0 0 .875rem rgba(136,191,242,.34) inset}
+  .special75 .tit{width:fit-content;background:-webkit-linear-gradient(left,#84c8f3,#3d7bd0);background:-o-linear-gradient(right,#84c8f3,#3d7bd0);background:-moz-linear-gradient(right,#84c8f3,#3d7bd0);background:linear-gradient(to right,#84c8f3,#3d7bd0);color:#fff;font-weight:700;line-height:2.4;padding:0 .48rem;border-radius:0 50px 50px .24rem;margin-left:-.6rem;position:relative}
+  .special75 .tit:before{content:"";width:0;border-bottom:.2rem solid #5ea1df;border-right:0 solid transparent;border-left:.2rem solid transparent;position:absolute;top:-.2rem;left:0;}
+  .special75 .tit:after{content:"";width:.72rem;height:.32rem;background:url(../assets/images/njhimg/special74-zs2.png) center no-repeat;background-size:100%;display:inline-block;vertical-align:middle;margin-left:.2666875rem;margin-top:-.06875rem}
+  .special75 p{margin: 0.4rem 0;}
+  .special77{background:#e7f3ff;border-radius:.2666875rem;padding:.1333125rem .4rem;margin:.4rem 0;position:relative}
+  .special77:before{content:"";border:1px dashed #2c83db;border-radius:.2666875rem;position:absolute;left:.1333125rem;right:.1333125rem;top:.1333125rem;bottom:.1333125rem}
+  .special80{color:#4168bf;border:1px dashed #97c7f7;padding:.24rem .4rem;position:relative}
+  .special80:before{content:"";width:1.7064rem;height:.213375rem;background:url(../assets/images/njhimg/special80-zs.png) no-repeat #fff;background-size:100%;display:block;position:absolute;right:1.0625rem;bottom:-.09375rem}
+  .special85{position:relative;margin: pxToRem(30) 0;}
+  .special85:before{content:"";background:#a9d9f6;border-radius:0.08rem;position:absolute;left:0;top:0;right:0;bottom:0;transform:rotate(3deg);-ms-transform:rotate(3deg);-moz-transform:rotate(3deg);-webkit-transform:rotate(3deg);-o-transform:rotate(3deg)}
+  .special85:after{content:"";width:.3333125rem;height:.3333125rem;background:url(../assets/images/njhimg/special85-zs.png) center no-repeat;background-size:100%;display:block;position:absolute;left:.32rem;top:.2rem}
+  .special85 p{background:#eaf7ff;border-radius:0.08rem;padding:0.4rem 0.6666875rem;position:relative}
+  .special89{padding:0 .4rem 1px;position:relative}
+  .special89:before{content:"";border:.04rem solid #d4e7fe;border-radius:.1333125rem;position:absolute;left:0;right:0;top:.32rem;bottom:0;}
+  .special89:after{content:"";background:-webkit-linear-gradient(left,transparent,#fff 22%);background:-o-linear-gradient(right,transparent,#fff 22%);background:-moz-linear-gradient(right,transparent,#fff 22%);background:linear-gradient(to right,transparent,#fff 22%);position:absolute;left:0;right:0;top:.32rem;bottom:0;}
+  .special89 .tit{width:fit-content;background:#306fbd;color:#fff;border-radius:.2rem;padding:0 .24rem}
+  .special89 P{margin: .4rem 0;position: relative;z-index: 1;}
+  .special92{position: relative;z-index: 1;}
+  .special92 .tit{text-align:center;position:relative;padding:0}
+  .special92 .tit:after,.special92 .tit:before{content:"";width:100%;background:#8bb8ec;display:block;position:absolute;left:auto;bottom:auto;border:none;z-index:-1}
+  .special92 .tit:before{height:.0266875rem;top:.32rem}
+  .special92 .tit:after{height:.05333125rem;bottom:.32rem}
+  .special92 .tit b{display:inline-block;background:-webkit-linear-gradient(left,#80bcf4,#3069c6);background:-o-linear-gradient(right,#80bcf4,#3069c6);background:-moz-linear-gradient(right,#80bcf4,#3069c6);background:linear-gradient(to right,#80bcf4,#3069c6);color:#fff;border-radius:100px;padding:.0266875rem .4rem;position:relative}
+  .special92 .tit b:before{content:"";border:1px solid #fff;border-radius:100px;position:absolute;left:.08rem;right:.08rem;top:.08rem;bottom:.08rem}
+  .special92 p{position:relative;padding-left:.83986875rem;margin: 0.4rem 0;}
+  .special92 p:before{content:"";width:.0266875rem;border:1px dashed #8bb8ec;position:absolute;left:.3125rem;top:.4rem;bottom:-.6rem}
+  .special92 p b{color:#336dc6}
+  .special92 p i{width:.6rem;height:.6rem;background:#336dc6;border-radius:50%;display:block;color:#fff;font-weight:400;font-style:normal;line-height:1;position:absolute;left:0;top:.12rem;z-index:1}
+  .special92 p strong{width:.48rem;height:.48rem;background:#fff;border-radius:50%;font-size:.4rem;color:#336dc6;font-weight:400;text-align:center;line-height:.48rem;display:block;position:absolute;left:0;top:.05333125rem}
+  .special92 p:last-child:before{display:none}
+  .special96{position:relative;z-index:1}
+  .special96 p{background:#fff;box-shadow:0 0 .8625rem rgba(136,191,242,.64) inset;color:#1b5cab;position:relative;padding:.12rem .32rem .12rem 1.53125rem;border-radius: .4rem;margin: 0.4rem 0;}
+  .special96 p:before{content:"";background:#adc6e7;border-radius:.4rem;position:absolute;left:.1333125rem;right:-.1333125rem;top:.1333125rem;bottom:-.1333125rem;z-index:-1}
+  .special96 p b{width:1.333125rem;font-size:.9625rem;text-align:center;display:flex;align-items:center;justify-content:center;border-right:1px dashed #adc6e7;position:absolute;left:0;top:.2666875rem;bottom:.2666875rem}
+  .special96 p strong{display:block}
+  .special99{background:url(../assets/images/njhimg/special99-bg.png) center top no-repeat;background-size:100%;padding:.32rem .4rem .5333125rem;color:#3168c5}
+  .special102 li{background:#7bb1ec;border-radius:.2666875rem;padding:.1333125rem;margin:.8rem 0;position:relative;}
+  .special102 li .tit{background:#e6f2ff;border-radius:20px;position:absolute;left:.32rem;right:.32rem;top:-0.32rem;text-align:center;color:#185db1}
+  .special102 li .tit:after{content:"";width:82%;border-bottom:1px dashed #4070ac;display:block;margin:.0666875rem auto 0}
+  .special102 li p:last-child{background:#e6f2ff;border-radius:.2666875rem;margin:0;color:#185db1;padding:.64rem .32rem .32rem;box-shadow:0 3px 5px rgba(5,70,144,.58)}
+  .special105{text-align:center;position:relative;z-index: 1;}
+  .special105 b{background:#5785d2;background:-webkit-linear-gradient(left,#5785d2,#6697e4);background:-o-linear-gradient(right,#5785d2,#6697e4);background:-moz-linear-gradient(right,#5785d2,#6697e4);background:linear-gradient(to right,#5785d2,#6697e4);display:inline-block;color:#fff;border-radius:50px;padding:0 6%}
+  .special105:before{content:"";width:90%;height:.04rem;background: -webkit-linear-gradient(left,transparent,#5785d2,transparent);background: -o-linear-gradient(right,transparent,#5785d2,transparent);
+    background: -moz-linear-gradient(right,transparent,#5785d2,transparent);background: linear-gradient(to right,transparent,#5785d2,transparent);position:absolute;left:5%;top:.375rem;z-index:-1}
+  .special108{background:#eaf6ff;padding:.2rem .4rem;color:#2174b8;border:.0266875rem dashed #88c5f6;border-radius:.24rem;box-shadow:0 0 114px rgba(33,125,200,.3) inset}
 }
 .style-list.is-pc{
   max-width:1024px;
@@ -603,6 +771,11 @@ html,body,#app,#app > .el-container{
   .websitetext16:after{border-top: 15px solid #bcd0f5;border-right: 0px solid transparent;border-left: 15px solid transparent;right: 0;top: 0;}
   .websitetext16 span:before{border-bottom: 15px solid #bcd0f5;border-right: 15px solid transparent;border-left: 0px solid transparent;left: 0;bottom: 0;}
   .websitetext16 span:after{border-bottom: 15px solid #bcd0f5;border-right: 0px solid transparent;border-left: 15px solid transparent;right: 0;bottom: 0;}
+  [class^="special"]{max-width: 800px;font-size:16px;line-height:40px;margin: 0 auto;}
+  .special85{position:relative;margin: 30px auto;}
+  .special85:before{content:"";background:#a9d9f6;border-radius:5px;position:absolute;left:0;top:0;right:0;bottom:0;transform:rotate(3deg);-ms-transform:rotate(3deg);-moz-transform:rotate(3deg);-webkit-transform:rotate(3deg);-o-transform:rotate(3deg)}
+  .special85:after{content:"";width:25px;height:25px;background:url(../assets/images/njhimg/special85-zs.png) center no-repeat;background-size:100%;display:block;position:absolute;left:15px;top:15px}
+  .special85 p{background:#eaf7ff;border-radius:5px;padding:35px 42px;position:relative}
 
   //================按钮
 }

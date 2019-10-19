@@ -1,0 +1,12 @@
+
+export function getHtmlData (){
+    return {
+        type:"wap", // web(只用于PC端)|wap(只用于移动端)|(PC和移动端通用该值为空)|
+        color:'蓝色', // 多个颜色用逗号分隔 目前取值项：红色,橙色,蓝色,绿色,棕色,黄色,紫色,粉色,黑色,青色,灰色
+        effect:'static', // dynamic(动态)|static(静态)
+        fileName:'njh37.js', // 该文件的文件名
+        styleWebCode:'', // PC端样式
+        styleWapCode:'.special92{position: relative;z-index: 1;}.special92 .tit{text-align:center;position:relative;padding:0}.special92 .tit:after,.special92 .tit:before{content:"";width:100%;background:#8bb8ec;display:block;position:absolute;left:auto;bottom:auto;border:none;z-index:-1}.special92 .tit:before{height:.0266875rem;top:.32rem}.special92 .tit:after{height:.05333125rem;bottom:.32rem}.special92 .tit b{display:inline-block;background:-webkit-linear-gradient(left,#80bcf4,#3069c6);background:-o-linear-gradient(right,#80bcf4,#3069c6);background:-moz-linear-gradient(right,#80bcf4,#3069c6);background:linear-gradient(to right,#80bcf4,#3069c6);color:#fff;border-radius:100px;padding:.0266875rem .4rem;position:relative}.special92 .tit b:before{content:"";border:1px solid #fff;border-radius:100px;position:absolute;left:.08rem;right:.08rem;top:.08rem;bottom:.08rem}.special92 p{position:relative;padding-left:.83986875rem;margin: 0.4rem 0;}.special92 p:before{content:"";width:.0266875rem;border:1px dashed #8bb8ec;position:absolute;left:.3125rem;top:.4rem;bottom:-.6rem}.special92 p b{color:#336dc6}.special92 p i{width:.6rem;height:.6rem;background:#336dc6;border-radius:50%;display:block;color:#fff;font-weight:400;font-style:normal;line-height:1;position:absolute;left:0;top:.12rem;z-index:1}.special92 p strong{width:.48rem;height:.48rem;background:#fff;border-radius:50%;font-size:.4rem;color:#336dc6;font-weight:400;text-align:center;line-height:.48rem;display:block;position:absolute;left:0;top:.05333125rem}.special92 p:last-child:before{display:none}', // 移动端样式
+        htmlString:'<div class="special92"><p class="tit"><b>标题标题标题标题</b></p><p><i><strong>1</strong></i>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p><p><i><strong>2</strong></i>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p><p><i><strong>3</strong></i>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p></div>'
+    };
+}
