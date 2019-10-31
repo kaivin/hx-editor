@@ -1,5 +1,3 @@
-
-
 function getArticleData(){
     const modulesFiles = require.context('./modules', false, /\.js$/);
     const articleModules = modulesFiles.keys().reduce((articleModules, modulePath) => {
