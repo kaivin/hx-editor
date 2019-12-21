@@ -147,7 +147,7 @@ module.exports={
                         loader: 'url-loader',
                         options: {
                             limit: 8192,        // 小于8192字节的图片打包成base 64图片
-                            name:'images/[name].[hash:8].[ext]',
+                            name:'images/[name].[ext]',
                             publicPath:''
                         }
                     }
@@ -160,7 +160,7 @@ module.exports={
                     loader: 'file-loader',
                     options: {
                         limit: 8192, 
-                        name: 'fonts/[name].[ext]?[hash:8]',
+                        name: 'fonts/[name].[ext]',
                         publicPath:''
                     },
                 }],
@@ -171,7 +171,7 @@ module.exports={
                     loader: 'file-loader',
                     options: {
                         limit: 8192, 
-                        name: 'audios/[name].[ext]?[hash:8]',
+                        name: 'audios/[name].[ext]',
                         publicPath:''
                     },
                 }],
