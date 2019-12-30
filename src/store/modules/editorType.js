@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 
 const state = {
     editorType: Cookies.get('editorType') ? Cookies.get('editorType') : 'title',
-    terminalType: Cookies.get('terminalType') ? Cookies.get('terminalType') : 'web',
+    terminalType: Cookies.get('terminalType') ? Cookies.get('terminalType') : '',
 };
   
   

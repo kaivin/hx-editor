@@ -2,8 +2,12 @@
     <div class="page-root">
       <div class="filter-panel">
         <el-scrollbar style="height:100%;">
-          <div class="btn-panel" v-bind:class="tType=='web'?'is-pc':'is-wap'"><span v-bind:class="tType=='web'?'on':''" v-on:click="changeTerminalType('web')">PC端</span><span v-bind:class="tType=='wap'?'on':''" v-on:click="changeTerminalType('wap')">移动端</span></div>
+          <!-- <div class="btn-panel" v-bind:class="tType=='web'?'is-pc':'is-wap'"><span v-bind:class="tType=='web'?'on':''" v-on:click="changeTerminalType('web')">PC端</span><span v-bind:class="tType=='wap'?'on':''" v-on:click="changeTerminalType('wap')">移动端</span></div> -->
           <div class="filter-wrap public-panel">
+            <dl class="filter-item fst-panel">
+              <dt>适用网站</dt>
+              <dd><el-checkbox v-for="(item,index) in publicFilteringData.siteType" v-bind:key="index" v-model="item.isSelected" v-bind:label="item.name" border v-bind:size="size" v-on:change="filteringSiteTypeChange(item)"><span>{{item.name}}</span></el-checkbox></dd>
+            </dl>
             <h2>筛选色系</h2>
             <dl class="filter-item">
               <dt>模式</dt>
@@ -35,20 +39,28 @@
           <div class="filter-wrap button-panel" v-else></div>
         </el-scrollbar>
       </div>
-      <div class="style-list" v-bind:class="tType=='web'?'is-pc':'is-wap'">
-        <el-scrollbar style="height:100%;">
-          <div class="item-list">
-              <div class="item-wrap" v-for="(item,index) in currentData" v-bind:key="index">
-                <div class="item-content" v-html="item.htmlString"></div>
+      <div class="style-wrapper">
+        <p><span v-if="tType!='wap'">web站点预览</span><span v-if="tType!='web'">wap站点预览</span></p>
+        <div class="style-list">
+          <el-scrollbar style="height:100%;">
+            <div class="item-list">
+              <div class="item-wrapper" v-for="(item,index) in currentData" v-bind:key="index">
                 <div class="file-panel"><span>后台文件名：{{item.fileName}}</span></div>
+                <div class="item-wrap is-pc" v-if="tType!='wap'">
+                  <div class="item-content" v-html="item.htmlString"></div>
+                </div>
+                <div class="item-wrap is-wap" v-if="tType!='web'">
+                  <div class="item-content" v-html="item.htmlString"></div>
+                </div>
                 <div class="edit-panel">
                   <span v-clipboard:copy="item.htmlString" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
-                  <span v-clipboard:copy="item.styleWebCode" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType == 'web'">复制样式</span>
-                  <span v-clipboard:copy="item.styleWapCode" v-clipboard:success="onCopy" v-clipboard:error="onError" v-else>复制样式</span>
+                  <span v-clipboard:copy="item.styleWebCode" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType!='wap'">复制web样式</span>
+                  <span v-clipboard:copy="item.styleWapCode" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType!='web'">复制wap样式</span>
                 </div>
               </div>
-          </div>
-        </el-scrollbar>
+            </div>
+          </el-scrollbar>
+        </div>
       </div>
     </div>
 </template>
@@ -70,6 +82,11 @@ export default {
       buttonData:[],
       size: 'small',
       publicFilteringData:{
+        selectedSiteType:'',
+        siteType:[
+          {key:'web',name:'PC网站',isSelected:true},
+          {key:'wap',name:'移动网站',isSelected:true}
+        ],
         filteringColorModeData:[
           {key:"sum",name:'并集'},
           {key:"intersection",name:'交集'}
@@ -168,6 +185,35 @@ export default {
       var typeValue = value;
       this.$store.dispatch('editorType/changeTerminalType',typeValue);
     },
+    // pc和移动端适用点击事件
+    filteringSiteTypeChange:function(items){
+      var $this = this;
+      $this.publicFilteringData.selectedSiteType = '';
+      if(items.key == 'web'&& !items.isSelected){
+        $this.publicFilteringData.siteType.forEach(function(item,index){
+          if(!item.isSelected&&item.key=='wap'){
+            item.isSelected = true;
+          }
+        });
+      }
+      if(items.key == 'wap'&& !items.isSelected){
+        $this.publicFilteringData.siteType.forEach(function(item,index){
+          if(!item.isSelected&&item.key=='web'){
+            item.isSelected = true;
+          }
+        });
+      }
+      $this.publicFilteringData.siteType.forEach(function(item,index){
+        if(item.isSelected){
+          $this.publicFilteringData.selectedSiteType += item.key;
+        }
+      });
+      if($this.publicFilteringData.selectedSiteType == 'webwap'){
+        $this.publicFilteringData.selectedSiteType = '';
+      }
+      console.log($this.publicFilteringData.selectedSiteType);
+      $this.$store.dispatch('editorType/changeTerminalType',$this.publicFilteringData.selectedSiteType);
+    },
     // 获取当前筛选条件数据
     getCurrentData:function(a,b,c){
       var $this = this;
@@ -183,12 +229,12 @@ export default {
               colorArray.forEach(function(item1,index1){
                 if($this.currentFiltering.color.length>0){// 筛选色值
                   $this.currentFiltering.color.forEach(function(item2,index2){
-                    if(item1==item2&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
+                    if(item1==item2&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
                       currentData.push(item);
                     }
                   });
                 }else{// 未选中任何色系
-                  if((item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
+                  if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
                     currentData.push(item);
                   }
                 }
@@ -202,18 +248,18 @@ export default {
               if($this.currentFiltering.color.length==1){ // 只筛选一个颜色
                 if(colorArray.length>0){
                   colorArray.forEach(function(item1,index1){
-                    if(item1==$this.currentFiltering.color[0]&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
+                    if(item1==$this.currentFiltering.color[0]&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
                         currentData.push(item);
                       }
                   });
                 }
               }else{// 多个筛选色值
-                if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
+                if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
                   currentData.push(item);
                 }
               }
             }else{// 未选中任何色系
-              if((item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
+              if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
                 currentData.push(item);
               }
             }
@@ -227,12 +273,12 @@ export default {
               colorArray.forEach(function(item1,index1){
                 if($this.currentFiltering.color.length>0){// 筛选色值
                   $this.currentFiltering.color.forEach(function(item2,index2){
-                    if(item1==item2&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    if(item1==item2&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                       currentData.push(item);
                     }
                   });
                 }else{// 未选中任何色系
-                  if((item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                  if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                     currentData.push(item);
                   }
                 }
@@ -246,18 +292,18 @@ export default {
               if($this.currentFiltering.color.length==1){ // 只筛选一个颜色
                 if(colorArray.length>0){
                   colorArray.forEach(function(item1,index1){
-                    if(item1==$this.currentFiltering.color[0]&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    if(item1==$this.currentFiltering.color[0]&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                         currentData.push(item);
                       }
                   });
                 }
               }else{// 多个筛选色值
-                if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                   currentData.push(item);
                 }
               }
             }else{// 未选中任何色系
-              if((item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+              if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                 currentData.push(item);
               }
             }
@@ -271,12 +317,12 @@ export default {
               colorArray.forEach(function(item1,index1){
                 if($this.currentFiltering.color.length>0){// 筛选色值
                   $this.currentFiltering.color.forEach(function(item2,index2){
-                    if(item1==item2&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    if(item1==item2&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                       currentData.push(item);
                     }
                   });
                 }else{// 未选中任何色系
-                  if((item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                  if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                     currentData.push(item);
                   }
                 }
@@ -290,18 +336,18 @@ export default {
               if($this.currentFiltering.color.length==1){ // 只筛选一个颜色
                 if(colorArray.length>0){
                   colorArray.forEach(function(item1,index1){
-                    if(item1==$this.currentFiltering.color[0]&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    if(item1==$this.currentFiltering.color[0]&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                         currentData.push(item);
                       }
                   });
                 }
               }else{// 多个筛选色值
-                if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                   currentData.push(item);
                 }
               }
             }else{// 未选中任何色系
-              if((item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+              if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                 currentData.push(item);
               }
             }
@@ -315,12 +361,12 @@ export default {
               colorArray.forEach(function(item1,index1){
                 if($this.currentFiltering.color.length>0){// 筛选色值
                   $this.currentFiltering.color.forEach(function(item2,index2){
-                    if(item1==item2&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    if(item1==item2&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                       currentData.push(item);
                     }
                   });
                 }else{// 未选中任何色系
-                  if((item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                  if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                     currentData.push(item);
                   }
                 }
@@ -334,18 +380,18 @@ export default {
               if($this.currentFiltering.color.length==1){ // 只筛选一个颜色
                 if(colorArray.length>0){
                   colorArray.forEach(function(item1,index1){
-                    if(item1==$this.currentFiltering.color[0]&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    if(item1==$this.currentFiltering.color[0]&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                         currentData.push(item);
                       }
                   });
                 }
               }else{// 多个筛选色值
-                if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                   currentData.push(item);
                 }
               }
             }else{// 未选中任何色系
-              if((item.type == tType||item.type=='')&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+              if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
                 currentData.push(item);
               }
             }
@@ -415,13 +461,23 @@ export default {
 </script>
 
 <style lang="scss">
+.page-root{
+  position: relative;
+  padding-left: 332px;
+}
 .filter-panel{
   width:324px;
   background: #fff;
   float:left;
-  margin-right:10px;
   height:100%;
-  overflow:hidden;
+  position: absolute;
+  left:0;
+  top:0;
+  background: #fff;
+  z-index: 100;
+  .fst-panel{
+    margin-top: 10px;
+  }
   .filter-wrap{
     width:100%;
     padding: 10px;
@@ -431,6 +487,7 @@ export default {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 10px;
+      margin-top: 20px;
     }
     .filter-item{
       width:100%;
@@ -536,6 +593,32 @@ export default {
   overflow: hidden;
   background: #fff;
 }
+.style-wrapper{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 64px 8px 8px 0;
+  >p{
+    display: block;
+    height: 48px;
+    position: absolute;
+    left:0;
+    top:8px;
+    right: 8px;
+    background: #fff;
+    span{
+      width: 50%;
+      float:left;
+      display: block;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      font-size: 18px;
+      color: $primary;
+      font-weight: bold;
+    }
+  }
+}
 .btn-panel{
   width: 100%;
   margin: 0 auto;
@@ -579,18 +662,25 @@ export default {
 .item-list{
   width:100%;
   overflow: hidden;
-  .item-wrap{
-    width:100%;
+  .item-wrapper{
+    width: 100%;
     overflow: hidden;
     position: relative;
+    &:before{
+      content:'';
+      display: block;
+      width: 10px;
+      height: 100%;
+      top:0;
+      bottom: 0;
+      background: #f5f5f5;
+      left: 820px;
+      position: absolute;
+    }
     &:hover{
       .edit-panel,.file-panel{
         display: block;
       }
-    }
-    .item-content{
-      width:100%;
-      overflow: hidden;
     }
     .file-panel{
       position: absolute;
@@ -637,8 +727,25 @@ export default {
       }
     }
   }
-  .item-wrap+.item-wrap{
-    border-top: 10px solid #f5f5f5;
+  .item-wrap{
+    overflow: hidden;
+    position: relative;
+    float:left;
+    .item-content{
+      width:100%;
+      @extend %clearfix;
+      background: url(../../assets/images/bg_mark.jpg) left top repeat;
+    }
+  }
+  .item-wrap.is-pc{
+    width: 820px;
+    margin-right: 10px;
+  }
+  .item-wrap.is-wap{
+    width: 750px;
+  }
+  .item-wrapper+.item-wrapper{
+    border-top: 8px solid #f5f5f5;
   }
 }
 </style>

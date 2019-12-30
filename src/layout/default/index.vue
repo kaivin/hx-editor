@@ -1,6 +1,5 @@
 <template>
   <el-container>
-    <sidebar />
     <el-container>
       <el-header>
         <header-module />
@@ -18,11 +17,10 @@
 
 <script>
 
-import { Sidebar, HeaderModule } from './components';
+import { HeaderModule } from './components';
 export default {
   name: 'Layout',
   components: {
-    Sidebar,
     HeaderModule,
   },
   computed:{
@@ -42,6 +40,6 @@ export default {
   background-color: #f5f5f5;
   color: #333;
   overflow: hidden!important;
-  padding:10px!important;
+  padding:0!important;
 }
 </style>

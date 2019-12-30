@@ -28,11 +28,9 @@ html,body,#app,#app > .el-container{
   height:100%; 
   overflow:hidden; 
 }
-.style-list.is-wap{
-  max-width: 750px;
-  min-width: 320px;
+.item-wrap.is-wap{
   //=============标题
-  .item-content{padding:pxToRem(15) pxToRem(30); }
+  padding:pxToRem(40) pxToRem(30); 
   [class^="smalltit"]{clear: both;font-size:pxToRem(30);line-height:pxToRem(60);color: #555;}
   .smalltit001{background:url(../assets/images/insidestyle/newicon01.png) no-repeat left pxToRem(15); }
   .smalltit002{background:url(../assets/images/insidestyle/newicon02.png) no-repeat left pxToRem(15); }
@@ -723,10 +721,8 @@ html,body,#app,#app > .el-container{
   .smallbtn003 dt{width:22%;float:right;background:url(../assets/images/insidestyle/smallbtn003-btnbg.jpg) no-repeat;background-size:100% 100%;padding:.2666875rem 0 .32rem 0;border-radius:0 .1333125rem .1333125rem 0}
   .smallbtn003 dt a{font-size:.375rem;line-height: 1;text-align:center;color:#fff;display:block;background:url(../assets/images/insidestyle/smallbtn003-btn.png) center top no-repeat;background-size:.69375rem;padding-top:.8265375rem}
 }
-.style-list.is-pc{
-  max-width:1024px;
-  min-width:320px;
-  .item-content{padding:15px 30px; }
+.item-wrap.is-pc{
+  padding:40px 30px;
   [class^="smalltit"]{color: #566367;/*margin: 10px 0px;*/font-size: 12px;line-height: 24px;}
   @media (min-width: 1366px){[class^="smalltit"]{font-size: 12px;line-height: 27px;}}
   @media (min-width: 1500px){[class^="smalltit"]{font-size: 14px;line-height: 30px;/*margin: 15px 0px;*/}}
