@@ -1,6 +1,7 @@
 <template>
     <div class="page-root">
-      <div class="filter-panel">
+      <div class="filter-panel" v-bind:class="isOpen?'is-open':'is-close'">
+        <div class="arrow-panel" v-on:click="toggleFilterClick"><span></span></div>
         <el-scrollbar style="height:100%;">
           <!-- <div class="btn-panel" v-bind:class="tType=='web'?'is-pc':'is-wap'"><span v-bind:class="tType=='web'?'on':''" v-on:click="changeTerminalType('web')">PC端</span><span v-bind:class="tType=='wap'?'on':''" v-on:click="changeTerminalType('wap')">移动端</span></div> -->
           <div class="filter-wrap public-panel">
@@ -39,11 +40,11 @@
           <div class="filter-wrap button-panel" v-else></div>
         </el-scrollbar>
       </div>
-      <div class="style-wrapper">
-        <p><span v-if="tType!='wap'">web站点预览</span><span v-if="tType!='web'">wap站点预览</span></p>
+      <div class="style-wrapper" v-bind:class="isOpen?'is-open':'is-close'">
+        <p v-bind:class="isSingle?'single-panel':''"><span v-if="tType!='wap'">web站点预览</span><span v-if="tType!='web'">wap站点预览</span></p>
         <div class="style-list">
           <el-scrollbar style="height:100%;">
-            <div class="item-list">
+            <div class="item-list" v-bind:class="isSingle?'single-panel':''">
               <div class="item-wrapper" v-for="(item,index) in currentData" v-bind:key="index">
                 <div class="file-panel"><span>后台文件名：{{item.fileName}}</span></div>
                 <div class="item-wrap is-pc" v-if="tType!='wap'">
@@ -65,7 +66,6 @@
     </div>
 </template>
 
-
 <script>
 import { mapGetters } from 'vuex';
 import {getTitleData} from '@/components/editorData/titleData/index.js';
@@ -81,6 +81,8 @@ export default {
       imageData:[],
       buttonData:[],
       size: 'small',
+      isOpen: false,
+      isSingle: false,
       publicFilteringData:{
         selectedSiteType:'',
         siteType:[
@@ -180,6 +182,11 @@ export default {
     onError: function (e) {
       this.$message.error('很遗憾，复制失败!');
     },
+    // 搜索条件隐藏开启点击事件
+    toggleFilterClick:function(){
+      var $this = this;
+      $this.isOpen = !$this.isOpen;
+    },
     // pc和移动端切换事件
     changeTerminalType(value){
       var typeValue = value;
@@ -210,6 +217,11 @@ export default {
       });
       if($this.publicFilteringData.selectedSiteType == 'webwap'){
         $this.publicFilteringData.selectedSiteType = '';
+      }
+      if($this.publicFilteringData.selectedSiteType == ''){
+        $this.isSingle = false;
+      }else{
+        $this.isSingle = true;
       }
       console.log($this.publicFilteringData.selectedSiteType);
       $this.$store.dispatch('editorType/changeTerminalType',$this.publicFilteringData.selectedSiteType);
@@ -463,18 +475,64 @@ export default {
 <style lang="scss">
 .page-root{
   position: relative;
-  padding-left: 332px;
+}
+.filter-panel.is-open{
+  left:0;
+}
+.filter-panel.is-close{
+  left:-324px;
+  .arrow-panel{
+    span{
+      -webkit-transform: rotate(180deg) translateX(-16px);
+      transform: rotate(180deg) translateX(-16px);
+    }
+  }
 }
 .filter-panel{
   width:324px;
   background: #fff;
-  float:left;
   height:100%;
   position: absolute;
-  left:0;
   top:0;
   background: #fff;
   z-index: 100;
+  -webkit-box-shadow: 10px 0 10px rgba(0,0,0,.1);
+  box-shadow: 10px 0 10px rgba(0,0,0,.1);
+  transition: all .3s linear;
+  .arrow-panel{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: -48px;
+    top: 8px;
+    border-radius: 0 4px 4px 0;
+    background: #fff;
+  -webkit-box-shadow: 10px 0 10px rgba(0,0,0,.1);
+  box-shadow: 10px 0 10px rgba(0,0,0,.1);
+  cursor: pointer;
+  span{
+    display: block;
+    width: 3px;
+    height: 20px;
+    background: $primary;
+    left: 12px;
+    top: 13px;
+    position: absolute;
+    &:before{
+      content:'';
+      display: block;
+      width: 16px;
+      height: 16px;
+      right: -24px;
+      top: 2px;
+      border-top: 3px solid $primary;
+      border-left: 3px solid $primary;
+      position: absolute;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+  }
   .fst-panel{
     margin-top: 10px;
   }
@@ -593,19 +651,29 @@ export default {
   overflow: hidden;
   background: #fff;
 }
+
+
 .style-wrapper{
   height: 100%;
   overflow: hidden;
   position: relative;
-  padding: 64px 8px 8px 0;
+  padding: 64px 8px 8px 56px;
+  transition: all .3s linear;
+  >p.single-panel{
+    span{
+      float:none;
+      margin: 0 auto;
+    }
+  }
   >p{
     display: block;
     height: 48px;
     position: absolute;
-    left:0;
+    left:56px;
     top:8px;
     right: 8px;
     background: #fff;
+  transition: all .3s linear;
     span{
       width: 50%;
       float:left;
@@ -659,6 +727,16 @@ export default {
   overflow-y: scroll!important;
   overflow-x: hidden!important;
 }
+.item-list.single-panel{
+  
+  .item-wrap{
+    margin-left:auto;
+    margin-right: auto;
+  }
+  .item-wrap.is-pc,.item-wrap.is-wap{
+    float:none;
+  }
+}
 .item-list{
   width:100%;
   overflow: hidden;
@@ -674,7 +752,7 @@ export default {
       top:0;
       bottom: 0;
       background: #f5f5f5;
-      left: 820px;
+      right: 760px;
       position: absolute;
     }
     &:hover{
@@ -730,7 +808,6 @@ export default {
   .item-wrap{
     overflow: hidden;
     position: relative;
-    float:left;
     .item-content{
       width:100%;
       @extend %clearfix;
@@ -738,11 +815,12 @@ export default {
     }
   }
   .item-wrap.is-pc{
-    width: 820px;
-    margin-right: 10px;
+    width: calc(100% - 780px);
+    float:left;
   }
   .item-wrap.is-wap{
     width: 750px;
+    float:right;
   }
   .item-wrapper+.item-wrapper{
     border-top: 8px solid #f5f5f5;
