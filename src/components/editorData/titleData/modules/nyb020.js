@@ -7,7 +7,7 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb20.js', // 该文件的文件名
-        styleWebCode:'.smalltit020{text-align:center;}.smalltit020 strong{position:relative;font-weight:normal;display:inline-block;border:1px solid #c7090f;padding:3px 15px;box-shadow:0px 3px 0px #ff545894;}', // PC端样式
+        styleWebCode:'.smalltit020{text-align:center; margin-bottom:25px!important;font-size: 20px!important;margin-top:30px!important;} .smalltit020 strong{position:relative;display:inline-block;border:1px solid #c7090f;padding: 5px 15px;box-shadow:0px 3px 0px #ff545894;} @media (max-width:1440px) {.smalltit020{margin-bottom:20px!important;font-size:18px!important;} .smalltit020 strong{padding: 8px 15px;}} @media (max-width:1280px) {.smalltit020 strong{padding:9px 15px;}}', // PC端样式
         styleWapCode:'.smalltit020{text-align:center;}.smalltit020 strong{position:relative;display:inline-block;border:1px solid #c7090f;padding:0rem 0.2rem;box-shadow:0px 0.06667rem 0px #ff545894;color:#c7090f;font-weight:normal;}', // 移动端样式
         htmlString:'<p class="smalltit020"><strong>标题标题标题标题标题标题</strong></p>'
     };

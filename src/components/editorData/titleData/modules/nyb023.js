@@ -7,7 +7,7 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb23.js', // 该文件的文件名
-        styleWebCode:'.smalltit023{text-align:center;}.smalltit023 strong{display:inline-block;position:relative;background:#cd3522;border-radius:3px;color:#fff;font-weight:normal;padding:3px 15px;position:relative;}.smalltit023 strong:after{content:"";position:absolute;left:5px;bottom:5px;right:5px;height:1px;background:#fff;}', // PC端样式
+        styleWebCode:'.smalltit023{text-align:center;font-size: 20px!important;margin-top:30px!important;} .smalltit023 strong{display:inline-block;position:relative;background:#cd3522;border-radius:3px;color:#fff;padding: 6px 15px;} @media (max-width:1440px) {.smalltit023{font-size:18px!important;} .smalltit023 strong{padding: 9px 15px;}} @media (max-width:1280px) {.smalltit023 strong{padding: 10px 15px;}}', // PC端样式
         styleWapCode:'.smalltit023{text-align:center;}.smalltit023 strong{display:inline-block;position:relative;background:#cd3522;border-radius:0.04rem;color:#fff;font-weight:normal;padding:0rem 0.2rem;position:relative;}.smalltit023 strong:after{content:"";position:absolute;left:0.06667rem;bottom:0.06667rem;right:0.06667rem;height:1px;background:#fff;}', // 移动端样式
         htmlString:'<p class="smalltit023"><strong>标题标题标题标题标题标题</strong></p>'
     };

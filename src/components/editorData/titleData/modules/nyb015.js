@@ -7,7 +7,7 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb15.js', // 该文件的文件名
-        styleWebCode:'.smalltit015{text-align:center;position:relative;z-index:3;}.smalltit015 strong{border:1px solid #577f88;display:inline-block;margin:0px;padding:2px 15px;background:#fff;font-weight:normal;position:relative;}.smalltit015 strong:after{content:"";z-index:-1;border:1px dashed #f1a927;position:absolute;left:5px;bottom:-5px;top:5px;right:-5px;}', // PC端样式
+        styleWebCode:'.smalltit015{text-align:center;position:relative;z-index:3;margin-top:30px!important;margin-bottom: 25px!important;font-size: 20px!important;} .smalltit015 strong{border:1px solid #577f88;display:inline-block;margin:0px;padding: 5px 15px;background:#fff;position:relative;} .smalltit015 strong:after{content:"";z-index:-1;border:1px dashed #f1a927;position:absolute;left:5px;bottom: -5px;top:5px;right:-5px;} @media (max-width:1440px) {.smalltit015{margin-bottom: 20px!important;font-size:18px!important;} .smalltit015 strong{padding: 7px 15px;}} @media (max-width:1280px) {.smalltit015 strong{padding:8px 15px;}}', // PC端样式
         styleWapCode:'.smalltit015{text-align:center;position:relative;z-index:10;}.smalltit015 strong{border:1px solid #577f88;display:inline-block;margin:0rem;padding:0rem 0.2rem;background:#fff;font-weight:normal;position:relative;}.smalltit015 strong:after{content:"";border:1px dashed #f1a927;position:absolute;left:0.06667rem;bottom:-0.06667rem;top:0.06667rem;right:-0.06667rem;z-index:-1;}', // 移动端样式
         htmlString:'<p class="smalltit015"><strong>标题标题标题标题标题标题</strong></p>'
     };

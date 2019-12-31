@@ -7,7 +7,7 @@ export function getHtmlData (){
         align:'left', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'icon', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb39.js', // 该文件的文件名
-        styleWebCode:'.smalltit039{background:url(../images/insidestyle/newicon15.png) no-repeat left 7px;background-size:15px;padding-left:25px !important;}', // PC端样式
+        styleWebCode:'.smalltit039 {background: url(../images/insidestyle/newicon15.png) no-repeat left 8px;background-size: 20px;padding-left: 30px;} @media (max-width:1760px) {.smalltit039 {background-position: left 8px;}} @media (max-width:1600px) {.smalltit039 {background-position: left 4px;background-size: 20px;}} @media (max-width:1440px) {.smalltit039 {background-size: 18px;}} @media (max-width:1280px) {.smalltit039 {background-position: left 3px;background-size: 16px;padding-left: 25px;}}', // PC端样式
         styleWapCode:'.smalltit039{background:url(../images/insidestyle/newicon15.png) no-repeat left 0.2rem;background-size:0.33333rem;padding:0px 0px 0px 0.46667rem !important;}', // 移动端样式
         htmlString:'<p class="smalltit039">标题标题标题标题标题标题</p>'
     };
