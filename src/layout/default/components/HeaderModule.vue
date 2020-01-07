@@ -30,6 +30,7 @@ export default {
             {type:'article',name:'正文',icon:'el-icon-document',isOn:false},
             {type:'image',name:'图文',icon:'el-icon-picture',isOn:false},
             {type:'button',name:'按钮',icon:'el-icon-open',isOn:false},
+            {type:'table',name:'表格',icon:'el-icon-s-grid',isOn:false},
         ]
         }
     },
@@ -122,6 +123,7 @@ export default {
     .el-menu-item{
         float:left;
         height: 64px;
+        line-height: 64px;
     }
     .el-menu-item.is-active{
         color: rgb(255, 255, 255)!important; background-color: rgb(30, 34, 38)!important;

@@ -37,7 +37,8 @@
           </div>
           <div class="filter-wrap article-panel" v-else-if="eType=='article'"></div>
           <div class="filter-wrap img-panel" v-else-if="eType=='image'"></div>
-          <div class="filter-wrap button-panel" v-else></div>
+          <div class="filter-wrap button-panel" v-else-if="eType=='button'"></div>
+          <div class="filter-wrap table-panel" v-else></div>
         </el-scrollbar>
       </div>
       <div class="style-wrapper" v-bind:class="isOpen?'is-open':'is-close'">
@@ -72,6 +73,7 @@ import {getTitleData} from '@/components/editorData/titleData/index.js';
 import {getArticleData} from '@/components/editorData/articleData/index.js';
 import {getImageData} from '@/components/editorData/imageData/index.js';
 import {getButtonData} from '@/components/editorData/buttonData/index.js';
+import {getTableData} from '@/components/editorData/tableData/index.js';
 export default {
   name: 'editorModelPage',
   data: function () {
@@ -80,6 +82,7 @@ export default {
       articleData:[],
       imageData:[],
       buttonData:[],
+      tableData:[],
       size: 'small',
       isOpen: false,
       isSingle: false,
@@ -138,11 +141,13 @@ export default {
     var modulesArticleData = getArticleData();
     var modulesImageData = getImageData();
     var modulesButtonData = getButtonData();
+    var modulesTableData = getTableData();
     this.$nextTick(function () {
       this.titleData = modulesTitleData;
       this.articleData = modulesArticleData;
       this.imageData = modulesImageData;
       this.buttonData = modulesButtonData;
+      this.tableData = modulesTableData;
     });
   },
   computed:{
@@ -165,8 +170,10 @@ export default {
           return this.getCurrentData(eType,tType,this.articleData);
         }else if(eType=='image'){
           return this.getCurrentData(eType,tType,this.imageData);
-        }else{
+        }else if(eType=='button'){
           return this.getCurrentData(eType,tType,this.buttonData);
+        }else{
+          return this.getCurrentData(eType,tType,this.tableData);
         }
       }
   },
