@@ -720,6 +720,18 @@ html,body,#app,#app > .el-container{
   .smallbtn003 dd:before{content:"";width:pxToRem(130);height:pxToRem(130);background:url(../assets/images/insidestyle/smallbtn003.png) no-repeat;background-size:100%;display:block;position:absolute;left:pxToRem(-30);;top:pxToRem(0);}
   .smallbtn003 dt{width:22%;float:right;background:url(../assets/images/insidestyle/smallbtn003-btnbg.jpg) no-repeat;background-size:100% 100%;padding:.2666875rem 0 .32rem 0;border-radius:0 .1333125rem .1333125rem 0}
   .smallbtn003 dt a{font-size:.375rem;line-height: 1;text-align:center;color:#fff;display:block;background:url(../assets/images/insidestyle/smallbtn003-btn.png) center top no-repeat;background-size:.69375rem;padding-top:.8265375rem}
+  //=============表格
+  .smalltable001{clear:both; margin:pxToRem(20) pxToRem(0); background: url(../assets/images/insidestyle/smalltableicon001.jpg) no-repeat center top #fff;background-size: 100% 100%;width: 100%;padding:pxToRem(5) pxToRem(20) pxToRem(30);box-sizing: border-box;}
+  .smalltable001 h3 {font-size:pxToRem(30);margin-bottom:pxToRem(30);color: #fff;font-weight: bold;margin:pxToRem(25) 0rem;text-align: center; color: #fff; background: none; padding:0rem;}
+  .smalltable001 h3:before {width:pxToRem(82);height:pxToRem(21);content: "";display: inline-block;background: url(../assets/images/insidestyle/smalltableicon002.png) no-repeat;position: static;margin-right:pxToRem(15);}
+  .smalltable001 h3:after {width:pxToRem(82);height:pxToRem(21);content: "";display: inline-block;background: url(../assets/images/insidestyle/smalltableicon003.png) no-repeat;position: static;margin-left:pxToRem(15);}
+  .smalltable001 .smalltable001box{border:pxToRem(12) solid #fff;}
+  .smalltable001 .smalltable001box table {margin: 0 auto;width: 100%;box-shadow: 0 0 pxToRem(30) rgba(44, 80, 179, 0.2); border-collapse: collapse;}
+  .smalltable001 .smalltable001box table tr:first-child td{background:#dee6ff;}
+  .smalltable001 .smalltable001box table tr:nth-child(even) td{background: #f7f7f7;}
+  .smalltable001 .smalltable001box table tr{border: 1px solid #000;}
+  .smalltable001 .smalltable001box table td{padding:pxToRem(15) pxToRem(10);word-break: break-all; border: 1px solid #333; text-align: center; font-size:pxToRem(28); line-height:pxToRem(50);}
+  .smalltable001 .smalltable001box table td a {color: #6b86cf; text-decoration: underline; position: relative;}
 }
 .item-wrap.is-pc{
   padding:40px 30px;
@@ -1384,4 +1396,16 @@ html,body,#app,#app > .el-container{
 .smallbtn003 dt{width: 22%;float: right;background: url(../assets/images/insidestyle/smallbtn003-btnbg.jpg) no-repeat;
 background-size: 100% 100%;padding: 20px 0;border-radius: 0 15px 15px 0;}
 .smallbtn003 dt a{font-size: 18px;line-height: 1;text-align: center;color: #fff;display: block;background:url(../assets/images/insidestyle/smallbtn003-btn.png) center top no-repeat;background-size: 40px;padding-top: 41px;}
+//=============表格
+.smalltable001{clear:both; margin:20px 0px; background: url(../assets/images/insidestyle/smalltableicon001.jpg) no-repeat center top #fff;background-size: 100% 100%;width: 100%;padding: 5px 60px 50px;box-sizing: border-box;}
+.smalltable001 h3 {font-size: 26px !important;color: #fff !important;font-weight: bold;margin: 25px 0 25px !important;text-align: center;padding: 0px !important;background: none !important;}
+.smalltable001 h3:before {width: 82px;height: 21px;content: "";display: inline-block;background: url(../assets/images/insidestyle/smalltableicon002.png) no-repeat;position: static;margin-right: 15px;}
+.smalltable001 h3:after {width: 82px;height: 21px;content: "";display: inline-block;background: url(../assets/images/insidestyle/smalltableicon003.png) no-repeat;position: static;margin-left: 15px;}
+.smalltable001 .smalltable001box{border: 12px solid #fff;box-shadow: 0 0 30px rgba(44, 80, 179, 0.2);}
+.smalltable001 .smalltable001box table {margin: 0 auto;width: 100%;    border-collapse:collapse;}
+.smalltable001 .smalltable001box table tr{border: 1px solid #000;}
+.smalltable001 .smalltable001box table tr:first-child td{background:#dee6ff}
+.smalltable001 .smalltable001box table tr:nth-child(even) td{background:#f7f7f7}
+.smalltable001 .smalltable001box table td{padding: 15px 10px!important;word-break: break-all!important;border: 1px solid #000;text-align: center;}
+.smalltable001 .smalltable001box table td a {color: #6b86cf; text-decoration: underline; position: relative;}
 }
