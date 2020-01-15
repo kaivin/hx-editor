@@ -44,7 +44,7 @@
       <div class="style-wrapper" v-bind:class="isOpen?'is-open':'is-close'">
         <p v-bind:class="isSingle?'single-panel':''"><span v-if="tType!='wap'">web站点预览</span><span v-if="tType!='web'">wap站点预览</span></p>
         <div class="style-list">
-          <el-scrollbar style="height:100%;">
+          <div class="scroll-wrap">
             <div class="item-list" v-bind:class="isSingle?'single-panel':''">
               <div class="item-wrapper" v-for="(item,index) in currentData" v-bind:key="index">
                 <div class="file-panel"><span>后台文件名：{{item.fileName}}</span></div>
@@ -61,7 +61,7 @@
                 </div>
               </div>
             </div>
-          </el-scrollbar>
+          </div>
         </div>
       </div>
     </div>
@@ -480,8 +480,14 @@ export default {
 </script>
 
 <style lang="scss">
+.scroll-wrap{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
 .page-root{
   position: relative;
+  height: calc(100vh - 64px);
 }
 .filter-panel.is-open{
   left:0;
