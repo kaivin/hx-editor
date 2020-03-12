@@ -5,7 +5,7 @@ export function getHtmlData (){
         effect:'static', // dynamic(动态)|static(静态)
         fileName:'nyb001.js', // 该文件的文件名
         styleWebCode:'.smalltext001{background:#fff4e2;padding:15px;border-radius:10px;font-size:16px;max-width:800px;margin-left:auto;margin-right:auto;}.smalltext001 strong{display:inline-block;position:relative;border-radius:10px;padding:10px 20px;background:#cc5510;color:#fff;line-height:1.3;overflow:hidden;font-size:18px;}.smalltext001 p{margin:0px;}', // PC端样式
-        styleWapCode:'.smalltext001{background:#fff4e2;padding:0.2rem;border-radius:0.13333rem;font-size:0.38667rem;}.smalltext001 strong{display:inline-block;position:relative;border-radius:0.13333rem;padding:0.2rem 0.26667rem;background:#cc5510;color:#fff;line-height:1.3;overflow:hidden;}', // 移动端样式
+        styleWapCode:'.smalltext001{background:#fff4e2;padding: 0.3rem 0.3rem 0.2rem 0.3rem !important;border-radius:0.13333rem;margin-bottom:0.26667rem;}.smalltext001 strong{display:inline-block; position:relative; border-radius:0.13333rem; padding:0.06667rem 0.26667rem; background:#cc5510; color:#fff!important; line-height:0.66667rem; overflow:hidden; font-size:0.38667rem;}.smalltext001 p{margin: 0rem 0rem 0.1rem 0rem;}', // 移动端样式
         htmlString:'<div class="smalltext001"><strong>标题标题标题标题标题</strong><p>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p></div>'
     };
 }
