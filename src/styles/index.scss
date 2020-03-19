@@ -572,6 +572,7 @@ html,body,#app,#app > .el-container{
   .smalltext007 li:nth-last-child(odd){color:#EFBD45;}
   .smalltext007 li:nth-last-child(odd):after{background-color:#EFBD45;}
   .smalltext007 li:before{content: "";position: absolute;top: 0.18667rem;left: 0.09333rem;width: 1px;height: 100%;background-color: #D8D8D8;}
+  .smalltext007 li:last-child:before{display:none;}
   .smalltext007 li p{color:#5a5a5a !important; margin-bottom:0; margin-top:0rem;}
   .smalltext007 li:nth-last-child(odd) p{color:#EFBD45; }
   .smalltext008{background: #fff4e2;padding: 0.26667rem 0.26667rem 0.26667rem 0.26667rem;border-radius: 0.13333rem;position: relative;font-size: 0.38667rem;}.smalltext008 strong{display: inline-block;text-align: center;border-radius: 0.4rem;padding: 0.13333rem 0.26667rem;background: #cc5510;color: #fff;line-height: 1.2;margin-bottom: 0.2rem;}.smalltext008 strong span{float: left;padding-right: 0.13333rem;}.smalltext008 p{margin:0rem 0rem 0rem 0rem;}
@@ -1235,12 +1236,12 @@ html,body,#app,#app > .el-container{
   .smalltext006 strong {font-weight:normal; display:block; text-align:center; font-size:14px; color:#b02330; position:relative; margin-top:20px; line-height: 1;}
   .smalltext006 p{margin-bottom:10px; margin-top:10px;}
   .smalltext007{clear:both; overflow:hidden;  margin-left: auto; margin-right: auto;}
-  .smalltext007 li{position:relative; float:left; width:100%; padding:0px 0px 10px 20px !important; background:none !important; color:#b9272f; font-size:18px;     margin: 0px!important; margin:0px !important;}
+  .smalltext007 li{position:relative; float:left; width:100%; padding:0px 0px 15px 20px !important; background:none !important; color:#b9272f; font-size:18px;     margin: 0px!important; margin:0px !important;}
   .smalltext007 li:last-child{padding-bottom:0 !important; }
   .smalltext007 li:after{content:""; position:absolute; left:0; top:9px; width:11px; height:11px; border-radius:50%; background-color:#b9272f; }
   .smalltext007 li:before{content:""; position:absolute; top:10px; left:5px; width:1px; height:100%; background-color:#D8D8D8; }
   .smalltext007 li:last-child:before{display:none;}
-  .smalltext007 li p{color:#5a5a5a !important; margin-bottom:0; margin-top:0px;}
+  .smalltext007 li p{color:#5a5a5a !important; margin-bottom:0 !important; margin-top:5px !important;}
   .smalltext007 li:nth-last-child(odd){color:#EFBD45; }
   .smalltext007 li:nth-last-child(odd):after{background-color:#EFBD45; }
   .smalltext007 li:nth-last-child(odd) p{color:#EFBD45; }  

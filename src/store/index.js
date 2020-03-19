@@ -3,7 +3,6 @@ import Vuex from 'vuex';
 import getters from './getters';
 
 Vue.use(Vuex);
-
 const modulesFiles = require.context('./modules', false, /\.js$/);
 // you do not need `import app from './modules/app'`
 // it will auto require all vuex module from modules file
