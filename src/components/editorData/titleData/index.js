@@ -10,7 +10,7 @@ function getTitleData(){
         return titleModules;
     }, {});
     console.log(titleModules);
-    var titleModulesArray = [];    
+    var titleModulesArray = [];
     for(var item in titleModules){
         var titleObj = {};
         titleObj = titleModules[item];
