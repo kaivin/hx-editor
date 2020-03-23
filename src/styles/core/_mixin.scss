@@ -144,3 +144,16 @@
   @function pxTo($px){
     @return ($px*46.875/75)+rem;
   }
+  //黑色背景色半透明
+@mixin bgcolor-alpha($bgcolor: rgba(0,0,0,.5)){
+  color:#fff;
+  @if $filter{
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#{ie-hex-str($bgcolor)}', endColorstr='#{ie-hex-str($bgcolor)}');
+  }@else{
+    background-color: #333;
+  }
+  background-color:$bgcolor;
+}
+%bgcolor-alpha{
+  @include bgcolor-alpha;
+}
