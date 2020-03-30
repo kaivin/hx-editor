@@ -548,6 +548,16 @@ html,body,#app,#app > .el-container{
   .smalltxt065:after{content: ''; position: absolute; left:pxToRem(0); top:pxToRem(0); right:pxToRem(0); bottom:pxToRem(0); border: 1px solid #82b3e7; border-radius:pxToRem(15);}
   .smalltxt065 i{width:pxToRem(60);height:pxToRem(60);display: block;border-radius: 50%;font-size:pxToRem(35);text-align: center;line-height:pxToRem(50);font-weight: bold;font-style: normal;position: absolute;border:pxToRem(5) solid #deebf9;left:pxToRem(-25);top:pxToRem(-20);background: url(../assets/images/insidestyle/small043.jpg) repeat; color: #3e62a8;z-index: 2;}
   .smalltxt065 i:after{content: '';position: absolute;left: 0px;top: 0px;right: 0px;bottom: 0px;border: 1px solid #82b3e7;border-radius: 50%;}
+  .smalltxt066tit{font-size:18px;}
+  @media screen and (max-width: 1600px){
+    .smalltxt066tit{font-size:16px;}
+  }
+  @media screen and (max-width: 1440px){
+    .smalltxt066tit{font-size:16px;}
+  }
+  @media screen and (max-width: 1280px){
+    .smalltxt066tit{font-size:15px;}
+  }
 
   /*模块*/
   [class^="smalltext"]{clear: both; color: #666; line-height: 0.8rem; font-size: .38667rem;}
@@ -742,6 +752,11 @@ html,body,#app,#app > .el-container{
   .smalltable004 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
   .smalltable004 table tr:nth-child(odd) td{background: #faf9f1; font-size:pxToRem(28); color: #181412;}
   .smalltable004 table tr td{border:1px solid #f1eedc; padding:pxToRem(10) pxToRem(20); font-size:pxToRem(24); color: #3c3733;}
+  //=============表格005
+  .smalltable005{ clear: both; display: block; margin: .33333rem 0rem;}
+  .smalltable005 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
+  .smalltable005 table thead th {background: -webkit-linear-gradient(top,#f7f7f7, #ececec);background: -o-linear-gradient(top,#f7f7f7, #ececec);background: -moz-linear-gradient(top,#f7f7f7, #ececec);background: linear-gradient(top,#f7f7f7, #ececec);}
+  .smalltable005 table thead th,.smalltable005 table tbody td{padding:0.133333rem 0.13333rem;border: 1px solid #ddd;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
 }
 .item-wrap.is-pc{
   padding:40px 30px;
@@ -1223,6 +1238,7 @@ html,body,#app,#app > .el-container{
   .smalltxt065:after{content: ''; position: absolute; left:0px; top:0px; right:0px; bottom:0px;    border: 1px solid #82b3e7; border-radius:15px;}
   .smalltxt065 i{width: 50px;height: 50px;display: block;border-radius: 50%;font-size:26px;text-align: center;line-height: 35px;font-weight: bold;font-style: normal;position: absolute;border: 5px solid #deebf9;left: -20px;top: -20px;background: url(../assets/images/insidestyle/small043.jpg) repeat;background-size: .14664375rem;color: #3e62a8;z-index: 2;}
   .smalltxt065 i:after{content: '';position: absolute;left: 0px;top: 0px;right: 0px;bottom: 0px;border: 1px solid #82b3e7;border-radius: 50%;}
+  .smalltxt066tit{font-size: 0.4667rem;}
   /*模块*/
 [class^="smalltext"],[class^="smalltext"] p{color: #566367;font-size: 12px;line-height: 24px; margin-top:10px; margin-bottom: 10px;}
 @media (min-width: 1366px){[class^="smalltext"],[class^="smalltext"] p{font-size: 12px;line-height: 27px;}}
@@ -1432,18 +1448,33 @@ background-size: 100% 100%;padding: 20px 0;border-radius: 0 15px 15px 0;}
 .smalltable002 .smalltable002box table tr:nth-child(even) td{background:#f7f7f7}
 .smalltable002 .smalltable002box table td{padding: 15px 10px!important;word-break: break-all!important;border: 1px solid #000;text-align: center;}
 .smalltable002 .smalltable002box table td a {color: #6b86cf; text-decoration: underline; position: relative;}
-  //=============表格003
-  .smalltable003{clear:both; margin:20px 0px;}
-  .smalltable003 h3{clear: both; display: block;
-    padding: 10px 10px !important; background: #bb1c19;background: -webkit-linear-gradient(left, #bb1c19,#ee4545);background: -o-linear-gradient(left, #bb1c19,#ee4545);background: linear-gradient(to right, #bb1c19,#ee4545); color: #fff; font-size: 28px; line-height: 48px; text-align: center; margin: 0px!important;font-weight: normal;}
-  .smalltable003 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
-  .smalltable003 table tr:nth-child(odd) td{background: #faf9f1;}
-  .smalltable003 table tr{border:1px solid #f1eedc;}
-  .smalltable003 table td{padding:15px 15px;word-break: break-all; border:1px solid #f1eedc; text-align: center;  line-height:24px; font-size:16px;}
-  //=============表格004
-  .smalltable004{clear:both; margin:20px 0px;}
-  .smalltable004 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
-  .smalltable004 table tr:nth-child(odd) td{background: #faf9f1; font-size: 18px; color: #181412;}
-  .smalltable004 table tr td{border:1px solid #f1eedc; padding:10px 20px; font-size: 16px; color: #3c3733;}
-
+//=============表格003
+.smalltable003{clear:both; margin:20px 0px;}
+.smalltable003 h3{clear: both; display: block;padding: 10px 10px !important; background: #bb1c19;background: -webkit-linear-gradient(left, #bb1c19,#ee4545);background: -o-linear-gradient(left, #bb1c19,#ee4545);background: linear-gradient(to right, #bb1c19,#ee4545); color: #fff; font-size: 28px; line-height: 48px; text-align: center; margin: 0px!important;font-weight: normal;}
+.smalltable003 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
+.smalltable003 table tr:nth-child(odd) td{background: #faf9f1;}
+.smalltable003 table tr{border:1px solid #f1eedc;}
+.smalltable003 table td{padding:15px 15px;word-break: break-all; border:1px solid #f1eedc; text-align: center;  line-height:24px; font-size:16px;}
+//=============表格004
+.smalltable004{clear:both; margin:20px 0px;}
+.smalltable004 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
+.smalltable004 table tr:nth-child(odd) td{background: #faf9f1; font-size: 18px; color: #181412;}
+.smalltable004 table tr td{border:1px solid #f1eedc; padding:10px 20px; font-size: 16px; color: #3c3733;}
+//=============表格005
+.smalltable005{ clear: both; display: block; margin:30px 0px;}
+.smalltable005 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
+.smalltable005 table thead th {background: -webkit-linear-gradient(top,#f7f7f7, #ececec);background: -o-linear-gradient(top,#f7f7f7, #ececec);background: -moz-linear-gradient(top,#f7f7f7, #ececec);background: linear-gradient(top,#f7f7f7, #ececec);}
+.smalltable005 table thead th,.smalltable005 table tbody td{padding: 10px 0px;border: 1px solid #ddd;text-align: center;word-break: break-all; font-size: 16px;}
+@media screen and (max-width: 1600px){
+  .smalltable005{clear:both; margin:26px 0px;}
+  .smalltable005 table thead th,.smalltable005 table tbody td{font-size:15px !important;padding: 14px 15px !important;}
+}
+@media screen and (max-width: 1440px){
+  .smalltable005{clear:both; margin:24px 0px;}
+  .smalltable005 table thead th,.smalltable005 table tbody td{padding: 12px 15px !important;}
+}
+@media screen and (max-width: 1280px){
+  .smalltable005{clear:both; margin:20px 0px;}
+  .smalltable005 table thead th,.smalltable005 table tbody td{font-size:14px !important;padding: 10px 15px !important;}
+}
 }
