@@ -549,7 +549,9 @@ html,body,#app,#app > .el-container{
   .smalltxt065 i{width:pxToRem(60);height:pxToRem(60);display: block;border-radius: 50%;font-size:pxToRem(35);text-align: center;line-height:pxToRem(50);font-weight: bold;font-style: normal;position: absolute;border:pxToRem(5) solid #deebf9;left:pxToRem(-25);top:pxToRem(-20);background: url(../assets/images/insidestyle/small043.jpg) repeat; color: #3e62a8;z-index: 2;}
   .smalltxt065 i:after{content: '';position: absolute;left: 0px;top: 0px;right: 0px;bottom: 0px;border: 1px solid #82b3e7;border-radius: 50%;}
   .smalltxt066tit{font-size: 0.4667rem; font-weight:bold;}
-
+  .smalltxt067{clear:both; margin: .4rem 0rem;}
+  .smalltxt067 .smalltxt067even{color:#ccc!important;margin:0rem 0rem 0.0667rem 0rem!important;}
+  .smalltxt067 .smalltxt067odd{color:#003399!important;margin:0rem 0px 0.4rem 0rem!important;}
   /*模块*/
   [class^="smalltext"]{clear: both; color: #666; line-height: 0.8rem; font-size: .38667rem;}
   [class^="smalltext"] p{clear: both; color: #666; line-height: 0.8rem; font-size: .38667rem; margin: .26667rem 0rem;}
@@ -1239,6 +1241,9 @@ html,body,#app,#app > .el-container{
   @media screen and (max-width: 1280px){
     .smalltxt066tit{font-size:15px;}
   }
+  .smalltxt067{clear:both;margin: 20px 0px;}.smalltxt067 .smalltxt067even{color:#ccc!important;margin:0px 0px 5px 0px!important;}.smalltxt067 .smalltxt067odd{color:#003399!important;margin:0px 0px 20px 0px!important;}
+  @media (max-width: 1440px){.smalltxt067{margin:15px 0px;}.smalltxt067 .smalltxt067odd{margin:0px 0px 15px 0px!important;}}
+  @media (max-width: 1280px){.smalltxt067{margin:15px 0px;}.smalltxt067 .smalltxt067odd{margin:0px 0px 15px 0px!important;}}
   /*模块*/
 [class^="smalltext"],[class^="smalltext"] p{color: #566367;font-size: 12px;line-height: 24px; margin-top:10px; margin-bottom: 10px;}
 @media (min-width: 1366px){[class^="smalltext"],[class^="smalltext"] p{font-size: 12px;line-height: 27px;}}
