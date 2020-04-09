@@ -7,7 +7,7 @@ export function getHtmlData (){
         effect:'static', // dynamic(动态)|static(静态)
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
-        fileName:'nyb02.js', // 该文件的文件名
+        fileName:'nyb002.js', // 该文件的文件名
         styleWebCode:'.smallbtn002{text-align:center;}.smallbtn002 a{display:inline-block;width:400px;}.smallbtn002 a img{max-width:100%;width:100%;}', // PC端样式
         styleWapCode:'.smallbtn002{text-align:center;width:9.2rem;margin:0.4rem auto;}.smallbtn002 a{clear:both;display:block;}.smallbtn002 img{max-width:100%;width:100%;}', // 移动端样式
         htmlString:'<p class="smallbtn002"><a href="#" rel="nofollow"><img src="'+image+'" alt=""></a></p>'
