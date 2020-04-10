@@ -756,7 +756,7 @@ html,body,#app,#app > .el-container{
   .smalltable005 table thead th,.smalltable005 table tbody td{padding:0.133333rem 0.13333rem;border: 1px solid #ddd;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
   //=============表格006
   .smalltable006{clear:both; margin:pxToRem(20) pxToRem(0);}
-  .smalltable006 .smalltable006tit{clear: both; display: block; background:#8088b4; color: #fff; font-size:pxToRem(28); line-height: pxToRem(30); padding:pxToRem(20) pxToRem(15); text-align: center; margin: 0px!important;font-weight:bold;}
+  .smalltable006 .smalltable006tit{clear: both; display: block; background:#4b5482; color: #fff; font-size:pxToRem(28); line-height: pxToRem(30); padding:pxToRem(20) pxToRem(15); text-align: center; margin: 0px!important;font-weight:bold;}
   .smalltable006 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
   .smalltable006 table tr{border:1px solid #dcdcdc;}
   .smalltable006 table td{padding:pxToRem(15) pxToRem(10);word-break: break-all; border:1px solid #dcdcdc; text-align: center; line-height:pxToRem(50); font-size: pxToRem(24); color: #333;}
@@ -768,7 +768,7 @@ html,body,#app,#app > .el-container{
   .smalltable007 table thead th,.smalltable007 table tbody td{padding:0.133333rem 0.13333rem;border: 1px solid #ddd;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
   //=============表格008
   .smalltable008{clear:both; margin:pxToRem(20) pxToRem(0);}
-  .smalltable008 .smalltable008tit{clear: both; display: block; background: #8088b4; color: #fff; font-size:pxToRem(28); line-height: pxToRem(30); padding:pxToRem(20) pxToRem(15); text-align: center; margin: 0px!important;font-weight:bold;}
+  .smalltable008 .smalltable008tit{clear: both; display: block; background: #4b5482; color: #fff; font-size:pxToRem(28); line-height: pxToRem(30); padding:pxToRem(20) pxToRem(15); text-align: center; margin: 0px!important;font-weight:bold;}
   .smalltable008 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
   .smalltable008 table tr:nth-child(even) td{background: #e9ecf7;}
   .smalltable008 table tr{border:1px solid #dcdcdc;}
@@ -776,15 +776,39 @@ html,body,#app,#app > .el-container{
   //=============表格009
   .smalltable009{ clear: both; display: block; margin: .33333rem 0rem;}
   .smalltable009 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
-  .smalltable009 table thead th {background:#8088b4; color: #fff;}
   .smalltable009 table thead th,.smalltable009 table tbody td{padding:0.133333rem 0.13333rem;border: 1px solid #dcdcdc;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
+  .smalltable009 table thead th {background:#4b5482; color: #fff;border:1px solid #59649a;}
   .smalltable009 table tbody tr:nth-child(even) td{background: #e9ecf7;}
   //=============表格010
   .smalltable010{ clear: both; display: block; margin: .33333rem 0rem;}
   .smalltable010 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
   .smalltable010 table td{padding:0.133333rem 0.13333rem;border: 1px solid #dcdcdc;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
   .smalltable010 table tr:nth-child(odd) td{background: #e9ecf7;}
-  .smalltable010 table tr td:first-child{background: #8088b4; color: #fff;}
+  .smalltable010 table tr td:first-child{background: #4b5482; color: #fff; border-bottom:1px solid #59649a;}
+  .smalltable010 table tr:last-child td:first-child{border-bottom:1px solid #dcdcdc;}  
+  //=============表格011
+  .smalltable011{background:url(../assets/images/insidestyle/smalltableicon007.jpg) repeat-y center top;background-size:100% auto;border-radius:pxToRem(32);position: relative;box-shadow:pxToRem(11) pxToRem(11) pxToRem(13) rgba(58,75,98,0.08);padding: 0rem pxToRem(30) pxToRem(25) pxToRem(30);margin:pxToRem(42) auto pxToRem(30);}
+  .smalltable011:after{content:'';position: absolute;left:pxToRem(10);top:pxToRem(10);right:pxToRem(10);bottom:pxToRem(10);border:2px solid #fff;border-radius:pxToRem(32);}
+  .smalltable011 .smalltable011top{clear: both;text-align: center;position: relative;z-index: 2;margin: 0px!important;}
+  .smalltable011 .smalltable011top span{font-size:pxToRem(30); color: #f7a837; background: #353e4d; line-height:pxToRem(40); padding:pxToRem(15) pxToRem(20); position: relative;border-radius:0rem 0rem pxToRem(26) pxToRem(26); font-weight: bold; margin-top:pxToRem(-12); display: inline-block;}
+  .smalltable011 .smalltable011top span:after,.smalltable011 .smalltable011top span:before{content:'';width:0px;height:0px;position: absolute;border-top:0px; border-bottom:pxToRem(12) solid #686e7a; top:0px;}
+  .smalltable011 .smalltable011top span:before{left:pxToRem(-7);border-left:pxToRem(7) solid transparent;border-right:0px solid transparent;}
+  .smalltable011 .smalltable011top span:after{right:pxToRem(-7);border-right:pxToRem(7) solid transparent;border-left:0px solid transparent;}
+  .smalltable011 .smalltable011mid{clear: both;margin-top:pxToRem(30); width: 100%;}
+  .smalltable011 .smalltable011mid table{clear: both; width: 100%; border:0px;border-collapse: collapse;}
+  .smalltable011 .smalltable011mid table thead tr{border-bottom:3px solid #353e4d;}
+  .smalltable011 .smalltable011mid table thead tr th{color:#353e4d;font-size:pxToRem(28);padding-bottom:pxToRem(10);text-align:left;}
+  .smalltable011 .smalltable011mid table thead tr th:last-child{text-align:right;}
+  .smalltable011 .smalltable011mid table thead tr th span{position: relative; display: inline-block; line-height:pxToRem(30);}
+  .smalltable011 .smalltable011mid table tbody{padding-top:pxToRem(10);}
+  .smalltable011 .smalltable011mid table tbody tr{border-bottom:1px solid #a3b5c9;}
+  .smalltable011 .smalltable011mid table tbody tr:first-child td{padding-top:pxToRem(20);}
+  .smalltable011 .smalltable011mid table tbody tr td{padding:pxToRem(15) pxToRem(10);text-align:left;font-size:pxToRem(28);line-height:pxToRem(40);color: #5c6c89;word-break: break-word;}
+  .smalltable011 .smalltable011mid table tbody tr td:last-child{text-align:center!important;}
+  .smalltable011 .smalltable011bom{clear: both;color: #353e4d;}
+  .smalltable011 .smalltable011bom p{color: #353e4d; margin:pxToRem(30) 0rem; font-size:pxToRem(28); line-height:pxToRem(60);}
+  .smalltable011 .smalltable011bom p a{background: #f7a837; font-weight: bold; border-radius:pxToRem(15); display: inline-block; margin:0rem pxToRem(10); padding:0rem pxToRem(15);}
+  .smalltable011 .smalltable011bom p a:hover{background: #c00; color: #fff;} 
 }
 .item-wrap.is-pc{
   padding:40px 30px;
@@ -1522,7 +1546,7 @@ html,body,#app,#app > .el-container{
   }
   //=============表格006
   .smalltable006{clear:both; margin:20px 0px;}
-  .smalltable006 .smalltable006tit{clear: both; display: block;padding: 10px 10px !important; background:#8088b4; color: #fff; font-size: 28px; line-height: 48px; text-align: center; margin: 0px!important;font-weight:bold;}
+  .smalltable006 .smalltable006tit{clear: both; display: block;padding: 10px 10px !important; background:#4b5482; color: #fff; font-size: 28px; line-height: 48px; text-align: center; margin: 0px!important;font-weight:bold;}
   .smalltable006 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
   .smalltable006 table tr{border:1px solid #dcdcdc;}
   .smalltable006 table td{padding:15px 15px;word-break: break-all; border:1px solid #dcdcdc; text-align: center;  line-height:24px; font-size:16px; color: #333;}
@@ -1546,7 +1570,7 @@ html,body,#app,#app > .el-container{
   }
   //=============表格008
   .smalltable008{clear:both; margin:20px 0px;}
-  .smalltable008 .smalltable008tit{clear: both; display: block;padding: 10px 10px !important; background: #8088b4; color: #fff; font-size: 28px; line-height: 48px; text-align: center; margin: 0px!important;font-weight:bold;}
+  .smalltable008 .smalltable008tit{clear: both; display: block;padding: 10px 10px !important; background: #4b5482; color: #fff; font-size: 28px; line-height: 48px; text-align: center; margin: 0px!important;font-weight:bold;}
   .smalltable008 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
   .smalltable008 table tr:nth-child(even) td{background: #e9ecf7;}
   .smalltable008 table tr{border:1px solid #dcdcdc;}
@@ -1554,8 +1578,8 @@ html,body,#app,#app > .el-container{
   //=============表格009
   .smalltable009{ clear: both; display: block; margin:30px 0px;}
   .smalltable009 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
-  .smalltable009 table thead th {background:#8088b4; color: #fff;}
   .smalltable009 table thead th,.smalltable009 table tbody td{padding: 10px 0px;border: 1px solid #dcdcdc;text-align: center;word-break: break-all; font-size: 16px;}
+  .smalltable009 table thead th {background:#4b5482; color: #fff;border:1px solid #59649a;}
   .smalltable009 table tbody tr:nth-child(even) td{background: #e9ecf7;}
   @media screen and (max-width: 1600px){
     .smalltable009{clear:both; margin:26px 0px;}
@@ -1574,7 +1598,8 @@ html,body,#app,#app > .el-container{
   .smalltable010 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
   .smalltable010 table td{padding: 10px 0px;border: 1px solid #dcdcdc;text-align: center;word-break: break-all; font-size: 16px;}
   .smalltable010 table tr:nth-child(odd) td{background: #e9ecf7;}
-  .smalltable010 table tr td:first-child{background: #8088b4; color: #fff;}
+  .smalltable010 table tr td:first-child{background: #4b5482; color: #fff; border-bottom:1px solid #59649a;}
+  .smalltable010 table tr:last-child td:first-child{border-bottom:1px solid #dcdcdc;}
   @media screen and (max-width: 1600px){
     .smalltable010{clear:both; margin:26px 0px;}
     .smalltable010 table td{font-size:15px !important;padding: 14px 15px !important;}
@@ -1587,4 +1612,65 @@ html,body,#app,#app > .el-container{
     .smalltable010{clear:both; margin:20px 0px;}
     .smalltable010 table td{font-size:14px !important;padding: 10px 15px !important;}
   }
+  //=============表格011
+  .smalltable011{background:url(../assets/images/insidestyle/smalltableicon007.jpg) repeat-y center top;background-size:100% auto;border-radius:32px;position: relative;box-shadow: 11px 11px 13px rgba(58,75,98,0.08);padding: 0px 50px 25px 50px;margin: 42px auto 30px;}
+  .smalltable011:after{content:'';position: absolute;left:10px;top:10px;right:10px;bottom:10px;border:2px solid #fff;border-radius:32px;}
+  .smalltable011 .smalltable011top{clear: both;text-align: center;position: relative;z-index: 2;margin: 0px!important;}
+  .smalltable011 .smalltable011top span{font-size: 24px; color: #f7a837; background: #353e4d; line-height: 40px; padding:10px 30px; position: relative;border-radius:0px 0px 26px 26px; font-weight: bold; margin-top:-12px; display: inline-block;}
+  .smalltable011 .smalltable011top span:after,.smalltable011 .smalltable011top span:before{content:'';width:0px;height:0px;position: absolute;border-top:0px; border-bottom:12px solid #686e7a; top:0px;}
+  .smalltable011 .smalltable011top span:before{left:-7px;border-left:7px solid transparent;border-right:0px solid transparent;}
+  .smalltable011 .smalltable011top span:after{right:-7px;border-right:7px solid transparent;border-left:0px solid transparent;}
+  .smalltable011 .smalltable011mid{clear: both;margin-top: 25px;margin-bottom:5px;width: 100%;}
+  .smalltable011 .smalltable011mid table{clear: both; width: 100%; border:0px;border-collapse: collapse;}
+  .smalltable011 .smalltable011mid table thead tr{border-bottom:3px solid #353e4d;}
+  .smalltable011 .smalltable011mid table thead tr th{color:#353e4d;font-size:20px;padding-bottom: 10px;text-align:left;}
+  .smalltable011 .smalltable011mid table thead tr th:last-child{text-align:right;}
+  .smalltable011 .smalltable011mid table thead tr th span{position: relative; margin-right:70px; display: inline-block; background: url(../assets/images/insidestyle/smalltableicon007icon02.png) no-repeat center top; background-size: 100%; padding: 0px 15px 0px 55px; line-height: 30px;}
+  .smalltable011 .smalltable011mid table thead tr th span i{position:absolute;right:-70px;bottom:0rem;background: url(../assets/images/insidestyle/smalltableicon007icon01.png) no-repeat center top;width: 65px;height: 54px;background-size: 100%;}
+  .smalltable011 .smalltable011mid table tbody{padding-top:10px;}
+  .smalltable011 .smalltable011mid table tbody tr{border-bottom:1px solid #a3b5c9;}
+  .smalltable011 .smalltable011mid table tbody tr:first-child td{padding-top:20px;}
+  .smalltable011 .smalltable011mid table tbody tr td{padding:10px 10px 10px 10px;text-align:left;font-size: 18px;line-height: 30px;color: #5c6c89;word-break: break-word;}
+  .smalltable011 .smalltable011mid table tbody tr td:last-child{text-align:center!important;}
+  .smalltable011 .smalltable011bom{clear: both;color: #353e4d;}
+  .smalltable011 .smalltable011bom p{font-size: 18px;line-height: 48px;color: #353e4d;margin: 20px 0px;}
+  .smalltable011 .smalltable011bom p a{background: #f7a837; font-size: 20px; font-weight: bold; border-radius:15px; display: inline-block; margin:0px 10px; padding:0px 15px;}
+  .smalltable011 .smalltable011bom p a:hover{background: #c00; color: #fff;}  
+  @media screen and (max-width: 1600px){
+    .smalltable011{padding: 0px 40px 25px 40px;border-radius: 28px;margin: 38px 0px 26px 0px;}
+    .smalltable011:after{border-radius: 26px;left: 8px;top: 8px;right: 8px;bottom: 8px;}
+    .smalltable011 .smalltable011top span{font-size: 22px;line-height: 35px;padding:10px 30px;border-radius: 0px 0px 24px 24px;}
+    .smalltable011 .smalltable011mid table thead tr th{font-size: 18px;padding-bottom: 5px;}
+    .smalltable011 .smalltable011mid table thead tr th span{margin-right: 50px;padding: 0px 15px 0px 45px;}
+    .smalltable011 .smalltable011mid table thead tr th span i{right: -55px;width: 50px;height: 41px;}
+    .smalltable011 .smalltable011mid table tbody tr td{padding: 8px;font-size: 16px;line-height: 26px;}
+    .smalltable011 .smalltable011mid table tbody tr:first-child td{padding-top:20px;}
+    .smalltable011 .smalltable011bom p{font-size: 16px;line-height: 38px;margin: 15px 0px;}
+    .smalltable011 .smalltable011bom p a{border-radius: 12px;font-size: 18px;padding: 0px 10px;}
+  }
+  @media screen and (max-width: 1440px){
+    .smalltable011{padding: 0px 30px 15px 30px;border-radius: 24px;margin: 36px 0px 24px 0px;}
+    .smalltable011:after{border-radius: 24px;left: 6px;top: 6px;right: 6px;bottom: 6px;}
+    .smalltable011 .smalltable011top span{font-size: 20px;line-height: 30px;border-radius: 0px 0px 20px 20px;}
+    .smalltable011 .smalltable011mid table thead tr th{font-size: 16px;padding-bottom: 5px;}
+    .smalltable011 .smalltable011mid table thead tr th span{margin-right: 41px;padding: 0px 8px 0px 37px;}
+    .smalltable011 .smalltable011mid table thead tr th span i{right: -44px;width: 45px;height: 38px;}
+    .smalltable011 .smalltable011mid table tbody tr td{padding: 8px;font-size: 15px;}
+    .smalltable011 .smalltable011mid table tbody tr:first-child td{padding-top:20px;}
+    .smalltable011 .smalltable011bom p{line-height: 35px;font-size: 15px;}
+    .smalltable011 .smalltable011bom p a{border-radius: 10px;padding: 0px 8px;font-size: 16px;}
+  }
+  @media screen and (max-width: 1280px){      
+    .smalltable011{padding: 0px 20px 15px 20px;border-radius: 20px;margin: 32px 0px 20px 0px;}
+    .smalltable011:after{border-radius: 20px;left: 4px;top: 4px;right: 4px;bottom: 4px;}
+    .smalltable011 .smalltable011top span{font-size: 18px;line-height: 26px;padding:10px 30px;border-radius: 0px 0px 16px 16px;}
+    .smalltable011 .smalltable011mid table thead tr th{font-size: 15px;padding-bottom: 5px;}
+    .smalltable011 .smalltable011mid table thead tr th span{margin-right: 40px;padding: 0px 9px 0px 37px;}
+    .smalltable011 .smalltable011mid table thead tr th span i{right: -40px;width: 40px;height: 34px;}
+    .smalltable011 .smalltable011mid table tbody tr td{padding: 5px;}
+    .smalltable011 .smalltable011mid table tbody tr:first-child td{padding-top: 10px;}
+    .smalltable011 .smalltable011bom p{line-height: 30px;font-size: 14px;}
+    .smalltable011 .smalltable011bom p a{border-radius: 5px;padding: 0px 5px;font-size: 14px;}
+  }
+
 }
