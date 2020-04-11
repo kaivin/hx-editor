@@ -31,6 +31,7 @@ export default {
             {type:'image',name:'图文',icon:'el-icon-picture',isOn:false},
             {type:'button',name:'按钮',icon:'el-icon-open',isOn:false},
             {type:'table',name:'表格',icon:'el-icon-s-grid',isOn:false},
+            {type:'video',name:'视频',icon:'el-icon-s-grid',isOn:false},
         ]
         }
     },

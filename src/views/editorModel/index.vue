@@ -74,6 +74,7 @@ import {getArticleData} from '@/components/editorData/articleData/index.js';
 import {getImageData} from '@/components/editorData/imageData/index.js';
 import {getButtonData} from '@/components/editorData/buttonData/index.js';
 import {getTableData} from '@/components/editorData/tableData/index.js';
+import {getVideoData} from '@/components/editorData/videoData/index.js';
 export default {
   name: 'editorModelPage',
   data: function () {
@@ -83,6 +84,7 @@ export default {
       imageData:[],
       buttonData:[],
       tableData:[],
+      videoData:[],
       size: 'small',
       isOpen: false,
       isSingle: false,
@@ -142,12 +144,14 @@ export default {
     var modulesImageData = getImageData();
     var modulesButtonData = getButtonData();
     var modulesTableData = getTableData();
+    var modulesVideoData = getVideoData();
     this.$nextTick(function () {
       this.titleData = modulesTitleData;
       this.articleData = modulesArticleData;
       this.imageData = modulesImageData;
       this.buttonData = modulesButtonData;
       this.tableData = modulesTableData;
+      this.videoData = modulesVideoData;
     });
   },
   computed:{
@@ -164,6 +168,7 @@ export default {
       currentData:function(){
         var eType = this.editorType;
         var tType = this.terminalType;
+        console.log(eType);
         if(eType=='title'){
           return this.getCurrentData(eType,tType,this.titleData);
         }else if(eType=='article'){
@@ -172,8 +177,10 @@ export default {
           return this.getCurrentData(eType,tType,this.imageData);
         }else if(eType=='button'){
           return this.getCurrentData(eType,tType,this.buttonData);
-        }else{
+        }else if(eType=='table'){
           return this.getCurrentData(eType,tType,this.tableData);
+        }else{
+          return this.getCurrentData(eType,tType,this.videoData);
         }
       }
   },
