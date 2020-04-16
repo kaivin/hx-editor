@@ -586,7 +586,8 @@ html,body,#app,#app > .el-container{
   .smalltext011 strong{clear:both; display:block; text-align:center; color:#c62929; padding-bottom:pxToRem(5); font-size:pxToRem(32); }
   .smalltext011 p{margin:0px; }
   .smalltext012{padding:pxToRem(0); }
-  .smalltext012 li{clear: both; padding:pxToRem(0) pxToRem(0)!important; background:none!important; background-size: .26667rem;  margin: .4rem 0rem;}
+  .smalltext012 li{clear: both; padding:pxToRem(0) pxToRem(0)!important; background:none!important; background-size: .26667rem;  margin: 0;}
+  .smalltext012 li+li{margin: .4rem 0rem 0;}
   .smalltext012 li .smalltext012top{color:#e3a14f; margin-bottom:pxToRem(10); overflow:hidden; line-height:pxToRem(60); }
   .smalltext012 li .smalltext012top span:nth-child(1){float:left; font-size:pxToRem(60); font-weight:normal; }
   .smalltext012 li .smalltext012top span:nth-child(2){font-weight:600; background:url(../assets/images/insidestyle/sytlelist01.png) no-repeat left center; background-size:pxToRem(55); padding-left:pxToRem(60); margin-left:pxToRem(15); line-height:pxToRem(50); display:inline-block; font-size:pxToRem(32); }
@@ -1414,8 +1415,9 @@ html,body,#app,#app > .el-container{
   .smalltext011{clear:both; display:block; width:100%; border:1px dotted #c62929; padding:15px 15px; border-radius:5px; overflow:hidden; margin-bottom:15px;  margin-left:auto; margin-right:auto; }
   .smalltext011 strong{clear:both; display:block; text-align:center; color:#c62929; font-size:18px; }
   .smalltext011 p{margin:10px 0px 0px 0px!important;}    
-  .smalltext012{padding:10px 0px; margin-left:auto; margin-right:auto;}
-  .smalltext012 li{clear: both; margin:20px 0px;}
+  .smalltext012{padding:0px; margin-left:auto; margin-right:auto;}
+  .smalltext012 li{clear: both; margin:0px;}
+  .smalltext012 li+li{margin:20px 0px 0;}
   .smalltext012 li .smalltext012top{color:#e3a14f;  overflow:hidden; line-height:50px; margin-bottom: 0px; margin-top:0px;}
   .smalltext012 li .smalltext012top span:nth-child(1){float:left; font-size:30px; font-weight:normal; }
   .smalltext012 li .smalltext012top span:nth-child(2){font-weight:600;margin-left:15px; line-height:50px; display:inline-block; font-size:26px; }
