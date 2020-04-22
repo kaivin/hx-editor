@@ -863,7 +863,39 @@ html,body,#app,#app > .el-container{
   .smalltable014{ clear: both; display: block; margin: .33333rem 0rem;}
   .smalltable014 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
   .smalltable014 table thead th,.smalltable014 table tbody td{padding:0.133333rem 0.13333rem;border: 1px solid #dcdcdc;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
-  .smalltable014 table thead th {background:#4b5482; color: #fff;border:1px solid #59649a;}
+  .smalltable014 table thead th {background:#4b5482; color: #fff;border:1px solid #59649a;}  
+  //=============表格015
+  .smalltable015{clear:both; margin:pxToRem(20) pxToRem(0);}
+  .smalltable015 .smalltable015tit{clear: both; display: block; background:#2b6b70; color: #fff; font-size:pxToRem(28); line-height: pxToRem(30); padding:pxToRem(20) pxToRem(15); text-align: center; margin: 0px!important;font-weight:bold;}
+  .smalltable015 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
+  .smalltable015 table tr{border:1px solid #dcdcdc;}
+  .smalltable015 table td{padding:pxToRem(15) pxToRem(10);word-break: break-all; border:1px solid #dcdcdc; text-align: center; line-height:pxToRem(50); font-size: pxToRem(24); color: #333;}
+  .smalltable015 table th{padding:pxToRem(15) pxToRem(10);word-break: break-all; border:1px solid #dcdcdc; text-align: center; line-height:pxToRem(50); font-size: pxToRem(26);background: #ebfeff; font-weight: bold; color: #333;}
+  //=============表格016
+  .smalltable016{ clear: both; display: block; margin: .33333rem 0rem;}
+  .smalltable016 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
+  .smalltable016 table thead th {background:#ebfeff;}
+  .smalltable016 table thead th,.smalltable016 table tbody td{padding:0.133333rem 0.13333rem;border: 1px solid #ddd;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
+  //=============表格017
+  .smalltable017{clear:both; margin:pxToRem(20) pxToRem(0);}
+  .smalltable017 .smalltable017tit{clear: both; display: block; background: #2b6b70; color: #fff; font-size:pxToRem(28); line-height: pxToRem(30); padding:pxToRem(20) pxToRem(15); text-align: center; margin: 0px!important;font-weight:bold;}
+  .smalltable017 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
+  .smalltable017 table tr:nth-child(even) td{background: #ebfeff;}
+  .smalltable017 table tr{border:1px solid #dcdcdc;}
+  .smalltable017 table td{padding:pxToRem(15) pxToRem(10);word-break: break-all; border:1px solid #dcdcdc; text-align: center; line-height:pxToRem(50); font-size: pxToRem(24);}
+  //=============表格018
+  .smalltable018{ clear: both; display: block; margin: .33333rem 0rem;}
+  .smalltable018 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
+  .smalltable018 table thead th,.smalltable018 table tbody td{padding:0.133333rem 0.13333rem;border: 1px solid #dcdcdc;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
+  .smalltable018 table thead th {background:#2b6b70; color: #fff;border:1px solid #59649a;}
+  .smalltable018 table tbody tr:nth-child(even) td{background: #ebfeff;}
+  //=============表格019
+  .smalltable019{ clear: both; display: block; margin: .33333rem 0rem;}
+  .smalltable019 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
+  .smalltable019 table td{padding:0.133333rem 0.13333rem;border: 1px solid #dcdcdc;text-align: center;word-break: break-all;font-size: .37333rem; line-height:0.64rem;}
+  .smalltable019 table tr:nth-child(odd) td{background: #ebfeff;}
+  .smalltable019 table tr td:first-child{background: #2b6b70; color: #fff; border-bottom:1px solid #59649a;}
+  .smalltable019 table tr:last-child td:first-child{border-bottom:1px solid #dcdcdc;} 
 }
 .item-wrap.is-pc{
   padding:40px 30px;
@@ -1869,6 +1901,75 @@ html,body,#app,#app > .el-container{
   @media screen and (max-width: 1280px){
     .smalltable014{clear:both; margin:20px 0px;}
     .smalltable014 table thead th,.smalltable014 table tbody td{font-size:14px !important;padding: 10px 15px !important;}
+  }
+  
+  //=============表格015
+  .smalltable015{clear:both; margin:20px 0px;}
+  .smalltable015 .smalltable015tit{clear: both; display: block;padding: 10px 10px !important; background:#2b6b70; color: #fff; font-size: 28px; line-height: 48px; text-align: center; margin: 0px!important;font-weight:bold;}
+  .smalltable015 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
+  .smalltable015 table tr{border:1px solid #dcdcdc;}
+  .smalltable015 table td{padding:15px 15px;word-break: break-all; border:1px solid #dcdcdc; text-align: center;  line-height:24px; font-size:16px; color: #333;}
+  .smalltable015 table th{padding:15px 15px;word-break: break-all; border:1px solid #dcdcdc; text-align: center;  line-height:24px; font-size:16px; background: #ebfeff; font-weight: bold; color: #333;}
+  //=============表格016
+  .smalltable016{ clear: both; display: block; margin:30px 0px;}
+  .smalltable016 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
+  .smalltable016 table thead th {background:#ebfeff;}
+  .smalltable016 table thead th,.smalltable016 table tbody td{padding: 10px 0px;border: 1px solid #ddd;text-align: center;word-break: break-all; font-size: 16px;}
+  @media screen and (max-width: 1600px){
+    .smalltable016{clear:both; margin:26px 0px;}
+    .smalltable016 table thead th,.smalltable016 table tbody td{font-size:15px !important;padding: 14px 15px !important;}
+  }
+  @media screen and (max-width: 1440px){
+    .smalltable016{clear:both; margin:24px 0px;}
+    .smalltable016 table thead th,.smalltable016 table tbody td{padding: 12px 15px !important;}
+  }
+  @media screen and (max-width: 1280px){
+    .smalltable016{clear:both; margin:20px 0px;}
+    .smalltable016 table thead th,.smalltable016 table tbody td{font-size:14px !important;padding: 10px 15px !important;}
+  }
+  //=============表格017
+  .smalltable017{clear:both; margin:20px 0px;}
+  .smalltable017 .smalltable017tit{clear: both; display: block;padding: 10px 10px !important; background: #2b6b70; color: #fff; font-size: 28px; line-height: 48px; text-align: center; margin: 0px!important;font-weight:bold;}
+  .smalltable017 table{margin: 0 auto;width: 100%; background: #fff; border-collapse: collapse;}
+  .smalltable017 table tr:nth-child(even) td{background: #ebfeff;}
+  .smalltable017 table tr{border:1px solid #dcdcdc;}
+  .smalltable017 table td{padding:15px 15px;word-break: break-all; border:1px solid #dcdcdc; text-align: center;  line-height:24px; font-size:16px;}
+  //=============表格018
+  .smalltable018{ clear: both; display: block; margin:30px 0px;}
+  .smalltable018 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
+  .smalltable018 table thead th,.smalltable018 table tbody td{padding: 10px 0px;border: 1px solid #dcdcdc;text-align: center;word-break: break-all; font-size: 16px;}
+  .smalltable018 table thead th {background:#2b6b70; color: #fff;border:1px solid #59649a;}
+  .smalltable018 table tbody tr:nth-child(even) td{background: #ebfeff;}
+  @media screen and (max-width: 1600px){
+    .smalltable018{clear:both; margin:26px 0px;}
+    .smalltable018 table thead th,.smalltable018 table tbody td{font-size:15px !important;padding: 14px 15px !important;}
+  }
+  @media screen and (max-width: 1440px){
+    .smalltable018{clear:both; margin:24px 0px;}
+    .smalltable018 table thead th,.smalltable018 table tbody td{padding: 12px 15px !important;}
+  }
+  @media screen and (max-width: 1280px){
+    .smalltable018{clear:both; margin:20px 0px;}
+    .smalltable018 table thead th,.smalltable018 table tbody td{font-size:14px !important;padding: 10px 15px !important;}
+  }
+  //=============表格019
+  .smalltable019{ clear: both; display: block; margin:30px 0px;}
+  .smalltable019 table {width: 100%;border-collapse: collapse;border: 0px;background: #fff;}
+  .smalltable019 table td{padding: 10px 0px;border: 1px solid #dcdcdc;text-align: center;word-break: break-all; font-size: 16px;}
+  .smalltable019 table tr:nth-child(odd) td{background: #ebfeff;}
+  .smalltable019 table tr td:first-child{background: #2b6b70; color: #fff; border-bottom:1px solid #59649a;}
+  .smalltable019 table tr:last-child td:first-child{border-bottom:1px solid #dcdcdc;}
+  @media screen and (max-width: 1600px){
+    .smalltable019{clear:both; margin:26px 0px;}
+    .smalltable019 table td{font-size:15px !important;padding: 14px 15px !important;}
+  }
+  @media screen and (max-width: 1440px){
+    .smalltable019{clear:both; margin:24px 0px;}
+    .smalltable019 table td{padding: 12px 15px !important;}
+  }
+  @media screen and (max-width: 1280px){
+    .smalltable019{clear:both; margin:20px 0px;}
+    .smalltable019 table td{font-size:14px !important;padding: 10px 15px !important;}
   }
 
 }
