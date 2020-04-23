@@ -729,9 +729,19 @@ html,body,#app,#app > .el-container{
   .smallvideo001 .smallvideo001bom{background: #0b7ec2;position: relative;padding:pxToRem(20) 0px pxToRem(20) pxToRem(20);}
   .smallvideo001 .smallvideo001bom .smallvideo001bombox{background: #b2d2ef;padding:pxToRem(20) pxToRem(20) pxToRem(20) pxToRem(30);text-align: left;font-size:pxToRem(26)!important;font-weight:bold;border-radius:pxToRem(50) 0rem 0rem pxToRem(50);line-height:pxToRem(35)!important;position: relative;box-shadow:0rem pxToRem(3) pxToRem(7) rgba(0,0,0,0.35);margin: 0!important;color: #1e5bb7!important;}
   .smallvideo001 .smallvideo001bom .smallvideo001bombox:after{content:'';position: absolute;left:pxToRem(-10); right:pxToRem(-10); top:pxToRem(-10); bottom:pxToRem(-10); border:1px dashed #cde3f7; border-radius:pxToRem(60);}
-  .smallvideo001 .smallvideo001bom span{position: absolute;right:pxToRem(-10);top:0px;bottom:pxToRem(-11);background: url(../assets/images/insidestyle/small047_icon01.png) no-repeat left center;background-size:100% 100%;width:pxToRem(150);padding-left:pxToRem(20);}
+  .smallvideo001 .smallvideo001bom span{position: absolute;right:pxToRem(0);top:0px;bottom:pxToRem(0);background: url(../assets/images/insidestyle/small047_icon01.png) no-repeat left center;background-size:100% 100%;width:pxToRem(150);padding-left:pxToRem(20);}
   .smallvideo001 .smallvideo001bom span a{clear: both;display: block;width:pxToRem(100); height:pxToRem(100); background: url(../assets/images/insidestyle/small047_icon02.png) no-repeat center center; background-size:100%; margin:pxToRem(18) auto 0px;font-size:pxToRem(26); line-height:pxToRem(30); color: #ff3a34; text-align: center; padding:pxToRem(15) pxToRem(20) pxToRem(0);}
   .smallvideo001 .smallvideo001bom span a:hover{color: #f43f54;} 
+  //=============视频002
+  .smallvideo002{clear: both;width:100%; margin:pxToRem(30) auto;}
+  .smallvideo002 .smallvideo002mid{clear: both;display: block;position: relative;}
+  .smallvideo002 .smallvideo002mid img{clear: both;width: 100% !important;max-width: 100% !important;}
+  .smallvideo002 .smallvideo002bom{background: #0b7ec2;position: relative;padding:pxToRem(20) 0px pxToRem(20) pxToRem(20);}
+  .smallvideo002 .smallvideo002bom .smallvideo002bombox{background: #b2d2ef;padding:pxToRem(20) pxToRem(20) pxToRem(20) pxToRem(30);text-align: left;font-size:pxToRem(26)!important;font-weight:bold;border-radius:pxToRem(50) 0rem 0rem pxToRem(50);line-height:pxToRem(35)!important;position: relative;box-shadow:0rem pxToRem(3) pxToRem(7) rgba(0,0,0,0.35);margin: 0!important;color: #1e5bb7!important;}
+  .smallvideo002 .smallvideo002bom .smallvideo002bombox:after{content:'';position: absolute;left:pxToRem(-10); right:pxToRem(-10); top:pxToRem(-10); bottom:pxToRem(-10); border:1px dashed #cde3f7; border-radius:pxToRem(60);}
+  .smallvideo002 .smallvideo002bom span{position: absolute;right:pxToRem(0);top:0px;bottom:pxToRem(0);background: url(../assets/images/insidestyle/small047_icon01.png) no-repeat left center;background-size:100% 100%;width:pxToRem(150);padding-left:pxToRem(20);}
+  .smallvideo002 .smallvideo002bom span a{clear: both;display: block;width:pxToRem(100); height:pxToRem(100); background: url(../assets/images/insidestyle/small047_icon02.png) no-repeat center center; background-size:100%; margin:pxToRem(18) auto 0px;font-size:pxToRem(26); line-height:pxToRem(30); color: #ff3a34; text-align: center; padding:pxToRem(15) pxToRem(20) pxToRem(0);}
+  .smallvideo002 .smallvideo002bom span a:hover{color: #f43f54;} 
   //=============表格001
   .smalltable001{clear:both; margin:pxToRem(20) pxToRem(0); background: url(../assets/images/insidestyle/smalltableicon001.jpg) no-repeat center top #fff;background-size: 100% 100%;width: 100%;padding:pxToRem(5) pxToRem(20) pxToRem(30);box-sizing: border-box;}
   .smalltable001 .smalltable001tit {font-size:pxToRem(30);margin-bottom:pxToRem(30);color: #fff;font-weight: bold;margin:pxToRem(25) 0rem;text-align: center; color: #fff; background: none; padding:0rem;}
@@ -1589,7 +1599,7 @@ html,body,#app,#app > .el-container{
   .smallvideo001 .smallvideo001bom{background: #0b7ec2;position: relative;padding:25px 0px 25px 30px;}
   .smallvideo001 .smallvideo001bom .smallvideo001bombox{background: #b2d2ef;padding: 15px 15px 15px 30px;text-align: left;font-size: 30px!important;font-weight:bold;border-radius:37px 0px 0px 37px;line-height: 44px!important;position: relative;box-shadow:0px 3px 7px rgba(0,0,0,0.35);margin: 0!important;color: #1e5bb7!important;}
   .smallvideo001 .smallvideo001bom .smallvideo001bombox:after{content:'';position: absolute;left:-10px; right:-10px; top:-10px; bottom:-10px; border:1px dashed #cde3f7; border-radius:47px;}
-  .smallvideo001 .smallvideo001bom span{position: absolute;right: -10px;top:0px;bottom:-11px;background: url(../assets/images/insidestyle/small047_icon01.png) no-repeat left center;background-size:100%;width: 210px;padding-left: 30px;}
+  .smallvideo001 .smallvideo001bom span{position: absolute;right:0px;top:0px;bottom:0px;background: url(../assets/images/insidestyle/small047_icon01.png) no-repeat left center;background-size:100%;width: 210px;padding-left: 30px;}
   .smallvideo001 .smallvideo001bom span a{clear: both;display: block;width:113px; height:113px; background: url(../assets/images/insidestyle/small047_icon02.png) no-repeat center center; background-size:100%; margin:12px auto 0px;font-size:24px; line-height: 30px; color: #ff3a34; text-align: center; padding:20px 30px;}
   .smallvideo001 .smallvideo001bom span a:hover{color: #f43f54;}  
   @media screen and (max-width: 1600px){
@@ -1618,6 +1628,35 @@ html,body,#app,#app > .el-container{
     .smallvideo001 .smallvideo001bom .smallvideo001bombox{font-size: 22px!important;line-height: 30px!important;}
     .smallvideo001 .smallvideo001bom span{width: 150px;}
     .smallvideo001 .smallvideo001bom span a{font-size: 16px!important;padding: 12px 20px 0px 20px;}
+  }
+  //=============视频002
+  .smallvideo002{clear: both;width:100%;max-width:800px; margin:30px auto;}
+  .smallvideo002 .smallvideo002mid{clear: both;display: block;position: relative;}
+  .smallvideo002 .smallvideo002mid img{clear: both;width: 100% !important;max-width: 100% !important;}
+  .smallvideo002 .smallvideo002bom{background: #0b7ec2;position: relative;padding:25px 0px 25px 30px;}
+  .smallvideo002 .smallvideo002bom .smallvideo002bombox{background: #b2d2ef;padding: 15px 15px 15px 30px;text-align: left;font-size: 30px!important;font-weight:bold;border-radius:37px 0px 0px 37px;line-height: 44px!important;position: relative;box-shadow:0px 3px 7px rgba(0,0,0,0.35);margin: 0!important;color: #1e5bb7!important;}
+  .smallvideo002 .smallvideo002bom .smallvideo002bombox:after{content:'';position: absolute;left:-10px; right:-10px; top:-10px; bottom:-10px; border:1px dashed #cde3f7; border-radius:47px;}
+  .smallvideo002 .smallvideo002bom span{position: absolute;right:0px;top:0px;bottom:0px;background: url(../assets/images/insidestyle/small047_icon01.png) no-repeat left center;background-size:100%;width: 210px;padding-left: 30px;}
+  .smallvideo002 .smallvideo002bom span a{clear: both;display: block;width:113px; height:113px; background: url(../assets/images/insidestyle/small047_icon02.png) no-repeat center center; background-size:100%; margin:12px auto 0px;font-size:24px; line-height: 30px; color: #ff3a34; text-align: center; padding:20px 30px;}
+  .smallvideo002 .smallvideo002bom span a:hover{color: #f43f54;}  
+  @media screen and (max-width: 1600px){
+    .smallvideo002{margin:20px auto;}
+    .smallvideo002 .smallvideo002bom{padding: 20px 0px 20px 25px;}
+    .smallvideo002 .smallvideo002bom .smallvideo002bombox{font-size:26px!important;border-radius: 33px 0px 0px 33px;line-height: 40px!important;padding: 13px 15px 13px 30px;}
+    .smallvideo002 .smallvideo002bom span{width: 190px;}
+    .smallvideo002 .smallvideo002bom span a{width: 100px;height: 100px;padding: 15px 25px 0px 25px;font-size: 20px!important;}
+  }
+  @media screen and (max-width: 1440px){
+    .smallvideo002{margin: 15px auto;}
+    .smallvideo002 .smallvideo002bom .smallvideo002bombox{font-size: 24px!important;border-radius: 27px 0px 0px 27px;line-height: 34px!important;padding: 10px 15px 10px 25px;}
+    .smallvideo002 .smallvideo002bom .smallvideo002bombox:after{left: -5px;right: -5px;top: -5px;bottom: -5px;}
+    .smallvideo002 .smallvideo002bom span{width: 160px;right: 0px;}
+    .smallvideo002 .smallvideo002bom span a{width: 80px;height: 80px;padding: 12px 15px 0px 15px;font-size: 18px!important;line-height: 24px;margin-top: 15px;}
+  }
+  @media screen and (max-width: 1280px){
+    .smallvideo002 .smallvideo002bom .smallvideo002bombox{font-size: 22px!important;line-height: 30px!important;}
+    .smallvideo002 .smallvideo002bom span{width: 150px;}
+    .smallvideo002 .smallvideo002bom span a{font-size: 16px!important;padding: 12px 20px 0px 20px;}
   }
   //=============表格001
   .smalltable001{clear:both; margin:20px 0px; background: url(../assets/images/insidestyle/smalltableicon001.jpg) no-repeat center top #fff;background-size: 100% 100%;width: 100%;padding: 5px 60px 50px;box-sizing: border-box;}
