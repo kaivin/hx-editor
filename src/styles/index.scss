@@ -699,6 +699,10 @@ html,body,#app,#app > .el-container{
   .smalltext027 li b{width:pxToRem(99);font-size:pxToRem(60);text-align: center;display:block;position: absolute;left: 0;top:50%; margin-top:pxToRem(-40); line-height:pxToRem(80);}
   .smalltext027 li strong{clear: both; display: block; text-align: left; line-height:pxToRem(40);font-size:pxToRem(32);}
   .smalltext027 li p{margin:pxToRem(10) 0rem 0rem 0rem;}
+  .smalltext028{}
+  .smalltext028 li{background: #f2f9ff;-webkit-box-shadow: 0 0 0.8625rem rgba(136,191,242,.64) inset;box-shadow: inset 0 0 0.8625rem rgba(136,191,242,.64);color: #1b5cab;position: relative;padding:pxToRem(15) pxToRem(25) pxToRem(15) pxToRem(120);border-radius:pxToRem(30);margin:pxToRem(20) 0;}
+  .smalltext028 li strong{clear: both; display: block; text-align: left; line-height:pxToRem(40);font-size:pxToRem(32);}
+  .smalltext028 li p{margin:pxToRem(10) 0rem 0rem 0rem;}
   //=============按钮
   .smallbtn001{width:pxToRem(690); margin:pxToRem(30) auto;}
   .smallbtn001 a{clear: both; display: block;}
@@ -1568,6 +1572,10 @@ html,body,#app,#app > .el-container{
   .smalltext027 li b{width:99px;font-size:60px;text-align: center;display:block;position: absolute;left: 0;top:50%; margin-top: -40px; line-height:80px;}
   .smalltext027 li strong{clear: both; display: block; text-align: left; font-size: 20px;}
   .smalltext027 li p{margin:10px 0px 0px 0px;}
+  .smalltext028{max-width: 800px;margin-left: auto;margin-right: auto;}
+  .smalltext028 li{background: #f2f9ff;-webkit-box-shadow: 0 0 0.8625rem rgba(136,191,242,.64) inset;box-shadow: inset 0 0 0.8625rem rgba(136,191,242,.64);color: #1b5cab;position: relative;padding:15px 25px 15px 120px;border-radius:30px;margin:20px 0;}
+  .smalltext028 li strong{clear: both; display: block; text-align: left; font-size: 20px;}
+  .smalltext028 li p{margin:10px 0px 0px 0px;}
   //================按钮
   //=============按钮
   .smallbtn001{clear:both; display:block; text-align: center;}
