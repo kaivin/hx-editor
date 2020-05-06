@@ -728,7 +728,13 @@ html,body,#app,#app > .el-container{
   .smalltext029 .p1{background:#94c6f7;display:inline-block;padding:0 5%;color:#fff;position:relative}
   .smalltext029 .p1:before{content:"";width:100%;height:.05333125rem;background:#94c6f7;display:block;position:absolute;left:0;bottom:-.09375rem}
   .smalltext029 .p1:after{content:"";width:100%;height:.3333125rem;background:url(../assets/images/insidestyle/smalltext029-tb.png) center no-repeat;background-size:.28125rem;display:block;position:absolute;left:0;bottom:-.73321875rem}
-
+  
+  .smalltext030{background:#fff;position:relative;box-shadow:0rem 0rem .06667rem #ddd;border-radius:.13333rem;padding:.26667rem .26667rem .13333rem .26667rem;width:100%;margin:.4rem auto .4rem}
+  .smalltext030 i{background:#636ca5;font-style:normal;position:absolute;right:.4rem;top:-.2rem;color:#fff;font-weight:bold;font-size:.37333rem;width:.8rem;height:.66667rem;line-height:.53333rem;display:block;text-align:center}
+  .smalltext030 i:after,.smalltext030 i:before{content:"";position:absolute;width:0rem;height:0rem}
+  .smalltext030 i:after{border-top:.2rem solid #636ca5;border-bottom:0rem;border-left:.4rem solid transparent;border-right:.4rem solid transparent;bottom:-.2rem;left:0rem}
+  .smalltext030 i:before{top:0rem;right:-.2rem;border-bottom:.2rem solid #454c7c;border-top:0rem;border-left:0rem;border-right:.2rem solid transparent}
+  .smalltext030 p.p1{color:#454c7c !important;font-size:.4rem !important;font-weight:bold;border-bottom:1px dashed #626ca5;padding-bottom:.13333rem;margin-top:0rem !important;margin-bottom:.26667rem !important}.smalltext030 p{margin-top:.13333rem !important;margin-bottom:.13333rem !important}
   //=============按钮
   .smallbtn001{width:pxToRem(690); margin:pxToRem(30) auto;}
   .smallbtn001 a{clear: both; display: block;}
@@ -1650,7 +1656,22 @@ html,body,#app,#app > .el-container{
   .smalltext029 .p1:before{content:"";width:100%;height: 3px;background:#94c6f7;display:block;position:absolute;left:0;bottom: -6px;}
   .smalltext029 .p1:after{content:"";width:100%;height: 25px;background:url(../assets/images/insidestyle/smalltext029-tb.png) center no-repeat;background-size: 15px;display:block;position:absolute;left:0;bottom: -40px;}
   .smalltext029 .p2{color:#4e79bf;text-align:center;}
-  .smalltext029 .p1 strong{font-size: 20px;color:#fff;}
+  .smalltext029 .p1 strong{font-size: 20px;color:#fff;}  
+  .smalltext030{background:#fff;position:relative;box-shadow:0px 0px 5px #ddd;border-radius:10px;padding: 20px 20px 10px 20px;width:100%;max-width:800px;margin: 40px auto 20px;}
+  .smalltext030 i{background:#636ca5;font-style:normal; position:absolute; right:30px; top:-15px; color:#fff; font-weight:bold; font-size:20px; width:60px; height:50px; line-height:40px; display:block; text-align:center; }
+  .smalltext030 i:after,.smalltext030 i:before{content:''; position:absolute; width:0px; height:0px;}
+  .smalltext030 i:after{border-top:15px solid #636ca5; border-bottom:0px; border-left:30px solid transparent; border-right:30px solid transparent; bottom:-15px; left:0px;}
+  .smalltext030 i:before{top:0px; right:-15px;border-bottom:15px solid #454c7c; border-top:0px; border-left:0px; border-right:15px solid transparent;}
+  .smalltext030 p.p1{color:#454c7c !important;font-size: 18px!important;font-weight: bold;border-bottom: 1px dashed #626ca5;padding-bottom: 10px;margin-top: 0px!important;margin-bottom: 20px !important;}
+  .smalltext030 p{margin-top: 10px !important;margin-bottom:10px !important;}
+  @media (max-width: 1600px){.smalltext030{max-width:700px;}}
+  @media (max-width: 1440px){
+    .smalltext030{max-width:650px;}
+    .smalltext030 i{font-size:18px; width:50px; height:40px; line-height:35px; top:-10px;}
+    .smalltext030 i:after{border-top:10px solid #636ca5; border-left:25px solid transparent; border-right:25px solid transparent; bottom:-10px;}
+    .smalltext030 i:before{right:-10px;border-bottom:10px solid #454c7c; border-right:10px solid transparent;}
+    .smalltext030 p.p1{font-size:16px !important;}
+  }
   //================按钮
   //=============按钮
   .smallbtn001{clear:both; display:block; text-align: center;}
