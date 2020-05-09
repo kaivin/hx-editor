@@ -6,7 +6,7 @@
           <!-- <div class="btn-panel" v-bind:class="tType=='web'?'is-pc':'is-wap'"><span v-bind:class="tType=='web'?'on':''" v-on:click="changeTerminalType('web')">PC端</span><span v-bind:class="tType=='wap'?'on':''" v-on:click="changeTerminalType('wap')">移动端</span></div> -->
           <div class="filter-wrap public-panel">
             <dl class="filter-item fst-panel">
-              <dt>适用网站测试</dt>
+              <dt>适用网站</dt>
               <dd><el-checkbox v-for="(item,index) in publicFilteringData.siteType" v-bind:key="index" v-model="item.isSelected" v-bind:label="item.name" border v-bind:size="size" v-on:change="filteringSiteTypeChange(item)"><span>{{item.name}}</span></el-checkbox></dd>
             </dl>
             <h2>筛选色系</h2>
