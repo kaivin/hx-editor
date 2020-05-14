@@ -852,6 +852,8 @@ export default {
       width:100%;
       @extend %clearfix;
       background: url(../../assets/images/bg_mark.jpg) left top repeat;
+      position:relative;
+      z-index: 1;
     }
   }
   .item-wrap.is-pc{
