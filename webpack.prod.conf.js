@@ -146,8 +146,8 @@ module.exports={
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 8192,        // 小于8192字节的图片打包成base 64图片
-                            name:'images/[name].[ext]',
+                            limit: 1024,        // 小于8192字节的图片打包成base 64图片
+                            name:'images/insidestyle/[name].[ext]',
                             publicPath:''
                         }
                     }

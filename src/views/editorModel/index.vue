@@ -49,10 +49,10 @@
               <div class="item-wrapper" v-for="(item,index) in currentData" v-bind:key="index">
                 <div class="file-panel"><span>后台文件名：{{item.fileName}}</span></div>
                 <div class="item-wrap is-pc" v-if="tType!='wap'">
-                  <div class="item-content" v-html="item.htmlString"></div>
+                  <div class="item-content" v-html="item.htmlStringCopy"></div>
                 </div>
                 <div class="item-wrap is-wap" v-if="tType!='web'">
-                  <div class="item-content" v-html="item.htmlString"></div>
+                  <div class="item-content" v-html="item.htmlStringCopy"></div>
                 </div>
                 <div class="edit-panel">
                   <span v-clipboard:copy="item.htmlString" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
@@ -169,19 +169,39 @@ export default {
         var eType = this.editorType;
         var tType = this.terminalType;
         console.log(eType);
+        var currentData = [];
         if(eType=='title'){
-          return this.getCurrentData(eType,tType,this.titleData);
+          currentData = this.getCurrentData(eType,tType,this.titleData);
         }else if(eType=='article'){
-          return this.getCurrentData(eType,tType,this.articleData);
+          currentData = this.getCurrentData(eType,tType,this.articleData);
         }else if(eType=='image'){
-          return this.getCurrentData(eType,tType,this.imageData);
+          currentData = this.getCurrentData(eType,tType,this.imageData);
         }else if(eType=='button'){
-          return this.getCurrentData(eType,tType,this.buttonData);
+          currentData = this.getCurrentData(eType,tType,this.buttonData);
         }else if(eType=='table'){
-          return this.getCurrentData(eType,tType,this.tableData);
+          currentData = this.getCurrentData(eType,tType,this.tableData);
         }else{
-          return this.getCurrentData(eType,tType,this.videoData);
+          currentData = this.getCurrentData(eType,tType,this.videoData);
         }
+        console.log(currentData,8888);
+        if(currentData.length>0){
+          currentData.forEach(function(item,index){
+            var srcReg = /src=([\'\"]?([^\'\"]*)[\'\"]?)/ig;
+            var allSrc = item.htmlString.match(srcReg);
+            console.log(allSrc);
+            item.htmlStringCopy = item.htmlString;
+            if(allSrc&&allSrc.length>0){
+              allSrc.forEach(function(items,indexs){
+                var itemsUrl = items.split('"')[1];
+                if(itemsUrl.indexOf('/images/insidestyle')!=-1){
+                  var itemImgUrl = require('@/assets'+itemsUrl);
+                  item.htmlStringCopy = item.htmlStringCopy.replace(items,'src='+itemImgUrl);
+                }
+              });
+            }
+          });
+        }
+        return currentData;
       }
   },
    methods: {
@@ -425,7 +445,7 @@ export default {
         }
       }
       return currentData;
-      console.log(currentData);
+      console.log(currentData,999);
     },
     // 筛选模式切换事件
     filteringModeChange:function(value){
