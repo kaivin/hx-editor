@@ -150,7 +150,7 @@ html,body,#app,#app > .el-container{
   .smalltit041 strong span{clear:both; display:block; background:#00a200; color:#fff; padding:pxToRem(5) pxToRem(20); border-radius:50px;box-shadow:0 .05333125rem 0 #fff;font-size: pxToRem(30);line-height: 1.5;}
   .smalltit042{clear:both; text-align: center;}.smalltit042 strong{display: inline-block;background:#00a200;color:#fff;font-size: pxToRem(30); border-radius:pxToRem(30); padding:pxToRem(0) pxToRem(20);box-shadow:0 pxToRem(5) 0 #aee6b8;}
   .smalltit043{text-align:center; position:relative;}.smalltit043:before{content:"";width:100%;height:1px;background:#00a101;display:block;position:absolute;left:0;top:50%;}.smalltit043 strong{background:#00a101; color:#fff; display:inline-block;padding:0 pxToRem(50);line-height:pxToRem(50);position:relative;}
-  .smalltit043 strong:after,.smalltit043 strong:before{content:"";width:pxToRem(35);height:pxToRem(35);background:#fff;display:block;position:absolute;left:-.21875rem;top:.1066875rem;transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg)}.smalltit043 strong:after{left:auto;right:-.21875rem}
+  .smalltit043 strong:after,.smalltit043 strong:before{content:"";width:pxToRem(35);height:pxToRem(35);background:#fff;display:block;position:absolute;left:-.23rem;top:.1066875rem;transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg)}.smalltit043 strong:after{left:auto;right:-.23rem}
   .smalltit044{clear:both; display:block; position:relative; text-align: left;}.smalltit044 strong{clear: both; display: inline-block; position: relative; padding-bottom:pxToRem(20);}.smalltit044 strong:after,.smalltit044 strong:before{content:"";height:pxToRem(5);display:block;position:absolute;left:0}.smalltit044 strong:before{width:30%;background:#00a101;bottom:pxToRem(10);}.smalltit044 strong:after{width:60%;background:#aee6b8;bottom:pxToRem(0);}
   .smalltit045{margin:pxToRem(15) pxToRem(0) pxToRem(10)!important;padding:pxToRem(40) pxToRem(0) pxToRem(0);position:relative;z-index: 1;}
   .smalltit045:before{content:"";width:100%;height:pxToRem(10);background:#ddffe3;border-top:1px solid #00a101;display:block;position:absolute;left:0;top:0}
@@ -567,10 +567,10 @@ html,body,#app,#app > .el-container{
   .smalltxt069 p:after{content:"";width:.0266875rem;background:#97c7f7;position:absolute;left:.1333125rem;top:.4rem;bottom:-.48rem}
   .smalltxt069 p:last-child{padding-bottom:0}
   .smalltxt069 p:last-child:after{display:none}
-  .smalltxt070{position:relative;z-index:1}
-  .smalltxt070 span{background:#dbe9f5;border:.0266875rem dashed #adc6e7;display:block;padding:.2rem .4rem;color:#1b5cab;font-weight:700;border-radius:.1333125rem;position:relative}
-  .smalltxt070 span:before{content:"";width:100%;height:.75rem;background:url(../assets/images/insidestyle/smalltxt070-zs.png) center no-repeat;background-size:1.075rem;display:block;position:absolute;left:0;top:-.5333125rem}
-  .smalltxt070 span:after{content:"";background:#fff;border:.0266875rem solid #adc6e7;border-radius:.1333125rem;position:absolute;left:.09375rem;right:-.1333125rem;top:.09375rem;bottom:-.1333125rem;z-index:-1}
+  .smalltxt070 { background: #dbe9f5; border: 1px dashed #adc6e7; display: block; color: #1b5cab !important; border-radius: 0.192rem; padding: 0.48rem 3% 0.2rem; margin: 0.4rem 0.2rem 0.6rem 0 !important; position: relative; }
+  .smalltxt070:before { content: ""; width: 100%; height: 0.75rem; background: url(../assets/images/insidestyle/smalltxt070-zs.png) center no-repeat; background-size: 1.075rem; display: block; position: absolute; left: 0; top: -0.48rem; }
+  .smalltxt070:after { content: ""; background: #fff; border: 1px solid #adc6e7; border-radius: 0.192rem; position: absolute; left: 0.2rem; right: -0.2rem; top: 0.2rem; bottom: -0.2rem; z-index: -1; }
+  .smalltxt070 p { color: #1b5cab !important; margin: 0 !important; }
   .smalltxt071{background: #f7fcff;border-radius: 0.28rem;padding: 0.12rem 1.4rem;margin: .4rem 0;box-shadow: 0 0 0.08rem rgba(1, 86, 133, 0.2);}
   .smalltxt071 p{line-height: 1.8!important;text-indent: 0!important;margin: .4rem 0;}
   .smalltxt071 p span{text-align: left;padding: 0.10667rem 0.26667rem;display: inline-block;position: relative;}
@@ -744,7 +744,7 @@ html,body,#app,#app > .el-container{
   .smalltext029 .p1:after{content:"";width:100%;height:.3333125rem;background:url(../assets/images/insidestyle/smalltext029-tb.png) center no-repeat;background-size:.28125rem;display:block;position:absolute;left:0;bottom:-.73321875rem}
   
   .smalltext030{background:#f7f8ff;position:relative;box-shadow:0rem 0rem .06667rem #ddd;border-radius:.13333rem;padding:.26667rem .26667rem .13333rem .26667rem;width:100%;margin:.4rem auto .4rem}
-  .smalltext030 i{background:#636ca5;font-style:normal;position:absolute;right:.4rem;top:-.2rem;color:#fff;font-weight:bold;font-size:.37333rem;width:.8rem;height:.66667rem;line-height:.53333rem;display:block;text-align:center}
+  .smalltext030 i{background:#636ca5;font-style:normal;position:absolute;right:.4rem;top:-.2rem;color:#fff;font-weight:bold;font-size:.37333rem;width:.8rem;height:.66667rem;line-height:0.72rem;display:block;text-align:center}
   .smalltext030 i:after,.smalltext030 i:before{content:"";position:absolute;width:0rem;height:0rem}
   .smalltext030 i:after{border-top:.2rem solid #636ca5;border-bottom:0rem;border-left:.4rem solid transparent;border-right:.4rem solid transparent;bottom:-.2rem;left:0rem}
   .smalltext030 i:before{top:0rem;right:-.2rem;border-bottom:.2rem solid #454c7c;border-top:0rem;border-left:0rem;border-right:.2rem solid transparent}
@@ -1124,8 +1124,8 @@ html,body,#app,#app > .el-container{
   .smalltit043{text-align:center; position:relative;}
   .smalltit043:before{content: "";width: 100%;height: 1px;background: #00a101;display: block;position: absolute;left: 0;top: 50%;}
   .smalltit043 strong{background: #00a101;color: #fff;display: inline-block;padding:7px 30px;line-height: 30px;position: relative;font-size: 18px;}
-  .smalltit043 strong:after,.smalltit043 strong:before{content: "";width: 25px;height: 25px;background: #fff;display: block;position: absolute;left: -13px;top: 9px;transform: rotate(45deg);-ms-transform: rotate(45deg);-moz-transform: rotate(45deg);-webkit-transform: rotate(45deg);-o-transform: rotate(45deg);}
-  .smalltit043 strong:after{left:auto;right:-13px;}  
+  .smalltit043 strong:after,.smalltit043 strong:before{content: "";width: 31px;height: 31px;background: #fff;display: block;position: absolute;left: -15px;top: 7px;transform: rotate(45deg);-ms-transform: rotate(45deg);-moz-transform: rotate(45deg);-webkit-transform: rotate(45deg);-o-transform: rotate(45deg);}
+  .smalltit043 strong:after{left:auto;right:-15px;}  
   .smalltit044{clear:both; display:block; position:relative; text-align: left;}
   .smalltit044 strong{clear: both; display: inline-block; position: relative; padding-bottom:15px;font-size: 18px;}
   .smalltit044 strong:after,.smalltit044 strong:before{content:"";height:3px;display:block;position:absolute;left:0}
@@ -1697,7 +1697,7 @@ html,body,#app,#app > .el-container{
   .smalltext029 .p2{color:#4e79bf;text-align:center;}
   .smalltext029 .p1 strong{font-size: 20px;color:#fff;}  
   .smalltext030{background:#f7f8ff;position:relative;box-shadow:0px 0px 5px #ddd;border-radius:10px;padding: 20px 20px 10px 20px;width:100%;max-width:800px;margin: 40px auto 20px;}
-  .smalltext030 i{background:#636ca5;font-style:normal; position:absolute; right:30px; top:-15px; color:#fff; font-weight:bold; font-size:20px; width:60px; height:50px; line-height:40px; display:block; text-align:center; }
+  .smalltext030 i{background:#636ca5;font-style:normal; position:absolute; right:30px; top:-15px; color:#fff; font-weight:bold; font-size:20px; width:60px; height:50px; line-height:55px; display:block; text-align:center; }
   .smalltext030 i:after,.smalltext030 i:before{content:''; position:absolute; width:0px; height:0px;}
   .smalltext030 i:after{border-top:15px solid #636ca5; border-bottom:0px; border-left:30px solid transparent; border-right:30px solid transparent; bottom:-15px; left:0px;}
   .smalltext030 i:before{top:0px; right:-15px;border-bottom:15px solid #454c7c; border-top:0px; border-left:0px; border-right:15px solid transparent;}
