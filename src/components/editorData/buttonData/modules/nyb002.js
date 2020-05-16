@@ -1,5 +1,11 @@
-
-import image from '@/assets/images/insidestyle/smallbtn002.png';
+/*
+ * @Author: your name
+ * @Date: 2020-04-16 09:35:28
+ * @LastEditTime: 2020-05-14 09:15:28
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \hx-editor\src\components\editorData\buttonData\modules\nyb002.js
+ */
 export function getHtmlData (){
     return {
         type:"", // web(只用于PC端)|wap(只用于移动端)|(PC和移动端通用该值为空)|
@@ -10,6 +16,6 @@ export function getHtmlData (){
         fileName:'nyb002.js', // 该文件的文件名
         styleWebCode:'.smallbtn002{text-align:center;}.smallbtn002 a{display:inline-block;width:400px;}.smallbtn002 a img{max-width:100%;width:100%;}', // PC端样式
         styleWapCode:'.smallbtn002{text-align:center;width:9.2rem;margin:0.4rem auto;}.smallbtn002 a{clear:both;display:block;}.smallbtn002 img{max-width:100%;width:100%;}', // 移动端样式
-        htmlString:'<p class="smallbtn002"><a href="#" rel="nofollow"><img src="'+image+'" alt=""></a></p>'
+        htmlString:'<p class="smallbtn002"><a href="#" rel="nofollow"><img src="/images/insidestyle/smallbtn002.png" alt=""></a></p>'
     };
 }
