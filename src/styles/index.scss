@@ -628,7 +628,9 @@ html,body,#app,#app > .el-container{
   .smallbtn009 a{ font-size: 0.4rem; color: #fff; line-height: 1; background-color: #195a9c; background-image: linear-gradient(to right, #227bb7 , #195a9c); border-radius: 0.6rem 0 0 0.6rem; padding: 0.06rem 0.1rem; display: block; position: relative; box-shadow: 0 0 0.06667rem #123f77; }
   .smallbtn009 a::before{ content: ""; width: 1.09333rem; height: 1.09333rem; background: url(../assets/images/insidestyle/smallbtn009-zs2.png) center no-repeat; background-size: 100%; display: inline-block; vertical-align: middle; margin-right: 0.16rem; }
   .smallbtn009 a::after{ content: ""; width: 0.77333rem; height: 1.21333rem; background: url(../assets/images/insidestyle/smallbtn009-zs3.jpg) center no-repeat; background-size: 100%; display: block; position: absolute; right: -0.77333rem; top: 0; }
-    
+  .smallbtn010{width: 100%;height: 2.08rem;background: url(../assets/images/insidestyle/smallbtn010-pic.png) center no-repeat;background-size: 100%;margin: 0 auto;padding: 0.44rem 0.48rem 0 2.64rem;text-align: center;}
+  .smallbtn010 strong{font-size: 0.37333rem;line-height: 1;color: #f05f08;display: block;margin-bottom: 0.15rem;}
+  .smallbtn010 span{font-size: 0.32rem;color: #f04832;line-height: 0.48rem;background: #feebdf;border-radius: 0.12rem;padding: 0 0.2rem;display: inline-block;}
 //=============视频001  
   .smallvideo001{clear: both;width:100%; margin:pxToRem(30) auto;}
   .smallvideo001 .smallvideo001top{background: #b2d2ef; border-top:1px solid #00b9c7; line-height:pxToRem(30); padding:pxToRem(15) 0rem pxToRem(15) pxToRem(180); position: relative; z-index:5; text-align: center;font-size:pxToRem(26); font-weight: bold;}
@@ -1476,7 +1478,14 @@ html,body,#app,#app > .el-container{
   .smallbtn009 a{font-size: 22px;color: #fff!important;line-height: 1;background-color: #195a9c;background-image: linear-gradient(to right, #227bb7 , #195a9c);border-radius: 50px 0 0 50px;padding: 4px 7px;display: block;position: relative;box-shadow: 0 0 5px #123f77;}
   .smallbtn009 a::before{content: "";width: 70px;height: 70px;background: url(../assets/images/insidestyle/smallbtn009-zs2.png) center no-repeat;background-size: 100%;display: inline-block;vertical-align: middle;margin-right: 12px;}
   .smallbtn009 a::after{content: "";width: 58px;height: 78px;background: url(../assets/images/insidestyle/smallbtn009-zs3.jpg) center no-repeat;background-size: 100%;display: block;position: absolute;right: -58px;top: 0;}
-
+  .smallbtn010{width: 722px;height: 165px;background: url(../assets/images/insidestyle/smallbtn010-pic.png) center no-repeat;background-size: 100%;margin: 0 auto;padding: 33px 4% 0 22%;text-align: center;}
+  .smallbtn010 strong{ font-size: 30px;line-height: 1;color: #f05f08; display: block; margin-bottom: 16px; }
+  .smallbtn010 span{ font-size: 24px; color: #f04832; line-height: 33px; background: #feebdf; border-radius: 10px; padding: 0 14px; display: inline-block; }
+  @media (max-width: 1600px){
+    .smallbtn010{ width: 555px; padding: 42px 5% 0 25%; }
+    .smallbtn010 strong{ font-size: 22px; margin-bottom: 12px; }
+    .smallbtn010 span{ font-size: 18px; line-height: 30px; }
+  }
   //=============视频001  
   .smallvideo001{clear: both;width:100%;max-width:800px; margin:30px auto;}
   .smallvideo001 .smallvideo001top{background: #b2d2ef; border-top:1px solid #00b9c7; line-height: 40px; padding:13px 0px 13px 220px; position: relative; z-index:5; text-align: center;font-size:24px; font-weight: bold;}
