@@ -15,6 +15,7 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb005.js', // 该文件的文件名
+        class:'smallbtn005',// 用来给js使用添加页面内样式使用
         styleWebCode:'.smallbtn005{text-align: center;}', // PC端样式
         styleWapCode:'.smallbtn005{text-align: center;}', // 移动端样式
         htmlString:'<p class="smallbtn005"><a href="#" rel="nofollow"><img src="/images/insidestyle/smallbtn005-pic01.png" alt=""></a></p>'

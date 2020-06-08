@@ -9,6 +9,19 @@
               <dt>适用网站</dt>
               <dd><el-checkbox v-for="(item,index) in publicFilteringData.siteType" v-bind:key="index" v-model="item.isSelected" v-bind:label="item.name" border v-bind:size="size" v-on:change="filteringSiteTypeChange(item)"><span>{{item.name}}</span></el-checkbox></dd>
             </dl>
+            <dl class="filter-item">
+              <dt>选择主题色</dt>
+              <dd>
+                <el-select v-model="publicFilteringData.selectedTheme" v-on:change="themeSelectedChange" placeholder="请选择">
+                  <el-option
+                    v-for="item in publicFilteringData.themeData"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                  </el-option>
+                </el-select>
+              </dd>
+            </dl>
             <h2>筛选色系</h2>
             <dl class="filter-item">
               <dt>模式</dt>
@@ -49,10 +62,10 @@
               <div class="item-wrapper" v-for="(item,index) in currentData" v-bind:key="index">
                 <div class="file-panel"><span>后台文件名：{{item.fileName}}</span></div>
                 <div class="item-wrap is-pc" v-if="tType!='wap'">
-                  <div class="item-content" v-html="item.htmlStringCopy"></div>
+                  <div class="item-content" v-html="item.webHtmlString"></div>
                 </div>
                 <div class="item-wrap is-wap" v-if="tType!='web'">
-                  <div class="item-content" v-html="item.htmlStringCopy"></div>
+                  <div class="item-content" v-html="item.wapHtmlString"></div>
                 </div>
                 <div class="edit-panel">
                   <span v-clipboard:copy="item.htmlString" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
@@ -88,6 +101,16 @@ export default {
       size: 'small',
       isOpen: false,
       isSingle: false,
+      beforeChangeThemeColor:{
+        color1:'#0182b8', // 主题色暗重色
+        color2:'#ffff00', // 主题色
+        color3:'#ff00ff', // 主题色亮重色
+        color4:'#00ff00', // 主题色暗浅色
+        color5:'#f0f0f0', // 主题色亮浅色
+        color6:'#0f0f0f', // 辅助色
+        color7:'#000fff', // 点缀色
+        color8:'#fff000', // 反冲色
+      },
       publicFilteringData:{
         selectedSiteType:'',
         siteType:[
@@ -97,6 +120,98 @@ export default {
         filteringColorModeData:[
           {key:"sum",name:'并集'},
           {key:"intersection",name:'交集'}
+        ],
+        selectedTheme:'theme1',
+        selectedThemeColor:{
+              color1:'#0182b8',
+              color2:'#ffff00',
+              color3:'#ff00ff',
+              color4:'#00ff00',
+              color5:'#f0f0f0',
+              color6:'#0f0f0f',
+              color7:'#000fff',
+              color8:'#fff000',
+            },
+        themeData:[
+          {
+            value:'theme1',
+            themeColor: {
+              color1:'#0182b8',
+              color2:'#ffff00',
+              color3:'#ff00ff',
+              color4:'#00ff00',
+              color5:'#f0f0f0',
+              color6:'#0f0f0f',
+              color7:'#000fff',
+              color8:'#fff000',
+            },
+            label: '默认主题'
+          }, {
+            value:'theme2',
+            themeColor: {
+              color1:'#ffff00',
+              color2:'#ff0000',
+              color3:'#ff00ff',
+              color4:'#00ff00',
+              color5:'#f0f0f0',
+              color6:'#0f0f0f',
+              color7:'#000fff',
+              color8:'#fff000',
+            },
+            label: 'hxjq.cn'
+          }, {
+            value:'theme3',
+            themeColor: {
+              color1:'#ff0000',
+              color2:'#ffff00',
+              color3:'#00ff00',
+              color4:'#ff00ff',
+              color5:'#f0f0f0',
+              color6:'#0f0f0f',
+              color7:'#000fff',
+              color8:'#fff000',
+            },
+            label: 'hnhxjq.cn'
+          }, {
+            value:'theme4',
+            themeColor: {
+              color1:'#ff00ff',
+              color2:'#ff00ff',
+              color3:'#ffff00',
+              color4:'#00ff00',
+              color5:'#f0f0f0',
+              color6:'#0f0f0f',
+              color7:'#000fff',
+              color8:'#fff000',
+            },
+            label: 'hxzg.com'
+          }, {
+            value:'theme5',
+            themeColor: {
+              color1:'#00ff00',
+              color2:'#ffff00',
+              color3:'#ff00ff',
+              color4:'#f0f0f0',
+              color5:'#00ff00',
+              color6:'#0f0f0f',
+              color7:'#000fff',
+              color8:'#fff000',
+            },
+            label: 'fenjiji.net'
+          }, {
+            value:'theme6',
+            themeColor: {
+              color1:'#f0f0f0',
+              color2:'#ffff00',
+              color3:'#ff00ff',
+              color4:'#00ff00',
+              color5:'#f0f0f0',
+              color6:'#0f0f0f',
+              color7:'#fff000',
+              color8:'#000fff',
+            },
+            label: 'rsjq.org'
+          }
         ],
         colorData:[
           {isSelected:false,name:'红色',styleClass:'is-red'},
@@ -166,9 +281,9 @@ export default {
         return this.terminalType;
       },
       currentData:function(){
+        var $this = this;
         var eType = this.editorType;
         var tType = this.terminalType;
-        console.log(eType);
         var currentData = [];
         if(eType=='title'){
           currentData = this.getCurrentData(eType,tType,this.titleData);
@@ -183,12 +298,28 @@ export default {
         }else{
           currentData = this.getCurrentData(eType,tType,this.videoData);
         }
-        console.log(currentData,8888);
         if(currentData.length>0){
           currentData.forEach(function(item,index){
+            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color1+"/g"),$this.publicFilteringData.selectedThemeColor.color1);
+            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color2+"/g"),$this.publicFilteringData.selectedThemeColor.color2);
+            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color3+"/g"),$this.publicFilteringData.selectedThemeColor.color3);
+            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color4+"/g"),$this.publicFilteringData.selectedThemeColor.color4);
+            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color5+"/g"),$this.publicFilteringData.selectedThemeColor.color5);
+            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color6+"/g"),$this.publicFilteringData.selectedThemeColor.color6);
+            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color7+"/g"),$this.publicFilteringData.selectedThemeColor.color7);
+            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color8+"/g"),$this.publicFilteringData.selectedThemeColor.color8);
+            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color1+"/g"),$this.publicFilteringData.selectedThemeColor.color1);
+            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color2+"/g"),$this.publicFilteringData.selectedThemeColor.color2);
+            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color3+"/g"),$this.publicFilteringData.selectedThemeColor.color3);
+            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color4+"/g"),$this.publicFilteringData.selectedThemeColor.color4);
+            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color5+"/g"),$this.publicFilteringData.selectedThemeColor.color5);
+            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color6+"/g"),$this.publicFilteringData.selectedThemeColor.color6);
+            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color7+"/g"),$this.publicFilteringData.selectedThemeColor.color7);
+            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color8+"/g"),$this.publicFilteringData.selectedThemeColor.color8);
+            item.styleWebCodeCopy = item.styleWebCode.replace(eval("/"+item.class+"/g"),'is-pc .'+item.class);
+            item.styleWapCodeCopy = item.styleWapCode.replace(eval("/"+item.class+"/g"),'is-wap .'+item.class);
             var srcReg = /src=([\'\"]?([^\'\"]*)[\'\"]?)/ig;
             var allSrc = item.htmlString.match(srcReg);
-            console.log(allSrc);
             item.htmlStringCopy = item.htmlString;
             if(allSrc&&allSrc.length>0){
               allSrc.forEach(function(items,indexs){
@@ -199,6 +330,8 @@ export default {
                 }
               });
             }
+            item.webHtmlString = "<style>" + item.styleWebCodeCopy + "</style>" + item.htmlStringCopy;
+            item.wapHtmlString = "<style>" + item.styleWapCodeCopy + "</style>" + item.htmlStringCopy;
           });
         }
         return currentData;
@@ -215,6 +348,17 @@ export default {
     // 代码复制失败提示
     onError: function (e) {
       this.$message.error('很遗憾，复制失败!');
+    },
+    // 主题色选择改变事件
+    themeSelectedChange:function(e){
+      var $this = this;
+      $this.beforeChangeThemeColor = $this.publicFilteringData.selectedThemeColor;
+      console.log($this.beforeChangeThemeColor);
+      $this.publicFilteringData.themeData.forEach(function(item){
+        if(item.value == $this.publicFilteringData.selectedTheme){
+          $this.publicFilteringData.selectedThemeColor = item.themeColor;
+        }
+      });
     },
     // 搜索条件隐藏开启点击事件
     toggleFilterClick:function(){
@@ -766,6 +910,7 @@ export default {
 .el-scrollbar__wrap{
   overflow-y: scroll!important;
   overflow-x: hidden!important;
+  margin-bottom:0!important;
 }
 .item-list.single-panel{
   

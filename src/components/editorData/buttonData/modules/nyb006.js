@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-12 15:44:59
- * @LastEditTime: 2020-05-14 09:16:44
+ * @LastEditTime: 2020-06-08 18:20:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \hx-editor\src\components\editorData\buttonData\modules\nyb006.js
@@ -15,6 +15,7 @@ export function getHtmlData (){
         align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb006.js', // 该文件的文件名
+        class:'smallbtn006',// 用来给js使用添加页面内样式使用
         styleWebCode:'.smallbtn006{text-align: center;}', // PC端样式
         styleWapCode:'.smallbtn006{text-align: center;}', // 移动端样式
         htmlString:'<p class="smallbtn006"><a href="#" rel="nofollow"><img src="/images/insidestyle/smallbtn006-pic01.png" alt=""></a></p>'

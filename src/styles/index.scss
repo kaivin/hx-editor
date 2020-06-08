@@ -214,11 +214,6 @@ html,body,#app,#app > .el-container{
   .smalltit098{width: fit-content;background:#e0f1fe;border-radius: 0.08rem 0.66667rem 0.66667rem 0.08rem;padding: 0.12rem 0.48rem 0.12rem 0.28rem;text-indent: 0!important;position:relative;left: 0.32rem;}
   .smalltit098:before,.smalltit098:after{content:"";width: 0.12rem;background:#6aafdb;border-radius: 0.04rem;position:absolute;left: -0.16rem;top:0;bottom:0;}
   .smalltit098:after{width: 0.08rem;background:#9cdef9;left: -0.28rem;}
-  .smalltit099{width:fit-content;color: #0182b8!important;margin: 0.4rem auto!important;padding-left: 0.96rem;position:relative;}
-  .smalltit099:before,.smalltit099:after{content:"";height: 1px;background:#0182b8;position:absolute;left:0;right:0;}
-  .smalltit099:before{right: -0.2rem;top:0;}
-  .smalltit099:after{left: 0.2rem;right: 0.26667rem;bottom:0;}
-  .smalltit099 em{font-size: 0.72rem;font-style: normal;line-height: 1;background: #fff;position: absolute;left: 0;bottom: 0.10667rem;}
   //=============正文  
   [class^="smalltxt"],[class^="smalltxt"] p{clear: both;font-size: .37333rem;line-height: .8rem;color: #555;}
   .smalltxt001{border:1px solid #bdbdbd;/*margin:pxToRem(40) pxToRem(0);*/ box-shadow:pxToRem(0) pxToRem(0) pxToRem(5) #dddcdb inset,pxToRem(0) pxToRem(0) pxToRem(5) #dddcdb; padding:pxToRem(20); }
@@ -1046,11 +1041,6 @@ html,body,#app,#app > .el-container{
   .smalltit098 { width: fit-content; background: #e0f1fe; border-radius: 5px 50px 50px 5px; padding: 8px 25px 8px 15px; text-indent: 0 !important; position: relative; }
   .smalltit098:before, .smalltit098:after { content: ""; width: 6px; background: #6aafdb; border-radius: 2px; position: absolute; left: -8px; top: 0; bottom: 0; }
   .smalltit098:after { width: 3px; background: #9cdef9; left: -13px; }
-  .smalltit099{width:fit-content;font-size: 20px!important;color: #0182b8!important;margin: 40px auto!important;padding: 3px 0 3px 55px;position:relative;}
-  .smalltit099:before,.smalltit099:after{ content:""; height:1px; background:#0182b8; position:absolute; left:0; right:0; }
-  .smalltit099:before{ right: -10px; top:0; }
-  .smalltit099:after{ left: 14px; right: 20px; bottom:0; }
-  .smalltit099 em{font-size: 40px!important;font-style: normal;background: #fff;position: absolute;left: 0;bottom: 7px;}
   //=============正文
 [class^="smalltxt"],[class^="smalltxt"] p{color: #566367;font-size: 12px;line-height: 24px; max-width:800px;}
 @media (min-width: 1366px){[class^="smalltxt"],[class^="smalltxt"] p{font-size: 12px;line-height: 27px;}}
