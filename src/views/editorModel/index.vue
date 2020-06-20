@@ -102,14 +102,14 @@ export default {
       isOpen: false,
       isSingle: false,
       beforeChangeThemeColor:{
-        color1:'#0182b8', // 主题色暗重色
-        color2:'#ffff00', // 主题色
-        color3:'#ff00ff', // 主题色亮重色
-        color4:'#00ff00', // 主题色暗浅色
-        color5:'#f0f0f0', // 主题色亮浅色
-        color6:'#0f0f0f', // 辅助色
-        color7:'#000fff', // 点缀色
-        color8:'#fff000', // 反冲色
+            color1:'0,86,133', // 主题色暗重色
+            color2:'1,102,155', // 主题色
+            color3:'2,143,199', // 主题色亮重色
+            color4:'127,207,237', // 主题色暗浅色
+            color5:'199,237,251', // 主题色亮浅色
+            color6:'252,110,81', // 辅助色
+            color7:'255,196,53', // 点缀色
+            color8:'238,42,2', // 反冲色
       },
       publicFilteringData:{
         selectedSiteType:'',
@@ -123,94 +123,42 @@ export default {
         ],
         selectedTheme:'theme1',
         selectedThemeColor:{
-              color1:'#0182b8',
-              color2:'#ffff00',
-              color3:'#ff00ff',
-              color4:'#00ff00',
-              color5:'#f0f0f0',
-              color6:'#0f0f0f',
-              color7:'#000fff',
-              color8:'#fff000',
-            },
+              color1:'0,86,133',
+              color2:'1,102,155',
+              color3:'2,143,199',
+              color4:'127,207,237',
+              color5:'199,237,251',
+              color6:'252,110,81',
+              color7:'255,196,53',
+              color8:'238,42,2',
+        },
         themeData:[
           {
             value:'theme1',
             themeColor: {
-              color1:'#0182b8',
-              color2:'#ffff00',
-              color3:'#ff00ff',
-              color4:'#00ff00',
-              color5:'#f0f0f0',
-              color6:'#0f0f0f',
-              color7:'#000fff',
-              color8:'#fff000',
+              color1:'0,86,133',
+              color2:'1,102,155',
+              color3:'2,143,199',
+              color4:'127,207,237',
+              color5:'199,237,251',
+              color6:'252,110,81',
+              color7:'255,196,53',
+              color8:'238,42,2',
             },
             label: '默认主题'
           }, {
             value:'theme2',
             themeColor: {
-              color1:'#ffff00',
-              color2:'#ff0000',
-              color3:'#ff00ff',
-              color4:'#00ff00',
-              color5:'#f0f0f0',
-              color6:'#0f0f0f',
-              color7:'#000fff',
-              color8:'#fff000',
+              color1:'168, 24, 22',
+              color2:'192,38,41',
+              color3:'219,50,59',
+              color4:'255,205,163',
+              color5:'255,238,224',
+              color6:'255,135,65',
+              color7:'255,201,84',
+              color8:'34,116,210',
             },
-            label: 'hxjq.cn'
-          }, {
-            value:'theme3',
-            themeColor: {
-              color1:'#ff0000',
-              color2:'#ffff00',
-              color3:'#00ff00',
-              color4:'#ff00ff',
-              color5:'#f0f0f0',
-              color6:'#0f0f0f',
-              color7:'#000fff',
-              color8:'#fff000',
-            },
-            label: 'hnhxjq.cn'
-          }, {
-            value:'theme4',
-            themeColor: {
-              color1:'#ff00ff',
-              color2:'#ff00ff',
-              color3:'#ffff00',
-              color4:'#00ff00',
-              color5:'#f0f0f0',
-              color6:'#0f0f0f',
-              color7:'#000fff',
-              color8:'#fff000',
-            },
-            label: 'hxzg.com'
-          }, {
-            value:'theme5',
-            themeColor: {
-              color1:'#00ff00',
-              color2:'#ffff00',
-              color3:'#ff00ff',
-              color4:'#f0f0f0',
-              color5:'#00ff00',
-              color6:'#0f0f0f',
-              color7:'#000fff',
-              color8:'#fff000',
-            },
-            label: 'fenjiji.net'
-          }, {
-            value:'theme6',
-            themeColor: {
-              color1:'#f0f0f0',
-              color2:'#ffff00',
-              color3:'#ff00ff',
-              color4:'#00ff00',
-              color5:'#f0f0f0',
-              color6:'#0f0f0f',
-              color7:'#fff000',
-              color8:'#000fff',
-            },
-            label: 'rsjq.org'
+            label: 'hxjq.net'
           }
         ],
         colorData:[
@@ -316,8 +264,18 @@ export default {
             item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color6+"/g"),$this.publicFilteringData.selectedThemeColor.color6);
             item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color7+"/g"),$this.publicFilteringData.selectedThemeColor.color7);
             item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color8+"/g"),$this.publicFilteringData.selectedThemeColor.color8);
-            item.styleWebCodeCopy = item.styleWebCode.replace(eval("/"+item.class+"/g"),'is-pc .'+item.class);
-            item.styleWapCodeCopy = item.styleWapCode.replace(eval("/"+item.class+"/g"),'is-wap .'+item.class);
+            
+            // var itemclass=[];
+            // itemclass=item.classary.split(',')
+            var perClass = '}.'+item.class;
+            var afterClass = item.class+'{';
+            var dotClass = ',.' + item.class;
+            item.styleWebCodeCopy = item.styleWebCode.replace(eval("/"+afterClass+"/g"),'is-pc .'+item.class+'{');            
+            item.styleWebCodeCopyitem = item.styleWebCodeCopy.replace(eval("/"+perClass+"/g"),'}.is-pc .'+item.class);          
+            item.styleWebCodeCopy = item.styleWebCodeCopyitem.replace(eval("/"+dotClass+"/g"),',.is-pc .'+item.class);
+            item.styleWapCodeCopy = item.styleWapCode.replace(eval("/"+afterClass+"/g"),'is-wap .'+item.class+'{');
+            item.styleWapCodeCopyitem = item.styleWapCodeCopy.replace(eval("/"+perClass+"/g"),'}.is-wap .'+item.class);
+            item.styleWapCodeCopy = item.styleWapCodeCopyitem.replace(eval("/"+dotClass+"/g"),',.is-wap .'+item.class);
             var srcReg = /src=([\'\"]?([^\'\"]*)[\'\"]?)/ig;
             var allSrc = item.htmlString.match(srcReg);
             item.htmlStringCopy = item.htmlString;
@@ -401,7 +359,7 @@ export default {
       }else{
         $this.isSingle = true;
       }
-      console.log($this.publicFilteringData.selectedSiteType);
+      //console.log($this.publicFilteringData.selectedSiteType);
       $this.$store.dispatch('editorType/changeTerminalType',$this.publicFilteringData.selectedSiteType);
     },
     // 获取当前筛选条件数据
@@ -414,7 +372,10 @@ export default {
       if(eType == 'title'){
         if($this.currentFiltering.filteringColorMode == 'sum'){// 并集
           currentAllData.forEach(function(item,index){
-            var colorArray = item.color.split(',');
+            var colorArray = [];
+            if(item.color != ''){
+              colorArray = item.color.split(',');
+            }
             if(colorArray.length>0){ // 模块色值
               colorArray.forEach(function(item1,index1){
                 if($this.currentFiltering.color.length>0){// 筛选色值
@@ -429,11 +390,18 @@ export default {
                   }
                 }
               });
+            }else{
+              if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
+                    currentData.push(item);
+                  }
             }
           });
         }else{// 交集
           currentAllData.forEach(function(item,index){
-            var colorArray = item.color.split(',');
+            var colorArray = [];
+            if(item.color != ''){
+              colorArray = item.color.split(',');
+            }
             if($this.currentFiltering.color.length>0){// 筛选色值
               if($this.currentFiltering.color.length==1){ // 只筛选一个颜色
                 if(colorArray.length>0){
@@ -442,6 +410,10 @@ export default {
                         currentData.push(item);
                       }
                   });
+                }else{
+                  if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
+                        currentData.push(item);
+                      }
                 }
               }else{// 多个筛选色值
                 if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)&&($this.currentFiltering.align=='all'||$this.currentFiltering.align==item.align)&&($this.currentFiltering.style=='all'||$this.currentFiltering.style==item.style)){
@@ -458,7 +430,10 @@ export default {
       }else if(eType == 'article'){
         if($this.currentFiltering.filteringColorMode == 'sum'){// 并集
           currentAllData.forEach(function(item,index){
-            var colorArray = item.color.split(',');
+            var colorArray = [];
+            if(item.color != ''){
+              colorArray = item.color.split(',');
+            }
             if(colorArray.length>0){ // 模块色值
               colorArray.forEach(function(item1,index1){
                 if($this.currentFiltering.color.length>0){// 筛选色值
@@ -473,11 +448,18 @@ export default {
                   }
                 }
               });
+            }else{
+              if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    currentData.push(item);
+                  }
             }
           });
         }else{// 交集
           currentAllData.forEach(function(item,index){
-            var colorArray = item.color.split(',');
+            var colorArray = [];
+            if(item.color != ''){
+              colorArray = item.color.split(',');
+            }
             if($this.currentFiltering.color.length>0){// 筛选色值
               if($this.currentFiltering.color.length==1){ // 只筛选一个颜色
                 if(colorArray.length>0){
@@ -486,6 +468,10 @@ export default {
                         currentData.push(item);
                       }
                   });
+                }else{
+                  if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                        currentData.push(item);
+                      }
                 }
               }else{// 多个筛选色值
                 if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
@@ -502,7 +488,10 @@ export default {
       }else if(eType == 'image'){
         if($this.currentFiltering.filteringColorMode == 'sum'){// 并集
           currentAllData.forEach(function(item,index){
-            var colorArray = item.color.split(',');
+            var colorArray = [];
+            if(item.color != ''){
+              colorArray = item.color.split(',');
+            }
             if(colorArray.length>0){ // 模块色值
               colorArray.forEach(function(item1,index1){
                 if($this.currentFiltering.color.length>0){// 筛选色值
@@ -517,11 +506,18 @@ export default {
                   }
                 }
               });
+            }else{
+              if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    currentData.push(item);
+                  }
             }
           });
         }else{// 交集
           currentAllData.forEach(function(item,index){
-            var colorArray = item.color.split(',');
+            var colorArray = [];
+            if(item.color != ''){
+              colorArray = item.color.split(',');
+            }
             if($this.currentFiltering.color.length>0){// 筛选色值
               if($this.currentFiltering.color.length==1){ // 只筛选一个颜色
                 if(colorArray.length>0){
@@ -530,6 +526,10 @@ export default {
                         currentData.push(item);
                       }
                   });
+                }else{
+                  if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                        currentData.push(item);
+                      }
                 }
               }else{// 多个筛选色值
                 if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
@@ -546,7 +546,10 @@ export default {
       }else{
         if($this.currentFiltering.filteringColorMode == 'sum'){// 并集
           currentAllData.forEach(function(item,index){
-            var colorArray = item.color.split(',');
+            var colorArray = [];
+            if(item.color != ''){
+              colorArray = item.color.split(',');
+            }
             if(colorArray.length>0){ // 模块色值
               colorArray.forEach(function(item1,index1){
                 if($this.currentFiltering.color.length>0){// 筛选色值
@@ -561,11 +564,18 @@ export default {
                   }
                 }
               });
+            }else{
+              if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                    currentData.push(item);
+                  }
             }
           });
         }else{// 交集
           currentAllData.forEach(function(item,index){
-            var colorArray = item.color.split(',');
+            var colorArray = [];
+            if(item.color != ''){
+              colorArray = item.color.split(',');
+            }
             if($this.currentFiltering.color.length>0){// 筛选色值
               if($this.currentFiltering.color.length==1){ // 只筛选一个颜色
                 if(colorArray.length>0){
@@ -574,6 +584,10 @@ export default {
                         currentData.push(item);
                       }
                   });
+                }else{
+                  if((item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
+                        currentData.push(item);
+                      }
                 }
               }else{// 多个筛选色值
                 if($this.isContained(colorArray,$this.currentFiltering.color)&&(item.type == tType)&&currentData.indexOf(item)==-1&&($this.currentFiltering.effect=='all'||$this.currentFiltering.effect==item.effect)){
@@ -589,13 +603,13 @@ export default {
         }
       }
       return currentData;
-      console.log(currentData,999);
+      //console.log(currentData,999);
     },
     // 筛选模式切换事件
     filteringModeChange:function(value){
       var $this = this;
       $this.currentFiltering.filteringColorMode = value;
-      console.log(value);
+      //console.log(value);
     },
     // 色系筛选点击事件
     filteringColorChange:function(value){
@@ -607,25 +621,25 @@ export default {
         }
       });
       $this.currentFiltering.color = colorData;
-      console.log($this.currentFiltering.color);
+      //console.log($this.currentFiltering.color);
     },
     // 对齐方式点击事件
     filteringAlignChange:function(value){
       var $this = this;
       $this.currentFiltering.align = value;
-      console.log($this.currentFiltering.align);
+      //console.log($this.currentFiltering.align);
     },
     // 附加样式点击事件
     filteringStyleChange:function(value){
       var $this = this;
       $this.currentFiltering.style = value;
-      console.log($this.currentFiltering.style);
+      //console.log($this.currentFiltering.style);
     },
     // 视觉特效点击事件
     filteringEffectChange:function(value){
       var $this = this;
       $this.currentFiltering.effect = value;
-      console.log($this.currentFiltering.effect);
+      //console.log($this.currentFiltering.effect);
     },
     // 判断一个数组是否包含另一个数组
     isContained:function(a,b){// a: 数据包含颜色值 b: 筛选所选颜色值
