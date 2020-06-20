@@ -23,7 +23,7 @@ module.exports={
         path:path.resolve(__dirname,'dist'),
         filename: 'js/[name].[chunkhash].js',
         chunkFilename: 'js/[name].[chunkhash].js',
-        publicPath:"/"
+        publicPath:"/yangshi/"
     },
     mode:"production",
     // 加载器 loader 配置项
