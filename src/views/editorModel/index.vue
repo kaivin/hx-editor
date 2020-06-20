@@ -149,7 +149,7 @@ export default {
           }, {
             value:'theme2',
             themeColor: {
-              color1:'168, 24, 22',
+              color1:'168,24,22',
               color2:'192,38,41',
               color3:'219,50,59',
               color4:'255,205,163',
@@ -159,6 +159,19 @@ export default {
               color8:'34,116,210',
             },
             label: 'hxjq.net'
+          }, {
+            value:'theme3',
+            themeColor: {
+              color1:'17,22,45',
+              color2:'54,62,107',
+              color3:'66,76,137',
+              color4:'149,159,214',
+              color5:'217,222,248',
+              color6:'255,182,52',
+              color7:'247,0,0',
+              color8:'254,225,63',
+            },
+            label: 'chinahxjq.com'
           }
         ],
         colorData:[
