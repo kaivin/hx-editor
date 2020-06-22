@@ -286,6 +286,7 @@ export default {
             item.styleWebCodeCopy = item.styleWebCode.replace(eval("/"+afterClass+"/g"),'is-pc .'+item.class+'{');            
             item.styleWebCodeCopyitem = item.styleWebCodeCopy.replace(eval("/"+perClass+"/g"),'}.is-pc .'+item.class);          
             item.styleWebCodeCopy = item.styleWebCodeCopyitem.replace(eval("/"+dotClass+"/g"),',.is-pc .'+item.class);
+            
             item.styleWapCodeCopy = item.styleWapCode.replace(eval("/"+afterClass+"/g"),'is-wap .'+item.class+'{');
             item.styleWapCodeCopyitem = item.styleWapCodeCopy.replace(eval("/"+perClass+"/g"),'}.is-wap .'+item.class);
             item.styleWapCodeCopy = item.styleWapCodeCopyitem.replace(eval("/"+dotClass+"/g"),',.is-wap .'+item.class);

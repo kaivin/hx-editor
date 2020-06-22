@@ -16,7 +16,7 @@ export function getHtmlData (){
         fileName:'nyb058.js', // 该文件的文件名
         class:'smalltxt058',// 用来给js使用添加页面内样式使用
         styleWebCode:'.smalltxt058{background:rgb(199,237,251)!important;border:2px solid rgb(1,102,155)!important;padding:15px;text-align:left;position:relative;z-index:1;margin-left:auto;margin-right:auto;}', // PC端样式
-        styleWapCode:'.smalltxt058{background:rgb(199,237,251)!important;border:0.02667rem solid rgb(1,102,155)!important;padding:0.2rem;text-align:left;position:relative;z-index:1;margin:0.53333rem 0rem !important;}', // 移动端样式
+        styleWapCode:'.smalltxt058{background:rgb(199,237,251)!important;border:0.02667rem solid rgb(1,102,155)!important;padding:0.2rem 0.4rem;text-align:left;position:relative;z-index:1;margin:0.53333rem 0rem !important;}', // 移动端样式
         htmlString:'<p class="smalltxt058">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p>'
     };
 }
