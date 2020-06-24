@@ -185,6 +185,19 @@ export default {
               color8:'165,42,42',
             },
             label: 'hnhxjq.cn'
+          }, {
+            value:'theme5',
+            themeColor: {
+              color1:'17,128,153',
+              color2:'87,174,194',
+              color3:'75,193,219',
+              color4:'127,215,235',
+              color5:'195,240,250',
+              color6:'247,176,52',
+              color7:'239,57,66',
+              color8:'194,107,87',
+            },
+            label: 'hxzg.com'
           }
         ],
         colorData:[
