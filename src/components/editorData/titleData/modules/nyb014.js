@@ -8,8 +8,8 @@ export function getHtmlData (){
         style:'icon', // icon(图标)|number(数字)|other(其他)
         class:'smalltit014',// 用来给js使用添加页面内样式使用
         fileName:'nyb14.js', // 该文件的文件名
-        styleWebCode:'.smalltit014{background:url(../images/insidestyle/newicon14.png) no-repeat left 8px;background-size:20px;padding-left:30px;} @media (max-width:1760px){.smalltit014{background-position:left 8px;}} @media (max-width:1600px){.smalltit014{background-position:left 4px;background-size:20px;}} @media (max-width:1440px){.smalltit014{background-size:18px;}} @media (max-width:1280px){.smalltit014{background-position:left 3px;background-size:16px;padding-left:25px;}}', // PC端样式
-        styleWapCode:'.smalltit014{background:url(../images/insidestyle/newicon14.png) no-repeat left 0.2rem;background-size:0.4rem;padding-left:0.53333rem;}', // 移动端样式
+        styleWebCode:'.smalltit014{overflow:hidden}.smalltit014:before{content:"";display:inline-block;vertical-align:middle;width:20px;height:20px;background:url(../images/insidestyle/newicon14.png) no-repeat left top;background-size:100%;margin-right:10px}@media (max-width: 1440px){.smalltit014:before{width:18px;height:18px}}@media (max-width: 1280px){.smalltit014:before{width:16px;height:16px}}', // PC端样式
+        styleWapCode:'.smalltit014{overflow:hidden}.smalltit014:before{content:"";display:inline-block;width:.4rem;height:.4rem;background:url(../images/insidestyle/newicon14.png) no-repeat left top;background-size:100%;vertical-align:middle;margin-right:.13333rem}', // 移动端样式
         htmlString:'<p class="smalltit014">标题标题标题标题标题标题</p>'
     };
 }
