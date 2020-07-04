@@ -318,6 +318,7 @@ export default {
             var stylewapCode2 = stylewapCode1.replace(eval("/"+perClass+"/g"),'}.is-wap .'+item.class);
             item.styleWapCodeCopy = stylewapCode2.replace(eval("/"+dotClass+"/g"),',.is-wap .'+item.class);
             item.styleWapCodeCopy = item.styleWapCodeCopy.replace('../images/','../yangshi/images/');
+            
             var srcReg = /src=([\'\"]?([^\'\"]*)[\'\"]?)/ig;
             var allSrc = item.htmlString.match(srcReg);
             item.htmlStringCopy = item.htmlString;
