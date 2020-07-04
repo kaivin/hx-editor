@@ -309,13 +309,15 @@ export default {
             var perClass = '}.'+item.class;
             var afterClass = item.class+'{';
             var dotClass = ',.' + item.class;
-            item.styleWebCodeCopy = item.styleWebCode.replace(eval("/"+afterClass+"/g"),'is-pc .'+item.class+'{');            
-            item.styleWebCodeCopyitem = item.styleWebCodeCopy.replace(eval("/"+perClass+"/g"),'}.is-pc .'+item.class);          
-            item.styleWebCodeCopy = item.styleWebCodeCopyitem.replace(eval("/"+dotClass+"/g"),',.is-pc .'+item.class);
+            var styleWebCode1 = item.styleWebCode.replace(eval("/"+afterClass+"/g"),'is-pc .'+item.class+'{');            
+            var styleWebCode2 = styleWebCode1.replace(eval("/"+perClass+"/g"),'}.is-pc .'+item.class);          
+            item.styleWebCodeCopy = styleWebCode2.replace(eval("/"+dotClass+"/g"),',.is-pc .'+item.class);   
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace('../images/','../yangshi/images/');
             
-            item.styleWapCodeCopy = item.styleWapCode.replace(eval("/"+afterClass+"/g"),'is-wap .'+item.class+'{');
-            item.styleWapCodeCopyitem = item.styleWapCodeCopy.replace(eval("/"+perClass+"/g"),'}.is-wap .'+item.class);
-            item.styleWapCodeCopy = item.styleWapCodeCopyitem.replace(eval("/"+dotClass+"/g"),',.is-wap .'+item.class);
+            var stylewapCode1 = item.styleWapCode.replace(eval("/"+afterClass+"/g"),'is-wap .'+item.class+'{');
+            var stylewapCode2 = stylewapCode1.replace(eval("/"+perClass+"/g"),'}.is-wap .'+item.class);
+            item.styleWapCodeCopy = stylewapCode2.replace(eval("/"+dotClass+"/g"),',.is-wap .'+item.class);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace('../images/','../yangshi/images/');
             var srcReg = /src=([\'\"]?([^\'\"]*)[\'\"]?)/ig;
             var allSrc = item.htmlString.match(srcReg);
             item.htmlStringCopy = item.htmlString;
