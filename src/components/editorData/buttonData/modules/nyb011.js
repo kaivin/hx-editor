@@ -5,8 +5,7 @@
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \hx-editor\src\components\editorData\buttonData\modules\nyb011.js
- */ 
-
+ */
 export function getHtmlData (){
     return{
         type:"", // web(只用于PC端)|wap(只用于移动端)|(PC和移动端通用该值为空)|

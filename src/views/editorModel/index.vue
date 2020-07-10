@@ -162,19 +162,6 @@ export default {
           }, {
             value:'theme3',
             themeColor: {
-              color1:'17,22,45',
-              color2:'54,62,107',
-              color3:'66,76,137',
-              color4:'149,159,214',
-              color5:'217,222,248',
-              color6:'255,182,52',
-              color7:'247,0,0',
-              color8:'254,225,63',
-            },
-            label: 'chinahxjq.com'
-          }, {
-            value:'theme4',
-            themeColor: {
               color1:'11,141,122',
               color2:'12,139,122',
               color3:'82,199,122',
@@ -186,7 +173,7 @@ export default {
             },
             label: 'hnhxjq.cn'
           }, {
-            value:'theme5',
+            value:'theme4',
             themeColor: {
               color1:'17,128,153',
               color2:'87,174,194',
@@ -198,6 +185,32 @@ export default {
               color8:'194,107,87',
             },
             label: 'hxzg.com'
+          },{
+            value:'theme5',
+            themeColor: {
+              color1:'17,22,45',
+              color2:'54,62,107',
+              color3:'66,76,137',
+              color4:'149,159,214',
+              color5:'217,222,248',
+              color6:'255,182,52',
+              color7:'247,0,0',
+              color8:'254,225,63',
+            },
+            label: 'chinahxjq.com 01'
+          },{
+            value:'theme6',
+            themeColor: {
+              color1:'10,33,67',
+              color2:'47,90,125',
+              color3:'98,152,199',
+              color4:'165,177,215',
+              color5:'220,228,241',
+              color6:'253,199,5',
+              color7:'173,109,82',
+              color8:'244,68,29',
+            },
+            label: 'chinahxjq.com 02'
           }
         ],
         colorData:[
