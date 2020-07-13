@@ -68,9 +68,9 @@
                   <div class="item-content" v-html="item.wapHtmlString"></div>
                 </div>
                 <div class="edit-panel">
-                  <span v-clipboard:copy="item.htmlString" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
-                  <span v-clipboard:copy="item.styleWebCode" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType!='wap'">复制web样式</span>
-                  <span v-clipboard:copy="item.styleWapCode" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType!='web'">复制wap样式</span>
+                  <span v-clipboard:copy="item.htmlStringShow" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
+                  <span v-clipboard:copy="item.styleWebCodeCopy" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType!='wap'">复制web样式</span>
+                  <span v-clipboard:copy="item.styleWapCodeCopy" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType!='web'">复制wap样式</span>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default {
       size: 'small',
       isOpen: false,
       isSingle: false,
-      beforeChangeThemeColor:{
+      defaultThemeColor:{
             color1:'0,86,133', // 主题色暗重色
             color2:'1,102,155', // 主题色
             color3:'2,143,199', // 主题色亮重色
@@ -300,52 +300,76 @@ export default {
         }
         if(currentData.length>0){
           currentData.forEach(function(item,index){
-            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color1+"/g"),$this.publicFilteringData.selectedThemeColor.color1);
-            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color2+"/g"),$this.publicFilteringData.selectedThemeColor.color2);
-            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color3+"/g"),$this.publicFilteringData.selectedThemeColor.color3);
-            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color4+"/g"),$this.publicFilteringData.selectedThemeColor.color4);
-            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color5+"/g"),$this.publicFilteringData.selectedThemeColor.color5);
-            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color6+"/g"),$this.publicFilteringData.selectedThemeColor.color6);
-            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color7+"/g"),$this.publicFilteringData.selectedThemeColor.color7);
-            item.styleWebCode = item.styleWebCode.replace(eval("/"+$this.beforeChangeThemeColor.color8+"/g"),$this.publicFilteringData.selectedThemeColor.color8);
-            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color1+"/g"),$this.publicFilteringData.selectedThemeColor.color1);
-            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color2+"/g"),$this.publicFilteringData.selectedThemeColor.color2);
-            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color3+"/g"),$this.publicFilteringData.selectedThemeColor.color3);
-            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color4+"/g"),$this.publicFilteringData.selectedThemeColor.color4);
-            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color5+"/g"),$this.publicFilteringData.selectedThemeColor.color5);
-            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color6+"/g"),$this.publicFilteringData.selectedThemeColor.color6);
-            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color7+"/g"),$this.publicFilteringData.selectedThemeColor.color7);
-            item.styleWapCode = item.styleWapCode.replace(eval("/"+$this.beforeChangeThemeColor.color8+"/g"),$this.publicFilteringData.selectedThemeColor.color8);
+            item.styleWebCodeCopy = item.styleWebCode;
+            item.styleWapCodeCopy = item.styleWapCode;
+
+            var copyShowClass = item.class+'-'+$this.publicFilteringData.selectedTheme;
+
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace(eval("/"+$this.defaultThemeColor.color1+"/g"),$this.publicFilteringData.selectedThemeColor.color1);
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace(eval("/"+$this.defaultThemeColor.color2+"/g"),$this.publicFilteringData.selectedThemeColor.color2);
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace(eval("/"+$this.defaultThemeColor.color3+"/g"),$this.publicFilteringData.selectedThemeColor.color3);
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace(eval("/"+$this.defaultThemeColor.color4+"/g"),$this.publicFilteringData.selectedThemeColor.color4);
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace(eval("/"+$this.defaultThemeColor.color5+"/g"),$this.publicFilteringData.selectedThemeColor.color5);
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace(eval("/"+$this.defaultThemeColor.color6+"/g"),$this.publicFilteringData.selectedThemeColor.color6);
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace(eval("/"+$this.defaultThemeColor.color7+"/g"),$this.publicFilteringData.selectedThemeColor.color7);
+            item.styleWebCodeCopy = item.styleWebCodeCopy.replace(eval("/"+$this.defaultThemeColor.color8+"/g"),$this.publicFilteringData.selectedThemeColor.color8);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace(eval("/"+$this.defaultThemeColor.color1+"/g"),$this.publicFilteringData.selectedThemeColor.color1);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace(eval("/"+$this.defaultThemeColor.color2+"/g"),$this.publicFilteringData.selectedThemeColor.color2);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace(eval("/"+$this.defaultThemeColor.color3+"/g"),$this.publicFilteringData.selectedThemeColor.color3);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace(eval("/"+$this.defaultThemeColor.color4+"/g"),$this.publicFilteringData.selectedThemeColor.color4);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace(eval("/"+$this.defaultThemeColor.color5+"/g"),$this.publicFilteringData.selectedThemeColor.color5);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace(eval("/"+$this.defaultThemeColor.color6+"/g"),$this.publicFilteringData.selectedThemeColor.color6);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace(eval("/"+$this.defaultThemeColor.color7+"/g"),$this.publicFilteringData.selectedThemeColor.color7);
+            item.styleWapCodeCopy = item.styleWapCodeCopy.replace(eval("/"+$this.defaultThemeColor.color8+"/g"),$this.publicFilteringData.selectedThemeColor.color8);
+            
             
             // var itemclass=[];
             // itemclass=item.classary.split(',')
             var perClass = '}.'+item.class;
             var afterClass = item.class+'{';
             var dotClass = ',.' + item.class;
-            var styleWebCode1 = item.styleWebCode.replace(eval("/"+afterClass+"/g"),'is-pc .'+item.class+'{');            
-            var styleWebCode2 = styleWebCode1.replace(eval("/"+perClass+"/g"),'}.is-pc .'+item.class);          
-            item.styleWebCodeCopy = styleWebCode2.replace(eval("/"+dotClass+"/g"),',.is-pc .'+item.class);   
-            item.styleWebCodeCopy = item.styleWebCodeCopy.replace('../images/','../yangshi/images/');
+
+            item.styleWebCodeShow = item.styleWebCodeCopy;
+
+            var styleWebCodeCopy1 = item.styleWebCodeCopy.replace(eval("/"+afterClass+"/g"),copyShowClass+'{');            
+            var styleWebCodeCopy2 = styleWebCodeCopy1.replace(eval("/"+perClass+"/g"),'}.'+copyShowClass);          
+            item.styleWebCodeCopy = styleWebCodeCopy2.replace(eval("/"+dotClass+"/g"),',.'+copyShowClass);  
+
+            var styleWebCodeShow1 = item.styleWebCodeShow.replace(eval("/"+afterClass+"/g"),'is-pc .'+copyShowClass+'{');            
+            var styleWebCodeShow2 = styleWebCodeShow1.replace(eval("/"+perClass+"/g"),'}.is-pc .'+copyShowClass);          
+            item.styleWebCodeShow = styleWebCodeShow2.replace(eval("/"+dotClass+"/g"),',.is-pc .'+copyShowClass);   
+            item.styleWebCodeShow = item.styleWebCodeShow.replace('../images/','../yangshi/images/');
             
-            var stylewapCode1 = item.styleWapCode.replace(eval("/"+afterClass+"/g"),'is-wap .'+item.class+'{');
-            var stylewapCode2 = stylewapCode1.replace(eval("/"+perClass+"/g"),'}.is-wap .'+item.class);
-            item.styleWapCodeCopy = stylewapCode2.replace(eval("/"+dotClass+"/g"),',.is-wap .'+item.class);
-            item.styleWapCodeCopy = item.styleWapCodeCopy.replace('../images/','../yangshi/images/');
+
+            item.styleWapCodeShow = item.styleWapCodeCopy;
+
+            var stylewapCodeCopy1 = item.styleWapCodeCopy.replace(eval("/"+afterClass+"/g"),copyShowClass+'{');
+            var stylewapCodeCopy2 = stylewapCodeCopy1.replace(eval("/"+perClass+"/g"),'}.'+copyShowClass);
+            item.styleWapCodeCopy = stylewapCodeCopy2.replace(eval("/"+dotClass+"/g"),',.'+copyShowClass);
+
+            var stylewapCodeShow1 = item.styleWapCodeShow.replace(eval("/"+afterClass+"/g"),'is-wap .'+copyShowClass+'{');
+            var stylewapCodeShow2 = stylewapCodeShow1.replace(eval("/"+perClass+"/g"),'}.is-wap .'+copyShowClass);
+            item.styleWapCodeShow = stylewapCodeShow2.replace(eval("/"+dotClass+"/g"),',.is-wap .'+copyShowClass);
+            item.styleWapCodeShow = item.styleWapCodeShow.replace('../images/','../yangshi/images/');
             
             var srcReg = /src=([\'\"]?([^\'\"]*)[\'\"]?)/ig;
             var allSrc = item.htmlString.match(srcReg);
-            item.htmlStringCopy = item.htmlString;
+            item.htmlStringShow = item.htmlString;
             if(allSrc&&allSrc.length>0){
               allSrc.forEach(function(items,indexs){
                 var itemsUrl = items.split('"')[1];
                 if(itemsUrl.indexOf('/images/insidestyle')!=-1){
                   var itemImgUrl = require('@/assets'+itemsUrl);
-                  item.htmlStringCopy = item.htmlStringCopy.replace(items,'src='+itemImgUrl);
+                  item.htmlStringShow = item.htmlStringShow.replace(items,'src='+itemImgUrl);
                 }
               });
             }
-            item.webHtmlString = "<style>" + item.styleWebCodeCopy + "</style>" + item.htmlStringCopy;
-            item.wapHtmlString = "<style>" + item.styleWapCodeCopy + "</style>" + item.htmlStringCopy;
+            var perHtmlClass = item.class+' ';
+            var afterHtmlClass = item.class+'"';
+            var htmlStringShow1 = item.htmlStringShow.replace(eval("/"+perHtmlClass+"/g"),copyShowClass+' ');
+            item.htmlStringShow = htmlStringShow1.replace(eval("/"+afterHtmlClass+"/g"),copyShowClass+'"');
+            item.webHtmlString = "<style>" + item.styleWebCodeShow + "</style>" + item.htmlStringShow;
+            item.wapHtmlString = "<style>" + item.styleWapCodeShow + "</style>" + item.htmlStringShow;
           });
         }
         return currentData;
@@ -366,8 +390,6 @@ export default {
     // 主题色选择改变事件
     themeSelectedChange:function(e){
       var $this = this;
-      $this.beforeChangeThemeColor = $this.publicFilteringData.selectedThemeColor;
-      console.log($this.beforeChangeThemeColor);
       $this.publicFilteringData.themeData.forEach(function(item){
         if(item.value == $this.publicFilteringData.selectedTheme){
           $this.publicFilteringData.selectedThemeColor = item.themeColor;
