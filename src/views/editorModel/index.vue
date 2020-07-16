@@ -68,7 +68,7 @@
                   <div class="item-content" v-html="item.wapHtmlString"></div>
                 </div>
                 <div class="edit-panel">
-                  <span v-clipboard:copy="item.htmlStringShow" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
+                  <span v-clipboard:copy="item.htmlStringCopy" v-clipboard:success="onCopy" v-clipboard:error="onError">复制代码</span>
                   <span v-clipboard:copy="item.styleWebCodeCopy" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType!='wap'">复制web样式</span>
                   <span v-clipboard:copy="item.styleWapCodeCopy" v-clipboard:success="onCopy" v-clipboard:error="onError" v-if="tType!='web'">复制wap样式</span>
                 </div>
@@ -325,31 +325,31 @@ export default {
             
             // var itemclass=[];
             // itemclass=item.classary.split(',')
-            var perClass = '}.'+item.class;
+            var perClass = item.class + ' ';
             var afterClass = item.class+'{';
-            var dotClass = ',.' + item.class;
+            var dotClass = item.class+':';
 
             item.styleWebCodeShow = item.styleWebCodeCopy;
 
             var styleWebCodeCopy1 = item.styleWebCodeCopy.replace(eval("/"+afterClass+"/g"),copyShowClass+'{');            
-            var styleWebCodeCopy2 = styleWebCodeCopy1.replace(eval("/"+perClass+"/g"),'}.'+copyShowClass);          
-            item.styleWebCodeCopy = styleWebCodeCopy2.replace(eval("/"+dotClass+"/g"),',.'+copyShowClass);  
+            var styleWebCodeCopy2 = styleWebCodeCopy1.replace(eval("/"+perClass+"/g"),copyShowClass+' ');          
+            item.styleWebCodeCopy = styleWebCodeCopy2.replace(eval("/"+dotClass+"/g"),copyShowClass + ':');  
 
             var styleWebCodeShow1 = item.styleWebCodeShow.replace(eval("/"+afterClass+"/g"),'is-pc .'+copyShowClass+'{');            
-            var styleWebCodeShow2 = styleWebCodeShow1.replace(eval("/"+perClass+"/g"),'}.is-pc .'+copyShowClass);          
-            item.styleWebCodeShow = styleWebCodeShow2.replace(eval("/"+dotClass+"/g"),',.is-pc .'+copyShowClass);   
+            var styleWebCodeShow2 = styleWebCodeShow1.replace(eval("/"+perClass+"/g"),'is-pc .'+copyShowClass+' ');          
+            item.styleWebCodeShow = styleWebCodeShow2.replace(eval("/"+dotClass+"/g"),'is-pc .'+copyShowClass + ':');   
             item.styleWebCodeShow = item.styleWebCodeShow.replace('../images/','../yangshi/images/');
             
 
             item.styleWapCodeShow = item.styleWapCodeCopy;
 
             var stylewapCodeCopy1 = item.styleWapCodeCopy.replace(eval("/"+afterClass+"/g"),copyShowClass+'{');
-            var stylewapCodeCopy2 = stylewapCodeCopy1.replace(eval("/"+perClass+"/g"),'}.'+copyShowClass);
-            item.styleWapCodeCopy = stylewapCodeCopy2.replace(eval("/"+dotClass+"/g"),',.'+copyShowClass);
+            var stylewapCodeCopy2 = stylewapCodeCopy1.replace(eval("/"+perClass+"/g"),copyShowClass+' ');
+            item.styleWapCodeCopy = stylewapCodeCopy2.replace(eval("/"+dotClass+"/g"),copyShowClass + ':');
 
             var stylewapCodeShow1 = item.styleWapCodeShow.replace(eval("/"+afterClass+"/g"),'is-wap .'+copyShowClass+'{');
-            var stylewapCodeShow2 = stylewapCodeShow1.replace(eval("/"+perClass+"/g"),'}.is-wap .'+copyShowClass);
-            item.styleWapCodeShow = stylewapCodeShow2.replace(eval("/"+dotClass+"/g"),',.is-wap .'+copyShowClass);
+            var stylewapCodeShow2 = stylewapCodeShow1.replace(eval("/"+perClass+"/g"),'is-wap .'+copyShowClass+' ');
+            item.styleWapCodeShow = stylewapCodeShow2.replace(eval("/"+dotClass+"/g"),'is-wap .'+copyShowClass + ':');
             item.styleWapCodeShow = item.styleWapCodeShow.replace('../images/','../yangshi/images/');
             
             var srcReg = /src=([\'\"]?([^\'\"]*)[\'\"]?)/ig;
@@ -360,7 +360,7 @@ export default {
                 var itemsUrl = items.split('"')[1];
                 if(itemsUrl.indexOf('/images/insidestyle')!=-1){
                   var itemImgUrl = require('@/assets'+itemsUrl);
-                  item.htmlStringShow = item.htmlStringShow.replace(items,'src='+itemImgUrl);
+                  item.htmlStringShow = item.htmlStringShow.replace(items,'src="'+itemImgUrl+'"');
                 }
               });
             }
@@ -370,6 +370,9 @@ export default {
             item.htmlStringShow = htmlStringShow1.replace(eval("/"+afterHtmlClass+"/g"),copyShowClass+'"');
             item.webHtmlString = "<style>" + item.styleWebCodeShow + "</style>" + item.htmlStringShow;
             item.wapHtmlString = "<style>" + item.styleWapCodeShow + "</style>" + item.htmlStringShow;
+            var htmlStringCopy = item.htmlString;
+            var htmlStringCopy1 = htmlStringCopy.replace(eval("/"+perHtmlClass+"/g"),copyShowClass+' ');
+            item.htmlStringCopy = htmlStringCopy1.replace(eval("/"+afterHtmlClass+"/g"),copyShowClass+'"');
           });
         }
         return currentData;
