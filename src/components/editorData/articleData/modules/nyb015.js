@@ -15,8 +15,8 @@ export function getHtmlData (){
         style:'icon', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb015.js', // 该文件的文件名
         class:'smalltxt015',// 用来给js使用添加页面内样式使用
-        styleWebCode:'.smalltxt015{position:relative;padding: 15px;background-size:100%;background:-webkit-linear-gradient(top, rgb(1,102,155), rgb(2,143,199));color:#fff !important;}.smalltxt015:before{content:"";position:absolute;left:5px;right:5px;top:5px;bottom:5px;border:1px solid #fff;}', // PC端样式
-        styleWapCode:'.smalltxt015{position:relative;padding:0.26667rem 0.33333rem;background:-webkit-linear-gradient(top, rgb(1,102,155), rgb(2,143,199));color:#fff !important;margin:0.53333rem 0rem 0.53333rem 0rem;}.smalltxt015:before{content:"";position:absolute;left:0.06667rem;right:0.06667rem;top:0.06667rem;bottom:0.06667rem;border:1px solid #fff;}', // 移动端样式
+        styleWebCode:'.smalltxt015{position:relative;padding:15px 25px;background-size:100%;background:-webkit-linear-gradient(top, rgb(1,102,155), rgb(2,143,199));color:#fff !important;}.smalltxt015:before{content:"";position:absolute;left:5px;right:5px;top:5px;bottom:5px;border:1px solid #fff;}.smalltxt015-theme2 p{color: #fff;margin:10px 0;}', // PC端样式
+        styleWapCode:'.smalltxt015{position:relative;padding:0.26667rem 0.33333rem;background:-webkit-linear-gradient(top, rgb(1,102,155), rgb(2,143,199));color:#fff !important;margin:0.26667rem 0.45rem;}.smalltxt015:before{content:"";position:absolute;left:0.06667rem;right:0.06667rem;top:0.06667rem;bottom:0.06667rem;border:1px solid #fff;}.smalltxt015-theme2 p{color: #fff; margin: .1333rem 0rem;}', // 移动端样式
         htmlString:'<p class="smalltxt015">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p>'
     };
 }
