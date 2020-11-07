@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // 生成 html 文件
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 分离 css 文件
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // 清除生成文件
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin'); // 压缩 JS
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin'); // 压缩 JS
+// const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // 压缩 css
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -224,11 +225,12 @@ module.exports={
         },
         minimizer: [ // 用于配置 minimizers 和选项
             // webpack 不支持es6语法的压缩，这里要使用需要babel配合
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true // set to true if you want JS source maps
-            }),// 压缩 js
+            // new TerserPlugin(),
+            // new UglifyJsPlugin({
+            //     cache: true,
+            //     parallel: true,
+            //     sourceMap: true // set to true if you want JS source maps
+            // }),// 压缩 js
             new OptimizeCSSAssetsPlugin({}), // 压缩 css
         ]
     },
