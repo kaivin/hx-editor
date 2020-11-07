@@ -10,7 +10,7 @@ export function getHtmlData (){
         class:'smalltit100',// 用来给js使用添加页面内样式使用
         fileName:'nyb100.js', // 该文件的文件名
         styleWebCode:'.smalltit100 strong{color: #272c38;font-size: 20px;position: relative;}.smalltit100 strong:before{content: "";display: block;width: 90%;height: 10px;position: absolute;left: 0;bottom: -2px;z-index: -1;background-color: rgb(2,143,199);border-radius: 0 6px 0 0;}', // PC端样式
-        styleWapCode:'.smalltit100 strong{color:#272c38;font-size:.45333rem;position:relative}.smalltit100 strong:before{content:"";display:block;width:90%;height:.26667rem;position:absolute;left:0;bottom:-.05333rem;z-index:-1;background-color:#028fc7;border-radius:0 .16rem 0 0}', // 移动端样式
+        styleWapCode:'.smalltit100 strong{color:#272c38;font-size:.45333rem;position:relative}.smalltit100 strong:before{content:"";display:block;width:90%;height:.26667rem;position:absolute;left:0;bottom:-.05333rem;z-index:-1;background-color:rgb(2,143,199);border-radius:0 .16rem 0 0}', // 移动端样式
         htmlString:'<p class="smalltit100"><strong>标题标题标题标题</strong></p>'
     };
 }
