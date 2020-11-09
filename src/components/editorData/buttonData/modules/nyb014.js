@@ -7,8 +7,8 @@ export function getHtmlData (){
         style:'other', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb014.js', // 该文件的文件名
         class:'smallbtn014',// 用来给js使用添加页面内样式使用
-        styleWebCode:'.smallbtn014{display: inline-block;vertical-align: top;padding-left: 70px;height: 80px;width: 240px;background: url(../images/insidestyle/smallbtn014.png) left top no-repeat;background-size: 100% auto;padding-right: 6px;}.smallbtn014 span{display: block;text-align: center;color: #ffffff;font-size: 26px;line-height: 80px;}', // PC端样式
-        styleWapCode:'.smallbtn014{display:inline-block;vertical-align:top;padding-left:1.2rem;height:1.41333rem;width:4.26667rem;background:url(../images/insidestyle/smallbtn014.png) left top no-repeat;background-size:100% auto;padding-right:.08rem}.smallbtn014 span{display:block;text-align:center;line-height:1.44rem;color:#ffffff;font-size:.48rem}', // 移动端样式
+        styleWebCode:'.smallbtn014{display: inline-block;vertical-align: top;padding-left: 32px;height: 40px;width: 120px;background: url(../images/insidestyle/smallbtn014.png) left top no-repeat;background-size: 100% auto;padding-right: 6px;}.smallbtn014 span{display: block;text-align: center;color: #ffffff;font-size: 16px;line-height: 40px;}', // PC端样式
+        styleWapCode:'.smallbtn014{display:inline-block;vertical-align:top;padding-left:.72rem;height:.85333rem;width:2.56rem;background:url(../images/insidestyle/smallbtn014.png) left top no-repeat;background-size:100% auto;padding-right:.05333rem}.smallbtn014 span{display:block;text-align:center;line-height:.85333rem;color:#ffffff;font-size:.37333rem}', // 移动端样式
         htmlString:'<a href="javascript:;" class="smallbtn014"><span>立即咨询</span></a>'
     };
 }
