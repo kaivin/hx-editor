@@ -211,6 +211,19 @@ export default {
               color8:'244,68,29',
             },
             label: 'chinahxjq.com 02'
+          },{
+            value:'theme7',
+            themeColor: {
+              color1:'194,27,27',
+              color2:'224,40,40',
+              color3:'226,71,71',
+              color4:'243,136,136',
+              color5:'248,201,201',
+              color6:'255,163,43',
+              color7:'253,212,58',
+              color8:'20,134,190',
+            },
+            label: 'hxjq.com.cn'
           }
         ],
         colorData:[
