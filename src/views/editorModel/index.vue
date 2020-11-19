@@ -223,7 +223,20 @@ export default {
               color7:'253,212,58',
               color8:'20,134,190',
             },
-            label: 'hxjq.com.cn'
+            label: 'hxjq.com.cn 01'
+          },{
+            value:'theme8',
+            themeColor: {
+              color1:'30,76,125', // 主题色暗重色
+              color2:'35,90,147', // 主题色
+              color3:'40,115,189', // 主题色亮重色
+              color4:'200,222,240', // 主题色暗浅色
+              color5:'236,245,252', // 主题色亮浅色
+              color6:'255,164,43', // 辅助色
+              color7:'253,211,58', // 点缀色
+              color8:'234,55,63', // 反冲色
+            },
+            label: 'hxjq.com.cn 02'
           }
         ],
         colorData:[
