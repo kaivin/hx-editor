@@ -15,8 +15,8 @@ export function getHtmlData (){
         style:'icon', // icon(图标)|number(数字)|other(其他)
         fileName:'nyb062.js', // 该文件的文件名
         class:'smalltxt062',// 用来给js使用添加页面内样式使用
-        styleWebCode:'.smalltxt062{background:rgb(199,237,251)!important;border-radius:10px;padding:20px;position:relative;margin-left:auto;margin-right:auto;}.smalltxt062:before{content:"";border:1px dashed rgb(1,102,155)!important;border-radius:10px;position:absolute;left:5px;right:5px;top:5px;bottom:5px;}', // PC端样式
-        styleWapCode:'.smalltxt062{background:rgb(199,237,251)!important;border-radius:0.13333rem;padding:0.26667rem;position:relative;margin:0.53333rem 0rem !important;}.smalltxt062:before{content:"";border:1px dashed rgb(1,102,155)!important;border-radius:0.13333rem;position:absolute;left:0.06667rem;right:0.06667rem;top:0.06667rem;bottom:0.06667rem;}', // 移动端样式
+        styleWebCode:'.smalltxt062{background:rgb(199,237,251)!important;border-radius:10px;padding:20px;position:relative;margin-left:auto;margin-right:auto;z-index:5;}.smalltxt062:before{content:"";border:1px dashed rgb(1,102,155)!important;border-radius:10px;position:absolute;left:5px;right:5px;top:5px;bottom:5px;z-index:-1;}', // PC端样式
+        styleWapCode:'.smalltxt062{background:rgb(199,237,251)!important;border-radius:0.13333rem;padding:0.26667rem;position:relative;margin:0.53333rem 0rem !important;z-index:5;}.smalltxt062:before{content:"";border:1px dashed rgb(1,102,155)!important;border-radius:0.13333rem;position:absolute;left:0.06667rem;right:0.06667rem;top:0.06667rem;bottom:0.06667rem;z-index:-1;}', // 移动端样式
         htmlString:'<p class="smalltxt062">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p>'
     };
 }
