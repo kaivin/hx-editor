@@ -365,7 +365,7 @@ export default {
             var styleWebCodeShow1 = item.styleWebCodeShow.replace(eval("/"+afterClass+"/g"),'is-pc .'+copyShowClass+'{');            
             var styleWebCodeShow2 = styleWebCodeShow1.replace(eval("/"+perClass+"/g"),'is-pc .'+copyShowClass+' ');          
             item.styleWebCodeShow = styleWebCodeShow2.replace(eval("/"+dotClass+"/g"),'is-pc .'+copyShowClass + ':');   
-            item.styleWebCodeShow = item.styleWebCodeShow.replace(eval(imgReg),'../yangshi/images/');
+            //item.styleWebCodeShow = item.styleWebCodeShow.replace(eval(imgReg),'../yangshi/images/');
             
 
             item.styleWapCodeShow = item.styleWapCodeCopy;
@@ -377,7 +377,7 @@ export default {
             var stylewapCodeShow1 = item.styleWapCodeShow.replace(eval("/"+afterClass+"/g"),'is-wap .'+copyShowClass+'{');
             var stylewapCodeShow2 = stylewapCodeShow1.replace(eval("/"+perClass+"/g"),'is-wap .'+copyShowClass+' ');
             item.styleWapCodeShow = stylewapCodeShow2.replace(eval("/"+dotClass+"/g"),'is-wap .'+copyShowClass + ':');
-            item.styleWapCodeShow = item.styleWapCodeShow.replace(eval(imgReg),'../yangshi/images/');
+            //item.styleWapCodeShow = item.styleWapCodeShow.replace(eval(imgReg),'../yangshi/images/');
             
             var srcReg = /src=([\'\"]?([^\'\"]*)[\'\"]?)/ig;
             var allSrc = item.htmlString.match(srcReg);

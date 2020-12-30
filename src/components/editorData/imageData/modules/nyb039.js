@@ -1,0 +1,14 @@
+export function getHtmlData (){
+    return{
+        type:"", // web(只用于PC端)|wap(只用于移动端)|(PC和移动端通用该值为空)|
+        color:'', // 多个颜色用逗号分隔 目前取值项：红色,橙色,蓝色,绿色,棕色,黄色,紫色,粉色,黑色,青色,灰色
+        effect:'static', // dynamic(动态)|static(静态)
+        align:'center', // left(左对齐)|center(居中对齐)|right(右对齐)        
+        style:'other', // icon(图标)|number(数字)|other(其他)
+        fileName:'nyb039.js', // 该文件的文件名
+        class:'smalltext039',// 用来给js使用添加页面内样式使用
+        styleWebCode:'.smalltext039{margin-top: 30px;margin-bottom: 30px}.smalltext039 .s039-img{position: relative;box-shadow: 2px 2px 5px rgb(0,86,133);}.smalltext039 .s039-img:before,.smalltext039 .s039-img:after{content: "";display: block;position: absolute;width: 4px;height: 15px;background: rgb(0,86,133);margin: 0 4px;bottom: -15px;}.smalltext039 .s039-img:before{left: 15%}.smalltext039 .s039-img:after{right: 15%}.smalltext039 .s039-img img{width: 100%}.smalltext039 .s039-text{margin-top: 15px;border: 1px solid rgb(0,86,133);padding: 10px 20px 0;box-shadow: 5px 5px 1px rgb(0,86,133);border-radius: 0 15px 0 15px;position: relative;}.smalltext039 .s039-text:before,.smalltext039 .s039-text:after{content: "";display: block;width: 12px;height: 12px;border: 1px solid rgb(0,86,133);border-radius: 50%;position: absolute;top: 5px;}.smalltext039 .s039-text:before{left: 15%}.smalltext039 .s039-text:after{right: 15%}.smalltext039 .s039-text p{margin-top: 20px;margin-bottom: 20px} ', // PC端样式
+        styleWapCode:'.smalltext039{margin-top: .4rem;margin-bottom: .4rem}.smalltext039 .s039-img{position: relative;box-shadow: .05333rem .05333rem .13333rem rgb(0,86,133)}.smalltext039 .s039-img:before,.smalltext039 .s039-img:after{content: "";display: block;position: absolute;width: .10667rem;height: .4rem;background: rgb(0,86,133);margin: 0 .10667rem;bottom: -.4rem}.smalltext039 .s039-img:before{left: 15%}.smalltext039 .s039-img:after{right: 15%}.smalltext039 .s039-img img{width: 100%}.smalltext039 .s039-text{margin-top: .4rem;border: .02667rem solid rgb(0,86,133);padding: .26667rem .26667rem 0;box-shadow: rgb(0,86,133) .13333rem .13333rem .02667rem;border-radius: 0 .4rem 0 .4rem;position: relative}.smalltext039 .s039-text:before,.smalltext039 .s039-text:after{content: "";display: block;width: .32rem;height: .32rem;border: .02667rem solid rgb(0,86,133);border-radius: 50%;position: absolute;top: .13333rem}.smalltext039 .s039-text:before{left: 15%}.smalltext039 .s039-text:after{right: 15%}.smalltext039 .s039-text p{margin-top: .26667rem;margin-bottom: .26667rem} ', // 移动端样式
+        htmlString:'<div class="smalltext039"> <div class="s039-img"> <img src="https://www.hxjq.cn/images/nopicture01.jpg" alt=""> </div> <div class="s039-text"> <p>在时间的长流里，你不过是一颗毫不起眼的尘埃，终将消散。他们说：你无法延长生命的长度，但你可以让你生命的宽度加以延伸，活出精彩，一颗尘埃的跳舞也是有意义的吧。</p> </div> </div>'
+    };
+}
